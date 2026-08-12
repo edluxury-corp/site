@@ -349,6 +349,117 @@ h2 { font-size: clamp(36px, 3.15vw, 54px); }
   font-size: 15px;
 }
 
+/* =========================
+   CONTACT
+========================= */
+
+.contact-page {
+  min-height: 100vh;
+  background: var(--cream);
+}
+
+.contact-hero {
+  padding: 180px clamp(28px, 7.2vw, 110px) 90px;
+  border-bottom: 1px solid var(--line);
+}
+
+.contact-intro {
+  width: min(720px, 100%);
+}
+
+.contact-intro h1 {
+  margin-top: 10px;
+}
+
+.contact-lead {
+  max-width: 600px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.85;
+}
+
+
+.contact-main {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 110px;
+  padding: 110px clamp(28px, 7.2vw, 110px) 130px;
+}
+
+
+.contact-details {
+  border-top: 1px solid var(--line);
+}
+
+.contact-block {
+  padding: 30px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.contact-label {
+  margin: 0 0 9px;
+  color: var(--gold);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+}
+
+.contact-value {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: 27px;
+  line-height: 1.25;
+}
+
+a.contact-value {
+  display: inline-block;
+  transition: opacity .25s ease;
+}
+
+a.contact-value:hover {
+  opacity: .6;
+}
+
+.contact-note {
+  max-width: 400px;
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.65;
+}
+
+
+.contact-sourcing {
+  align-self: start;
+  padding: 55px;
+  background: #fbfaf7;
+  border: 1px solid var(--line);
+}
+
+.contact-sourcing h2 {
+  max-width: 600px;
+}
+
+.contact-sourcing > p:not(.eyebrow) {
+  max-width: 540px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.85;
+}
+
+
+.footer-links {
+  display: flex;
+  gap: 26px;
+  align-items: center;
+}
+
+
+
+
 
 /* HORIZONTAL GALLERY */
 
@@ -581,7 +692,25 @@ h2 { font-size: clamp(36px, 3.15vw, 54px); }
   gap: 12px;
 }
 
+.contact-hero {
+  padding: 145px 28px 65px;
+}
 
+.contact-main {
+  grid-template-columns: 1fr;
+  gap: 65px;
+  padding: 70px 28px 90px;
+}
+
+.contact-sourcing {
+  padding: 38px 30px;
+}
+
+.footer-links {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
 
 
 @media (max-width: 640px) {
@@ -626,6 +755,14 @@ h2 { font-size: clamp(36px, 3.15vw, 54px); }
   font-size: 25px;
 }
   
+}
+
+.contact-value {
+  font-size: 24px;
+}
+
+.contact-sourcing {
+  padding: 34px 24px;
 }
 
 
