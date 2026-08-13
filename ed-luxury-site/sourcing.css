@@ -230,6 +230,7 @@
 
 .field-large input,
 .field-large textarea,
+.field-large select,
 .contact-fields input {
   width: 100%;
   border: 0;
@@ -239,6 +240,18 @@
   color: var(--ink);
   font: inherit;
   outline: none;
+}
+
+.field-large select {
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  border: 1px solid var(--line);
+  padding: 14px 42px 14px 14px;
+  background:
+    linear-gradient(45deg, transparent 50%, var(--muted) 50%) calc(100% - 18px) 52% / 5px 5px no-repeat,
+    linear-gradient(135deg, var(--muted) 50%, transparent 50%) calc(100% - 13px) 52% / 5px 5px no-repeat,
+    rgba(251, 250, 247, .58);
 }
 
 .field-large textarea {
@@ -251,8 +264,31 @@
 
 .field-large input:focus,
 .field-large textarea:focus,
+.field-large select:focus,
 .contact-fields input:focus {
   border-color: var(--gold);
+}
+
+.conditional-field {
+  margin-top: 24px;
+  margin-left: 74px;
+  max-width: 720px;
+  padding: 22px 24px;
+  border: 1px solid rgba(181, 150, 97, .28);
+  background: rgba(251, 250, 247, .6);
+}
+
+.conditional-field[hidden] {
+  display: none;
+}
+
+.conditional-field .field-large {
+  margin-left: 0;
+  max-width: none;
+}
+
+.conditional-field .field-large + .field-large {
+  margin-top: 22px;
 }
 
 .contact-fields {
@@ -361,7 +397,8 @@
   .contact-fields,
   .form-privacy,
   .sourcing-submit,
-  .sourcing-section > .choice-grid {
+  .sourcing-section > .choice-grid,
+  .conditional-field {
     margin-left: 50px;
   }
 
@@ -389,8 +426,13 @@
   .contact-fields,
   .form-privacy,
   .sourcing-submit,
-  .sourcing-section > .choice-grid {
+  .sourcing-section > .choice-grid,
+  .conditional-field {
     margin-left: 0;
+  }
+
+  .conditional-field {
+    padding: 18px;
   }
 
   .size-options,
