@@ -1,0 +1,38 @@
+/* Responsive visual refinements for the landing page */
+
+/* Keep the selection image stable while the layout moves from two columns
+   to one column. A fluid height avoids the visible size jump around tablet
+   widths, while object-fit preserves the crop. */
+.selection-image {
+  min-height: 0;
+  height: clamp(300px, 31vw, 440px);
+}
+
+.selection-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+@media (max-width: 900px) {
+  .selection-image {
+    height: clamp(300px, 42vw, 380px);
+  }
+}
+
+@media (max-width: 760px) {
+  .selection-image {
+    height: clamp(290px, 56vw, 390px);
+  }
+}
+
+@media (max-width: 480px) {
+  .selection-image {
+    height: clamp(260px, 72vw, 320px);
+  }
+
+  .selection-image img {
+    object-position: 50% 52%;
+  }
+}
