@@ -2,8 +2,8 @@ const toggle = document.querySelector('.menu-toggle');
 const nav = document.querySelector('.main-nav');
 
 toggle?.addEventListener('click', () => {
-  const isOpen = nav.classList.toggle('open');
-  toggle.setAttribute('aria-expanded', String(isOpen));
+  const isOpen = nav?.classList.toggle('open');
+  toggle.setAttribute('aria-expanded', String(Boolean(isOpen)));
 });
 
 nav?.querySelectorAll('a').forEach((link) => {
@@ -13,7 +13,15 @@ nav?.querySelectorAll('a').forEach((link) => {
   });
 });
 
-document.querySelector('#year').textContent = new Date().getFullYear();
+const year = document.querySelector('#year');
+if (year) year.textContent = new Date().getFullYear();
+
+if (document.querySelector('.contact-actions')) {
+  const contactStyles = document.createElement('link');
+  contactStyles.rel = 'stylesheet';
+  contactStyles.href = 'contact-actions.css';
+  document.head.appendChild(contactStyles);
+}
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
