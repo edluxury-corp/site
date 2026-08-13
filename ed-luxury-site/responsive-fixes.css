@@ -25,6 +25,14 @@
   color: #514b44;
 }
 
+/* Slightly deeper antique-gold tone than the global brand gold so the
+   eyebrow stays readable over the light beige hero on desktop. */
+.hero-copy .eyebrow {
+  color: #87652f;
+  font-weight: 600;
+  text-shadow: 0 1px 10px rgba(246, 246, 246, .72);
+}
+
 @media (max-width: 900px) {
   .selection-image {
     height: clamp(300px, 42vw, 380px);
