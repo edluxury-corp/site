@@ -123,13 +123,17 @@ html[data-theme="dark"] .theme-toggle-icon::after {
   background: #151310;
 }
 
-html[data-theme="dark"] .hero {
+html[data-theme="dark"] .hero,
+html[data-theme="dark"] .hero-visual {
   background: #11100e;
 }
 
 html[data-theme="dark"] .hero-image {
-  transform: scale(.95);
-  transform-origin: center bottom;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center bottom;
+  transform: none;
 }
 
 html[data-theme="dark"] .hero-copy h1 {
