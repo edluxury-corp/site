@@ -25,6 +25,37 @@
   .selection-image {
     height: clamp(290px, 56vw, 390px);
   }
+
+  /* On tablet / narrow desktop, keep the three showroom images compact
+     instead of letting the old min-height make them disproportionately tall. */
+  .showroom-gallery {
+    min-height: 0;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 6px;
+  }
+
+  .showroom-gallery img {
+    width: 100%;
+    height: clamp(155px, 25vw, 215px);
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+@media (max-width: 640px) {
+  /* On phones, use one restrained editorial image per row.
+     This avoids three very tall photos taking over the whole page. */
+  .showroom-gallery {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    min-height: 0;
+  }
+
+  .showroom-gallery img {
+    height: clamp(190px, 48vw, 250px);
+    object-fit: cover;
+    object-position: center;
+  }
 }
 
 @media (max-width: 480px) {
@@ -34,5 +65,9 @@
 
   .selection-image img {
     object-position: 50% 52%;
+  }
+
+  .showroom-gallery img {
+    height: clamp(175px, 50vw, 220px);
   }
 }
