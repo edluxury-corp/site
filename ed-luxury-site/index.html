@@ -11,6 +11,57 @@
   
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    /* Responsive hero framing */
+    .hero {
+      min-height: clamp(680px, 76vh, 860px);
+    }
+
+    .hero-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 57% bottom;
+    }
+
+    @media (max-width: 1200px) {
+      .hero-image {
+        object-position: 60% bottom;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .hero-image {
+        object-position: 64% bottom;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .hero {
+        min-height: 760px;
+      }
+
+      .hero-image {
+        object-position: 67% bottom;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .hero {
+        min-height: 720px;
+      }
+
+      .hero-image {
+        object-position: 72% bottom;
+      }
+
+      .hero-copy {
+        width: 100%;
+        padding: 125px 22px 40px;
+      }
+    }
+  </style>
 </head>
 <body>
   <header class="site-header" id="top">
@@ -43,14 +94,13 @@
       </div>
 
       <div class="hero-visual reveal" aria-label="Emplacement pour votre photo principale de Birkin">
-          <img
-            src="assets/images/hero-bag.png"
-            alt="Sac de luxe sélectionné par ED Luxury"
-            class="hero-bag"
-          />
-        </div>
-        <p class="asset-note"></p>
-      
+        <img
+          src="assets/images/hero-bag.png"
+          alt="Sac de luxe sélectionné par ED Luxury"
+          class="hero-image"
+        />
+      </div>
+      <p class="asset-note"></p>
     </section>
 
     <section class="showroom section-shell" id="showroom">
