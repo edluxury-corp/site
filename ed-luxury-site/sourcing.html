@@ -50,7 +50,6 @@
 
   </header>
 
-
   <main class="sourcing-page">
 
     <section class="sourcing-intro">
@@ -63,7 +62,6 @@
         si une opportunité correspondant à vos critères peut être identifiée.
       </p>
     </section>
-
 
     <form class="sourcing-form">
 
@@ -90,6 +88,11 @@
                 <label><input type="radio" name="size" value="Kelly 32"><span>32</span></label>
                 <label><input type="radio" name="size" value="Kelly 35"><span>35</span></label>
                 <label><input type="radio" name="size" value="Kelly autre"><span>Autre</span></label>
+              </div>
+
+              <div class="model-other-field" id="kelly-other-size-field" hidden>
+                <label for="kelly-other-size">Autre taille Kelly</label>
+                <input type="text" id="kelly-other-size" name="kelly_other_size" placeholder="Ex. 22, 40, Mini Kelly...">
               </div>
             </div>
           </div>
@@ -120,11 +123,15 @@
                 <label><input type="radio" name="size" value="HAC 55"><span>55</span></label>
                 <label><input type="radio" name="size" value="Birkin ou HAC autre"><span>Autre</span></label>
               </div>
+
+              <div class="model-other-field" id="birkin-other-size-field" hidden>
+                <label for="birkin-other-size">Autre taille Birkin / HAC</label>
+                <input type="text" id="birkin-other-size" name="birkin_hac_other_size" placeholder="Précisez la taille ou le modèle recherché">
+              </div>
             </div>
           </div>
         </div>
       </section>
-
 
       <section class="sourcing-section">
         <div class="sourcing-section-heading">
@@ -137,7 +144,6 @@
           <input type="text" id="color" name="color" placeholder="Ex. Noir, Gold, Étoupe, Craie, Vert Menthe...">
         </div>
       </section>
-
 
       <section class="sourcing-section">
         <div class="sourcing-section-heading">
@@ -158,16 +164,25 @@
 
         <div class="conditional-field" id="exotic-leather-fields" hidden>
           <div class="field-large">
-            <label for="exotic-leather">Type de cuir exotique</label>
-            <select id="exotic-leather" name="exotic_leather">
-              <option value="">Sélectionnez un cuir exotique</option>
-              <option value="Crocodile Niloticus">Crocodile Niloticus</option>
-              <option value="Crocodile Porosus">Crocodile Porosus</option>
-              <option value="Alligator Mississippiensis">Alligator Mississippiensis</option>
-              <option value="Autruche">Autruche</option>
-              <option value="Lézard">Lézard</option>
-              <option value="Autre">Autre</option>
-            </select>
+            <span class="conditional-label">Type de cuir exotique</span>
+
+            <div class="luxury-select" id="exotic-leather-select">
+              <button type="button" class="luxury-select-trigger" aria-expanded="false">
+                <span id="exotic-leather-value">Sélectionnez un cuir exotique</span>
+                <span class="luxury-select-arrow" aria-hidden="true"></span>
+              </button>
+
+              <div class="luxury-select-menu" hidden>
+                <button type="button" data-value="Crocodile Niloticus">Crocodile Niloticus</button>
+                <button type="button" data-value="Crocodile Porosus">Crocodile Porosus</button>
+                <button type="button" data-value="Alligator Mississippiensis">Alligator Mississippiensis</button>
+                <button type="button" data-value="Autruche">Autruche</button>
+                <button type="button" data-value="Lézard">Lézard</button>
+                <button type="button" data-value="Autre">Autre</button>
+              </div>
+
+              <input type="hidden" id="exotic-leather" name="exotic_leather" value="">
+            </div>
           </div>
 
           <div class="field-large" id="exotic-leather-other-field" hidden>
@@ -194,7 +209,6 @@
         </div>
       </section>
 
-
       <section class="sourcing-section">
         <div class="sourcing-section-heading">
           <span class="sourcing-number">04</span>
@@ -208,7 +222,6 @@
           <label><input type="radio" name="hardware" value="Indifférent"><span>Indifférent</span></label>
         </div>
       </section>
-
 
       <section class="sourcing-section">
         <div class="sourcing-section-heading">
@@ -226,7 +239,6 @@
         </div>
       </section>
 
-
       <section class="sourcing-section">
         <div class="sourcing-section-heading">
           <span class="sourcing-number">06</span>
@@ -240,7 +252,6 @@
           <label><input type="radio" name="condition" value="Indifférent"><span>Indifférent</span></label>
         </div>
       </section>
-
 
       <section class="sourcing-section sourcing-contact">
         <div class="sourcing-section-heading">
@@ -284,7 +295,6 @@
 
   </main>
 
-
   <footer class="collection-footer">
     <a href="index.html" class="brand footer-brand">
       <span class="brand-main">ED</span>
@@ -300,11 +310,35 @@
   <script>
     const leatherChoices = document.querySelectorAll('input[name="leather"]');
     const exoticFields = document.getElementById('exotic-leather-fields');
-    const exoticSelect = document.getElementById('exotic-leather');
+    const exoticHiddenInput = document.getElementById('exotic-leather');
     const exoticOtherField = document.getElementById('exotic-leather-other-field');
     const exoticOtherInput = document.getElementById('exotic-leather-other');
     const otherLeatherField = document.getElementById('other-leather-field');
     const otherLeatherInput = document.getElementById('other-leather');
+
+    const luxurySelect = document.getElementById('exotic-leather-select');
+    const luxurySelectTrigger = luxurySelect.querySelector('.luxury-select-trigger');
+    const luxurySelectMenu = luxurySelect.querySelector('.luxury-select-menu');
+    const luxurySelectValue = document.getElementById('exotic-leather-value');
+
+    const sizeChoices = document.querySelectorAll('input[name="size"]');
+    const kellyOtherSizeField = document.getElementById('kelly-other-size-field');
+    const kellyOtherSizeInput = document.getElementById('kelly-other-size');
+    const birkinOtherSizeField = document.getElementById('birkin-other-size-field');
+    const birkinOtherSizeInput = document.getElementById('birkin-other-size');
+
+    function closeLuxurySelect() {
+      luxurySelectMenu.hidden = true;
+      luxurySelectTrigger.setAttribute('aria-expanded', 'false');
+    }
+
+    function resetLuxurySelect() {
+      exoticHiddenInput.value = '';
+      luxurySelectValue.textContent = 'Sélectionnez un cuir exotique';
+      exoticOtherField.hidden = true;
+      exoticOtherInput.value = '';
+      closeLuxurySelect();
+    }
 
     function updateLeatherFields() {
       const selectedLeather = document.querySelector('input[name="leather"]:checked')?.value;
@@ -314,31 +348,50 @@
       exoticFields.hidden = !isExotic;
       otherLeatherField.hidden = !isOther;
 
-      if (!isExotic) {
-        exoticSelect.value = '';
-        exoticOtherField.hidden = true;
-        exoticOtherInput.value = '';
-      }
-
-      if (!isOther) {
-        otherLeatherInput.value = '';
-      }
+      if (!isExotic) resetLuxurySelect();
+      if (!isOther) otherLeatherInput.value = '';
     }
 
-    function updateExoticOtherField() {
-      const showOther = exoticSelect.value === 'Autre';
-      exoticOtherField.hidden = !showOther;
+    function updateSizeFields() {
+      const selectedSize = document.querySelector('input[name="size"]:checked')?.value || '';
+      const isKellyOther = selectedSize === 'Kelly autre';
+      const isBirkinOther = selectedSize === 'Birkin ou HAC autre';
 
-      if (!showOther) {
-        exoticOtherInput.value = '';
-      }
+      kellyOtherSizeField.hidden = !isKellyOther;
+      birkinOtherSizeField.hidden = !isBirkinOther;
+
+      if (!isKellyOther) kellyOtherSizeInput.value = '';
+      if (!isBirkinOther) birkinOtherSizeInput.value = '';
     }
 
     leatherChoices.forEach((choice) => {
       choice.addEventListener('change', updateLeatherFields);
     });
 
-    exoticSelect.addEventListener('change', updateExoticOtherField);
+    sizeChoices.forEach((choice) => {
+      choice.addEventListener('change', updateSizeFields);
+    });
+
+    luxurySelectTrigger.addEventListener('click', () => {
+      const willOpen = luxurySelectMenu.hidden;
+      luxurySelectMenu.hidden = !willOpen;
+      luxurySelectTrigger.setAttribute('aria-expanded', String(willOpen));
+    });
+
+    luxurySelectMenu.querySelectorAll('button[data-value]').forEach((option) => {
+      option.addEventListener('click', () => {
+        const value = option.dataset.value;
+        exoticHiddenInput.value = value;
+        luxurySelectValue.textContent = value;
+        exoticOtherField.hidden = value !== 'Autre';
+        if (value !== 'Autre') exoticOtherInput.value = '';
+        closeLuxurySelect();
+      });
+    });
+
+    document.addEventListener('click', (event) => {
+      if (!luxurySelect.contains(event.target)) closeLuxurySelect();
+    });
   </script>
 
 </body>
