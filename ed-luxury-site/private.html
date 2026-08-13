@@ -5,193 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="noindex, nofollow" />
   <title>ED Luxury — Espace privé</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles.css" />
   <style>
-    [hidden] { display: none !important; }
-    .private-page { min-height: 100vh; background: var(--cream); }
-    .private-header { position: relative; min-height: 100px; display: flex; align-items: center; justify-content: space-between; gap: 30px; padding: 24px clamp(28px, 5vw, 76px); border-bottom: 1px solid var(--line); background: #fbfaf7; }
-    .private-header-actions { display: flex; align-items: center; gap: 18px; }
-    .private-user { color: var(--muted); font-size: 11px; }
-    .logout-button { border: 1px solid var(--line); background: transparent; padding: 12px 16px; font: 600 10px var(--sans); letter-spacing: .08em; text-transform: uppercase; cursor: pointer; }
-    .private-main { width: min(1120px, calc(100% - 56px)); margin: 0 auto; padding: 90px 0 120px; }
-    .private-intro { max-width: 720px; }
-    .private-intro h1 { margin-top: 10px; }
-    .private-intro > p:last-child { max-width: 620px; color: var(--muted); }
-    .private-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 18px; margin-top: 65px; }
-    .private-card { min-height: 210px; padding: 30px; border: 1px solid var(--line); background: #fbfaf7; }
-    .private-card span { display: block; margin-bottom: 18px; color: var(--gold); font-size: 10px; letter-spacing: .12em; text-transform: uppercase; }
-    .private-card h2 { margin-bottom: 14px; font-size: 29px; text-transform: none; }
-    .private-card p { margin: 0; color: var(--muted); font-size: 13px; }
-
-    .private-showrooms { margin-top: 72px; padding-top: 42px; border-top: 1px solid var(--line); }
-    .private-showrooms-heading { display: flex; justify-content: space-between; align-items: flex-end; gap: 28px; margin-bottom: 28px; }
-    .private-showrooms-heading h2 { margin-top: 8px; font-size: 38px; text-transform: none; }
-    .private-showrooms-note { max-width: 380px; margin: 0; color: var(--muted); font-size: 12px; line-height: 1.7; text-align: right; }
-    .showroom-admin-list { border-top: 1px solid var(--line); }
-    .showroom-admin-row { display: grid; grid-template-columns: 150px minmax(0, 1fr) 170px; gap: 30px; align-items: center; min-height: 108px; padding: 22px 0; border-bottom: 1px solid var(--line); }
-    .showroom-admin-date { color: var(--gold); font-family: var(--serif); font-size: 23px; line-height: 1.15; }
-    .showroom-admin-info h3 { margin: 0 0 5px; font-family: var(--serif); font-size: 25px; font-weight: 400; }
-    .showroom-admin-info p { margin: 0; color: var(--muted); font-size: 12px; }
-    .showroom-admin-status { justify-self: end; padding: 9px 12px; border: 1px solid rgba(181,150,97,.45); color: #8d6c38; font-size: 9px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; }
-    .showroom-admin-empty .showroom-admin-date { color: #aaa39a; }
-    .showroom-admin-empty .showroom-admin-info h3 { color: #4f4a44; }
-
-    .private-loading { min-height: 100vh; display: grid; place-items: center; padding: 28px; text-align: center; font-size: 12px; color: var(--muted); }
-
-    @media (max-width: 760px) {
-      .private-header { align-items: flex-start; }
-      .private-header-actions { flex-direction: column; align-items: flex-end; }
-      .private-main { width: calc(100% - 40px); padding-top: 65px; }
-      .private-grid { grid-template-columns: 1fr; }
-      .private-showrooms-heading { align-items: flex-start; flex-direction: column; }
-      .private-showrooms-note { text-align: left; }
-      .showroom-admin-row { grid-template-columns: 1fr; gap: 10px; padding: 24px 0; }
-      .showroom-admin-status { justify-self: start; }
-    }
+    [hidden]{display:none!important}.private-page{min-height:100vh;background:var(--cream)}.private-header{position:relative;min-height:100px;display:flex;align-items:center;justify-content:space-between;gap:30px;padding:24px clamp(28px,5vw,76px);border-bottom:1px solid var(--line);background:#fbfaf7}.private-header-actions{display:flex;align-items:center;gap:18px}.private-user{color:var(--muted);font-size:11px}.logout-button{border:1px solid var(--line);background:transparent;padding:12px 16px;font:600 10px var(--sans);letter-spacing:.08em;text-transform:uppercase;cursor:pointer}.private-main{width:min(1120px,calc(100% - 56px));margin:0 auto;padding:90px 0 120px}.private-intro{max-width:720px}.private-intro h1{margin-top:10px}.private-intro>p:last-child{max-width:620px;color:var(--muted)}.private-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:65px}.private-card{min-height:210px;padding:30px;border:1px solid var(--line);background:#fbfaf7}.private-card span{display:block;margin-bottom:18px;color:var(--gold);font-size:10px;letter-spacing:.12em;text-transform:uppercase}.private-card h2{margin-bottom:14px;font-size:29px;text-transform:none}.private-card p{margin:0;color:var(--muted);font-size:13px}.private-showrooms{margin-top:72px;padding-top:42px;border-top:1px solid var(--line)}.private-showrooms-heading{display:flex;justify-content:space-between;align-items:flex-end;gap:28px;margin-bottom:28px}.private-showrooms-heading h2{margin-top:8px;font-size:38px;text-transform:none}.private-showrooms-note{max-width:380px;margin:0;color:var(--muted);font-size:12px;line-height:1.7;text-align:right}.showroom-admin-list{border-top:1px solid var(--line)}.showroom-admin-row{display:grid;grid-template-columns:150px minmax(0,1fr) 170px;gap:30px;align-items:center;min-height:108px;padding:22px 0;border-bottom:1px solid var(--line)}.showroom-admin-date{color:var(--gold);font-family:var(--serif);font-size:23px}.showroom-admin-info h3{margin:0 0 5px;font-family:var(--serif);font-size:25px;font-weight:400}.showroom-admin-info p{margin:0;color:var(--muted);font-size:12px}.showroom-admin-status{justify-self:end;padding:9px 12px;border:1px solid rgba(181,150,97,.45);color:#8d6c38;font-size:9px;font-weight:600;letter-spacing:.1em;text-transform:uppercase}.showroom-admin-empty .showroom-admin-date{color:#aaa39a}.showroom-admin-empty .showroom-admin-info h3{color:#4f4a44}.private-loading{min-height:100vh;display:grid;place-items:center;padding:28px;text-align:center;font-size:12px;color:var(--muted)}
+    @media(max-width:760px){.private-header{align-items:flex-start}.private-header-actions{flex-direction:column;align-items:flex-end}.private-main{width:calc(100% - 40px);padding-top:65px}.private-grid{grid-template-columns:1fr}.private-showrooms-heading{align-items:flex-start;flex-direction:column}.private-showrooms-note{text-align:left}.showroom-admin-row{grid-template-columns:1fr;gap:10px}.showroom-admin-status{justify-self:start}}
   </style>
 </head>
 <body>
   <div id="auth-loading" class="private-loading">Vérification de l’accès…</div>
-
   <div id="private-content" class="private-page" hidden>
-    <header class="private-header">
-      <a class="brand" href="index.html" aria-label="ED Luxury, accueil">
-        <span class="brand-main">ED</span>
-        <span class="brand-sub">LUXURY</span>
-      </a>
-      <div class="private-header-actions">
-        <span class="private-user" id="private-user"></span>
-        <button class="logout-button" id="logout-button" type="button">Déconnexion</button>
-      </div>
-    </header>
-
-    <main class="private-main">
-      <section class="private-intro">
-        <p class="eyebrow">Espace privé</p>
-        <h1>Bienvenue chez ED Luxury</h1>
-        <span class="gold-line"></span>
-        <p>Cette première version sert de base à votre espace privé. Les outils internes, demandes de sourcing et propositions de vente pourront être ajoutés ici progressivement.</p>
-      </section>
-
-      <section class="private-grid">
-        <article class="private-card">
-          <span>01</span>
-          <h2>Sourcing</h2>
-          <p>Consultation et suivi des futures demandes de recherche.</p>
-        </article>
-        <article class="private-card">
-          <span>02</span>
-          <h2>Propositions de vente</h2>
-          <p>Réception et étude des sacs proposés à ED Luxury.</p>
-        </article>
-        <article class="private-card">
-          <span>03</span>
-          <h2>Sélection</h2>
-          <p>Gestion privée des pièces et informations internes.</p>
-        </article>
-      </section>
-
-      <section class="private-showrooms" aria-labelledby="private-showrooms-title">
-        <div class="private-showrooms-heading">
-          <div>
-            <p class="eyebrow">Calendrier privé</p>
-            <h2 id="private-showrooms-title">Prochains showrooms</h2>
-          </div>
-          <p class="private-showrooms-note">Les futures dates pourront être gérées ici puis, plus tard, synchronisées avec la page publique Showrooms.</p>
-        </div>
-
-        <div class="showroom-admin-list">
-          <div class="showroom-admin-row showroom-admin-empty">
-            <div class="showroom-admin-date">—</div>
-            <div class="showroom-admin-info">
-              <h3>Aucune date programmée</h3>
-              <p>Le prochain showroom apparaîtra ici dès qu’une date sera ajoutée.</p>
-            </div>
-            <span class="showroom-admin-status">À programmer</span>
-          </div>
-        </div>
-      </section>
+    <header class="private-header"><a class="brand" href="index.html"><span class="brand-main">ED</span><span class="brand-sub">LUXURY</span></a><div class="private-header-actions"><span class="private-user" id="private-user"></span><button class="logout-button" id="logout-button" type="button">Déconnexion</button></div></header>
+    <main class="private-main"><section class="private-intro"><p class="eyebrow">Espace privé</p><h1>Bienvenue chez ED Luxury</h1><span class="gold-line"></span><p>Cette première version sert de base à votre espace privé. Les outils internes, demandes de sourcing et propositions de vente pourront être ajoutés ici progressivement.</p></section>
+      <section class="private-grid"><article class="private-card"><span>01</span><h2>Sourcing</h2><p>Consultation et suivi des futures demandes de recherche.</p></article><article class="private-card"><span>02</span><h2>Propositions de vente</h2><p>Réception et étude des sacs proposés à ED Luxury.</p></article><article class="private-card"><span>03</span><h2>Sélection</h2><p>Gestion privée des pièces et informations internes.</p></article></section>
+      <section class="private-showrooms"><div class="private-showrooms-heading"><div><p class="eyebrow">Calendrier privé</p><h2>Prochains showrooms</h2></div><p class="private-showrooms-note">Les futures dates pourront être gérées ici puis synchronisées avec la page publique Showrooms.</p></div><div class="showroom-admin-list"><div class="showroom-admin-row showroom-admin-empty"><div class="showroom-admin-date">—</div><div class="showroom-admin-info"><h3>Aucune date programmée</h3><p>Le prochain showroom apparaîtra ici dès qu’une date sera ajoutée.</p></div><span class="showroom-admin-status">À programmer</span></div></div></section>
     </main>
   </div>
-
+  <script src="script.js"></script>
   <script>
-    const PROJECT_REF = 'xyjupseviramwfekttjh';
-    const STORAGE_KEY = `sb-${PROJECT_REF}-auth-token`;
-    const loading = document.getElementById('auth-loading');
-    const content = document.getElementById('private-content');
-    const userLabel = document.getElementById('private-user');
-    const logoutButton = document.getElementById('logout-button');
-
-    function readStoredSession() {
-      try {
-        const raw = localStorage.getItem(STORAGE_KEY);
-        if (!raw) return null;
-        const stored = JSON.parse(raw);
-        const session = stored?.currentSession || stored;
-        if (!session?.access_token || !session?.user) return null;
-        if (session.expires_at && session.expires_at * 1000 <= Date.now()) return null;
-        return session;
-      } catch (error) {
-        return null;
-      }
-    }
-
-    function showDashboard(session) {
-      userLabel.textContent = session?.user?.email || 'Compte privé';
-      loading.hidden = true;
-      content.hidden = false;
-    }
-
-    function goToLogin() {
-      window.location.replace('login.html');
-    }
-
-    const storedSession = readStoredSession();
-
-    if (!storedSession) {
-      goToLogin();
-    } else {
-      showDashboard(storedSession);
-    }
-
-    logoutButton.addEventListener('click', async () => {
-      logoutButton.disabled = true;
-      try {
-        const { createClient } = await import('https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm');
-        const supabase = createClient(
-          'https://xyjupseviramwfekttjh.supabase.co',
-          'sb_publishable_MEwqY-CLaEIOdM370VFMLA_r0z7X2uw'
-        );
-        await supabase.auth.signOut();
-      } catch (error) {
-        localStorage.removeItem(STORAGE_KEY);
-      }
-      goToLogin();
-    });
-
-    (async () => {
-      try {
-        const { createClient } = await import('https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm');
-        const supabase = createClient(
-          'https://xyjupseviramwfekttjh.supabase.co',
-          'sb_publishable_MEwqY-CLaEIOdM370VFMLA_r0z7X2uw'
-        );
-
-        const { data, error } = await supabase.auth.getSession();
-        if (error || !data.session) {
-          localStorage.removeItem(STORAGE_KEY);
-          goToLogin();
-          return;
-        }
-
-        showDashboard(data.session);
-      } catch (error) {
-        // Le dashboard reste utilisable avec la session locale déjà validée.
-      }
-    })();
+    const PROJECT_REF='xyjupseviramwfekttjh',STORAGE_KEY=`sb-${PROJECT_REF}-auth-token`,loading=document.getElementById('auth-loading'),content=document.getElementById('private-content'),userLabel=document.getElementById('private-user'),logoutButton=document.getElementById('logout-button');
+    function readStoredSession(){try{const raw=localStorage.getItem(STORAGE_KEY);if(!raw)return null;const stored=JSON.parse(raw),session=stored?.currentSession||stored;if(!session?.access_token||!session?.user)return null;if(session.expires_at&&session.expires_at*1000<=Date.now())return null;return session}catch(e){return null}}
+    function showDashboard(session){userLabel.textContent=session?.user?.email||'Compte privé';loading.hidden=true;content.hidden=false}function goToLogin(){window.location.replace('login.html')}
+    const storedSession=readStoredSession();storedSession?showDashboard(storedSession):goToLogin();
+    logoutButton.addEventListener('click',async()=>{logoutButton.disabled=true;try{const{createClient}=await import('https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm');const supabase=createClient('https://xyjupseviramwfekttjh.supabase.co','sb_publishable_MEwqY-CLaEIOdM370VFMLA_r0z7X2uw');await supabase.auth.signOut()}catch(e){localStorage.removeItem(STORAGE_KEY)}goToLogin()});
+    (async()=>{try{const{createClient}=await import('https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm');const supabase=createClient('https://xyjupseviramwfekttjh.supabase.co','sb_publishable_MEwqY-CLaEIOdM370VFMLA_r0z7X2uw');const{data,error}=await supabase.auth.getSession();if(error||!data.session){localStorage.removeItem(STORAGE_KEY);goToLogin();return}showDashboard(data.session)}catch(e){}})();
   </script>
 </body>
 </html>
