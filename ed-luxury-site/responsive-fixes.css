@@ -15,9 +15,44 @@
   object-position: 50% 50%;
 }
 
+/* Keep the hero copy crisp over the beige photography without turning it
+   into a visible card on desktop. */
+.hero-copy h1 {
+  color: #15120f;
+}
+
+.hero-copy .lead {
+  color: #514b44;
+}
+
 @media (max-width: 900px) {
   .selection-image {
     height: clamp(300px, 42vw, 380px);
+  }
+
+  .hero-copy {
+    width: min(72%, 610px);
+    padding-right: 34px;
+    padding-bottom: 38px;
+    background: linear-gradient(
+      90deg,
+      rgba(246, 246, 246, .76) 0%,
+      rgba(246, 246, 246, .58) 70%,
+      rgba(246, 246, 246, 0) 100%
+    );
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(44px, 6.8vw, 64px);
+    line-height: 1.06;
+  }
+
+  .hero-copy .lead {
+    max-width: 420px;
+    font-size: 14px;
+    line-height: 1.7;
   }
 }
 
@@ -40,6 +75,38 @@
     object-fit: cover;
     object-position: center;
   }
+
+  .hero-copy {
+    width: min(82%, 570px);
+    padding-right: 30px;
+    padding-bottom: 34px;
+    background: linear-gradient(
+      90deg,
+      rgba(246, 246, 246, .84) 0%,
+      rgba(246, 246, 246, .66) 76%,
+      rgba(246, 246, 246, .10) 100%
+    );
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(39px, 8vw, 52px);
+    line-height: 1.04;
+  }
+
+  .hero-copy .eyebrow {
+    font-size: 10px;
+    letter-spacing: .11em;
+  }
+
+  .hero-copy .lead {
+    max-width: 360px;
+    font-size: 13px;
+    line-height: 1.62;
+  }
+
+  .hero-copy .gold-line {
+    margin: 22px 0;
+  }
 }
 
 @media (max-width: 640px) {
@@ -56,6 +123,29 @@
     object-fit: cover;
     object-position: center;
   }
+
+  .hero-copy {
+    width: min(92%, 520px);
+    margin-right: auto;
+    padding: 122px 24px 34px 22px;
+    background: linear-gradient(
+      90deg,
+      rgba(246, 246, 246, .90) 0%,
+      rgba(246, 246, 246, .73) 74%,
+      rgba(246, 246, 246, .12) 100%
+    );
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(37px, 10vw, 46px);
+    max-width: 440px;
+  }
+
+  .hero-copy .lead {
+    max-width: 330px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -69,5 +159,36 @@
 
   .showroom-gallery img {
     height: clamp(175px, 50vw, 220px);
+  }
+
+  .hero-copy {
+    width: 94%;
+    padding: 116px 20px 28px 20px;
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(35px, 10.5vw, 42px);
+  }
+
+  .hero-copy .gold-line {
+    margin: 18px 0;
+  }
+
+  .hero-copy .button {
+    margin-top: 16px;
+    padding: 14px 18px;
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 420px) {
+  /* On very small phones, preserve the brand statement and CTA but remove
+     the supporting sentence so the hero stays readable and uncluttered. */
+  .hero-copy .lead {
+    display: none;
+  }
+
+  .hero-copy {
+    padding-bottom: 26px;
   }
 }
