@@ -133,26 +133,46 @@
   }
 
   .hero-copy {
-    width: min(92%, 520px);
+    width: min(88%, 500px) !important;
     margin-right: auto;
-    padding: 122px 24px 34px 22px;
+    padding: 98px 20px 20px 20px !important;
     background: linear-gradient(
       90deg,
-      rgba(246, 246, 246, .90) 0%,
-      rgba(246, 246, 246, .73) 74%,
-      rgba(246, 246, 246, .12) 100%
+      rgba(246, 246, 246, .88) 0%,
+      rgba(246, 246, 246, .68) 70%,
+      rgba(246, 246, 246, .06) 100%
     );
-    backdrop-filter: blur(3px);
-    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+  }
+
+  .hero {
+    min-height: 640px !important;
+  }
+
+  .hero-image {
+    object-position: 68% bottom !important;
   }
 
   .hero-copy h1 {
-    font-size: clamp(37px, 10vw, 46px);
-    max-width: 440px;
+    font-size: clamp(35px, 9.6vw, 44px);
+    max-width: 420px;
   }
 
   .hero-copy .lead {
-    max-width: 330px;
+    max-width: 310px;
+    font-size: 12.5px;
+    line-height: 1.55;
+  }
+
+  .hero-copy .gold-line {
+    margin: 16px 0;
+  }
+
+  .hero-copy .button {
+    margin-top: 12px;
+    padding: 13px 17px;
+    font-size: 9.5px;
   }
 }
 
@@ -169,23 +189,17 @@
     height: clamp(175px, 50vw, 220px);
   }
 
+  .hero {
+    min-height: 600px !important;
+  }
+
   .hero-copy {
-    width: 94%;
-    padding: 116px 20px 28px 20px;
+    width: 86% !important;
+    padding: 92px 18px 18px 18px !important;
   }
 
   .hero-copy h1 {
-    font-size: clamp(35px, 10.5vw, 42px);
-  }
-
-  .hero-copy .gold-line {
-    margin: 18px 0;
-  }
-
-  .hero-copy .button {
-    margin-top: 16px;
-    padding: 14px 18px;
-    font-size: 10px;
+    font-size: clamp(33px, 10vw, 40px);
   }
 }
 
@@ -197,6 +211,10 @@
   }
 
   .hero-copy {
-    padding-bottom: 26px;
+    padding-bottom: 18px !important;
+  }
+
+  .hero {
+    min-height: 570px !important;
   }
 }
