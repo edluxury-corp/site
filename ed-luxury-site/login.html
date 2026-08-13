@@ -47,24 +47,9 @@
       max-width: 540px;
     }
 
-    .login-visual-content .eyebrow {
-      color: #8d6c38;
-      margin-bottom: 16px;
-    }
-
-    .login-visual-content h1 {
-      font-size: clamp(54px, 5.2vw, 82px);
-      text-transform: none;
-      color: #171411;
-    }
-
-    .login-visual-content p:last-child {
-      max-width: 440px;
-      margin-top: 24px;
-      color: #5c554d;
-      font-size: 14px;
-      line-height: 1.8;
-    }
+    .login-visual-content .eyebrow { color: #8d6c38; margin-bottom: 16px; }
+    .login-visual-content h1 { font-size: clamp(54px, 5.2vw, 82px); text-transform: none; color: #171411; }
+    .login-visual-content p:last-child { max-width: 440px; margin-top: 24px; color: #5c554d; font-size: 14px; line-height: 1.8; }
 
     .login-panel {
       min-height: 100vh;
@@ -76,43 +61,14 @@
       border-left: 1px solid var(--line);
     }
 
-    .login-brand {
-      position: absolute;
-      top: 34px;
-      right: clamp(34px, 6vw, 86px);
-    }
-
+    .login-brand { position: absolute; top: 34px; right: clamp(34px, 6vw, 86px); }
     .login-brand .brand-main { font-size: 42px; }
-
-    .login-card {
-      width: min(430px, 100%);
-      margin: 0 auto;
-    }
-
+    .login-card { width: min(430px, 100%); margin: 0 auto; }
     .login-card .eyebrow { margin-bottom: 12px; }
-
-    .login-card h2 {
-      margin-bottom: 18px;
-      text-transform: none;
-      font-size: clamp(38px, 3.4vw, 52px);
-    }
-
-    .login-intro {
-      margin: 0 0 38px;
-      color: var(--muted);
-      font-size: 14px;
-      line-height: 1.75;
-    }
-
-    .login-form {
-      display: grid;
-      gap: 22px;
-    }
-
-    .login-field {
-      display: grid;
-      gap: 8px;
-    }
+    .login-card h2 { margin-bottom: 18px; text-transform: none; font-size: clamp(38px, 3.4vw, 52px); }
+    .login-intro { margin: 0 0 38px; color: var(--muted); font-size: 14px; line-height: 1.75; }
+    .login-form { display: grid; gap: 22px; }
+    .login-field { display: grid; gap: 8px; }
 
     .login-field label {
       font-size: 10px;
@@ -135,9 +91,7 @@
       transition: border-color .2s ease;
     }
 
-    .login-field input:focus {
-      border-bottom-color: var(--gold);
-    }
+    .login-field input:focus { border-bottom-color: var(--gold); }
 
     .login-submit {
       margin-top: 10px;
@@ -150,59 +104,23 @@
       font-weight: 600;
       letter-spacing: .08em;
       text-transform: uppercase;
-      cursor: not-allowed;
-      opacity: .72;
+      cursor: pointer;
+      transition: opacity .2s ease;
     }
 
-    .login-note {
-      margin-top: 18px;
-      color: #8a837a;
-      font-size: 11px;
-      line-height: 1.6;
-    }
-
-    .login-back {
-      display: inline-flex;
-      align-items: center;
-      gap: 12px;
-      margin-top: 42px;
-      color: #8d6c38;
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-    }
+    .login-submit:disabled { cursor: wait; opacity: .58; }
+    .login-status { min-height: 20px; margin: 16px 0 0; font-size: 11px; line-height: 1.6; color: #8a837a; }
+    .login-status.error { color: #8b3f35; }
+    .login-status.success { color: #6d623f; }
+    .login-back { display: inline-flex; align-items: center; gap: 12px; margin-top: 30px; color: #8d6c38; font-size: 11px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; }
 
     @media (max-width: 900px) {
-      .login-page {
-        grid-template-columns: 1fr;
-      }
-
-      .login-visual {
-        min-height: 38vh;
-      }
-
-      .login-visual-content {
-        left: 28px;
-        right: 28px;
-        bottom: 34px;
-      }
-
-      .login-visual-content h1 {
-        font-size: clamp(44px, 9vw, 64px);
-      }
-
-      .login-panel {
-        min-height: 62vh;
-        border-left: 0;
-        border-top: 1px solid var(--line);
-        padding: 64px 28px 70px;
-      }
-
-      .login-brand {
-        position: static;
-        margin-bottom: 46px;
-      }
+      .login-page { grid-template-columns: 1fr; }
+      .login-visual { min-height: 38vh; }
+      .login-visual-content { left: 28px; right: 28px; bottom: 34px; }
+      .login-visual-content h1 { font-size: clamp(44px, 9vw, 64px); }
+      .login-panel { min-height: 62vh; border-left: 0; border-top: 1px solid var(--line); padding: 64px 28px 70px; }
+      .login-brand { position: static; margin-bottom: 46px; }
     }
 
     @media (max-width: 520px) {
@@ -219,7 +137,7 @@
       <div class="login-visual-content">
         <p class="eyebrow">ED Luxury — Paris</p>
         <h1>Un espace réservé<br>à nos clients privés.</h1>
-        <p>Cet espace accueillera prochainement les services et sélections réservés à notre clientèle privée.</p>
+        <p>Connectez-vous pour accéder aux services et informations réservés à l’espace privé ED Luxury.</p>
       </div>
     </section>
 
@@ -232,26 +150,69 @@
       <div class="login-card">
         <p class="eyebrow">Accès privé</p>
         <h2>Connexion</h2>
-        <p class="login-intro">L’espace privé est actuellement en préparation. Le formulaire ci-dessous est une prévisualisation et n’est pas encore connecté à un système de compte.</p>
+        <p class="login-intro">Cet espace est actuellement réservé aux comptes autorisés par ED Luxury.</p>
 
-        <form class="login-form" onsubmit="return false;">
+        <form class="login-form" id="login-form">
           <div class="login-field">
             <label for="email">Adresse e-mail</label>
-            <input id="email" name="email" type="email" autocomplete="email" placeholder="votre@email.com" />
+            <input id="email" name="email" type="email" autocomplete="email" placeholder="votre@email.com" required />
           </div>
 
           <div class="login-field">
             <label for="password">Mot de passe</label>
-            <input id="password" name="password" type="password" autocomplete="current-password" placeholder="••••••••" />
+            <input id="password" name="password" type="password" autocomplete="current-password" placeholder="••••••••" required />
           </div>
 
-          <button class="login-submit" type="submit" aria-disabled="true">Se connecter</button>
+          <button class="login-submit" id="login-submit" type="submit">Se connecter</button>
         </form>
 
-        <p class="login-note">Aucune authentification ni donnée de connexion n’est enregistrée à ce stade.</p>
+        <p class="login-status" id="login-status" aria-live="polite"></p>
         <a class="login-back" href="index.html"><span>←</span> Retour au site</a>
       </div>
     </section>
   </main>
+
+  <script type="module">
+    import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm';
+
+    const supabase = createClient(
+      'https://xyjupseviramwfekttjh.supabase.co',
+      'sb_publishable_MEwqY-CLaEIOdM370VFMLA_r0z7X2uw'
+    );
+
+    const form = document.getElementById('login-form');
+    const emailInput = document.getElementById('email');
+    const passwordInput = document.getElementById('password');
+    const submit = document.getElementById('login-submit');
+    const status = document.getElementById('login-status');
+
+    const { data: sessionData } = await supabase.auth.getSession();
+    if (sessionData.session) window.location.replace('private.html');
+
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      status.className = 'login-status';
+      status.textContent = '';
+      submit.disabled = true;
+      submit.textContent = 'Connexion…';
+
+      const { error } = await supabase.auth.signInWithPassword({
+        email: emailInput.value.trim(),
+        password: passwordInput.value
+      });
+
+      if (error) {
+        status.className = 'login-status error';
+        status.textContent = 'E-mail ou mot de passe incorrect.';
+        submit.disabled = false;
+        submit.textContent = 'Se connecter';
+        return;
+      }
+
+      status.className = 'login-status success';
+      status.textContent = 'Connexion réussie.';
+      window.location.replace('private.html');
+    });
+  </script>
 </body>
 </html>
