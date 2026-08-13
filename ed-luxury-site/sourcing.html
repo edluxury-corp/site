@@ -155,6 +155,43 @@
           <label><input type="radio" name="leather" value="Indifférent"><span>Indifférent</span></label>
           <label><input type="radio" name="leather" value="Autre"><span>Autre</span></label>
         </div>
+
+        <div class="conditional-field" id="exotic-leather-fields" hidden>
+          <div class="field-large">
+            <label for="exotic-leather">Type de cuir exotique</label>
+            <select id="exotic-leather" name="exotic_leather">
+              <option value="">Sélectionnez un cuir exotique</option>
+              <option value="Crocodile Niloticus">Crocodile Niloticus</option>
+              <option value="Crocodile Porosus">Crocodile Porosus</option>
+              <option value="Alligator Mississippiensis">Alligator Mississippiensis</option>
+              <option value="Autruche">Autruche</option>
+              <option value="Lézard">Lézard</option>
+              <option value="Autre">Autre</option>
+            </select>
+          </div>
+
+          <div class="field-large" id="exotic-leather-other-field" hidden>
+            <label for="exotic-leather-other">Autre cuir exotique</label>
+            <input
+              type="text"
+              id="exotic-leather-other"
+              name="exotic_leather_other"
+              placeholder="Précisez le cuir exotique recherché"
+            >
+          </div>
+        </div>
+
+        <div class="conditional-field" id="other-leather-field" hidden>
+          <div class="field-large">
+            <label for="other-leather">Autre cuir / matière</label>
+            <input
+              type="text"
+              id="other-leather"
+              name="other_leather"
+              placeholder="Précisez le cuir ou la matière recherchée"
+            >
+          </div>
+        </div>
       </section>
 
 
@@ -260,6 +297,49 @@
   </footer>
 
   <script src="script.js"></script>
+  <script>
+    const leatherChoices = document.querySelectorAll('input[name="leather"]');
+    const exoticFields = document.getElementById('exotic-leather-fields');
+    const exoticSelect = document.getElementById('exotic-leather');
+    const exoticOtherField = document.getElementById('exotic-leather-other-field');
+    const exoticOtherInput = document.getElementById('exotic-leather-other');
+    const otherLeatherField = document.getElementById('other-leather-field');
+    const otherLeatherInput = document.getElementById('other-leather');
+
+    function updateLeatherFields() {
+      const selectedLeather = document.querySelector('input[name="leather"]:checked')?.value;
+      const isExotic = selectedLeather === 'Exotique';
+      const isOther = selectedLeather === 'Autre';
+
+      exoticFields.hidden = !isExotic;
+      otherLeatherField.hidden = !isOther;
+
+      if (!isExotic) {
+        exoticSelect.value = '';
+        exoticOtherField.hidden = true;
+        exoticOtherInput.value = '';
+      }
+
+      if (!isOther) {
+        otherLeatherInput.value = '';
+      }
+    }
+
+    function updateExoticOtherField() {
+      const showOther = exoticSelect.value === 'Autre';
+      exoticOtherField.hidden = !showOther;
+
+      if (!showOther) {
+        exoticOtherInput.value = '';
+      }
+    }
+
+    leatherChoices.forEach((choice) => {
+      choice.addEventListener('change', updateLeatherFields);
+    });
+
+    exoticSelect.addEventListener('change', updateExoticOtherField);
+  </script>
 
 </body>
 </html>
