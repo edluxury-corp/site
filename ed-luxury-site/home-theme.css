@@ -127,6 +127,11 @@ html[data-theme="dark"] .hero {
   background: #11100e;
 }
 
+html[data-theme="dark"] .hero-image {
+  transform: scale(.95);
+  transform-origin: center bottom;
+}
+
 html[data-theme="dark"] .hero-copy h1 {
   color: #f4efe7;
 }
