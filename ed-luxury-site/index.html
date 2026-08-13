@@ -6,12 +6,21 @@
   <meta name="description" content="ED Luxury — sélection privée de pièces d’exception et showroom parisien." />
   <title>ED Luxury — Sélection privée</title>
 
+  <script>
+    try {
+      if (localStorage.getItem('edluxury-theme') === 'dark') {
+        document.documentElement.dataset.theme = 'dark';
+      }
+    } catch (error) {}
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="responsive-fixes.css" />
+  <link rel="stylesheet" href="home-theme.css" />
 
   <style>
     /* Responsive hero framing */
@@ -81,7 +90,12 @@
       <a href="contact.html">Contact</a>
     </nav>
 
-    <a class="private-link" href="login.html">Accès privé</a>
+    <div class="header-actions">
+      <button class="theme-toggle" type="button" aria-label="Activer le mode sombre" aria-pressed="false" title="Mode sombre">
+        <span class="theme-toggle-icon" aria-hidden="true"></span>
+      </button>
+      <a class="private-link" href="login.html">Accès privé</a>
+    </div>
   </header>
 
   <main>
@@ -97,6 +111,8 @@
       <div class="hero-visual reveal" aria-label="Emplacement pour votre photo principale de Birkin">
         <img
           src="assets/images/hero-bag.png"
+          data-light-src="assets/images/hero-bag.png"
+          data-dark-src="assets/images/hero_bag_noir.png"
           alt="Sac de luxe sélectionné par ED Luxury"
           class="hero-image"
         />
@@ -121,7 +137,12 @@
 
     <section class="selection section-shell" id="selection">
       <div class="selection-image reveal">
-        <img src="assets/images/selection_blanche.png" alt="Sélection de sacs de luxe sur fond crème" />
+        <img
+          src="assets/images/selection_blanche.png"
+          data-light-src="assets/images/selection_blanche.png"
+          data-dark-src="assets/images/selection_noir.png"
+          alt="Sélection de sacs de luxe"
+        />
       </div>
 
       <div class="section-copy reveal">
@@ -172,5 +193,37 @@
   </footer>
 
   <script src="script.js"></script>
+  <script>
+    (() => {
+      const root = document.documentElement;
+      const toggle = document.querySelector('.theme-toggle');
+      const themedImages = document.querySelectorAll('[data-light-src][data-dark-src]');
+
+      function applyTheme(theme, persist) {
+        const dark = theme === 'dark';
+        root.dataset.theme = dark ? 'dark' : 'light';
+
+        themedImages.forEach((image) => {
+          image.src = dark ? image.dataset.darkSrc : image.dataset.lightSrc;
+        });
+
+        if (toggle) {
+          toggle.setAttribute('aria-pressed', String(dark));
+          toggle.setAttribute('aria-label', dark ? 'Activer le mode clair' : 'Activer le mode sombre');
+          toggle.title = dark ? 'Mode clair' : 'Mode sombre';
+        }
+
+        if (persist) {
+          try { localStorage.setItem('edluxury-theme', dark ? 'dark' : 'light'); } catch (error) {}
+        }
+      }
+
+      applyTheme(root.dataset.theme === 'dark' ? 'dark' : 'light', false);
+
+      toggle?.addEventListener('click', () => {
+        applyTheme(root.dataset.theme === 'dark' ? 'light' : 'dark', true);
+      });
+    })();
+  </script>
 </body>
 </html>
