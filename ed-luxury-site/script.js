@@ -17,6 +17,22 @@
     image.src = savedTheme === 'dark' ? image.dataset.darkSrc : image.dataset.lightSrc;
   });
 
+  const siteHeader = document.querySelector('.site-header');
+  const privateHeaderActions = document.querySelector('.private-header-actions');
+  let actions = siteHeader?.querySelector('.header-actions') || null;
+
+  if (siteHeader && !actions) {
+    const privateLink = siteHeader.querySelector('.private-link');
+    actions = document.createElement('div');
+    actions.className = 'header-actions';
+    if (privateLink) {
+      siteHeader.insertBefore(actions, privateLink);
+      actions.appendChild(privateLink);
+    } else {
+      siteHeader.appendChild(actions);
+    }
+  }
+
   const existingToggle = document.querySelector('.theme-toggle');
 
   if (!existingToggle) {
@@ -25,22 +41,7 @@
     themeToggle.className = 'theme-toggle';
     themeToggle.innerHTML = '<span class="theme-toggle-icon" aria-hidden="true"></span>';
 
-    const siteHeader = document.querySelector('.site-header');
-    const privateHeaderActions = document.querySelector('.private-header-actions');
-
-    if (siteHeader) {
-      const privateLink = siteHeader.querySelector('.private-link');
-      let actions = siteHeader.querySelector('.header-actions');
-      if (!actions) {
-        actions = document.createElement('div');
-        actions.className = 'header-actions';
-        if (privateLink) {
-          siteHeader.insertBefore(actions, privateLink);
-          actions.appendChild(privateLink);
-        } else {
-          siteHeader.appendChild(actions);
-        }
-      }
+    if (actions) {
       actions.insertBefore(themeToggle, actions.firstChild);
     } else if (privateHeaderActions) {
       privateHeaderActions.insertBefore(themeToggle, privateHeaderActions.firstChild);
@@ -66,6 +67,56 @@
       });
       try { localStorage.setItem('edluxury-theme', dark ? 'dark' : 'light'); } catch (error) {}
       syncToggle();
+    });
+  }
+
+  if (!document.querySelector('.language-menu')) {
+    const languageMenu = document.createElement('div');
+    languageMenu.className = 'language-menu';
+    languageMenu.innerHTML = `
+      <button class="language-trigger" type="button" aria-expanded="false" aria-haspopup="true">
+        <span class="language-current">FR</span>
+        <span class="language-chevron" aria-hidden="true"></span>
+      </button>
+      <div class="language-dropdown" hidden>
+        <button type="button" class="language-option active" data-lang="fr">FR</button>
+        <button type="button" class="language-option" data-lang="en" aria-disabled="true">EN</button>
+        <button type="button" class="language-option" data-lang="ko" aria-disabled="true">KO</button>
+        <button type="button" class="language-option" data-lang="ja" aria-disabled="true">JA</button>
+      </div>`;
+
+    const languageTarget = actions || privateHeaderActions;
+    if (languageTarget) {
+      const themeToggle = languageTarget.querySelector('.theme-toggle');
+      languageTarget.insertBefore(languageMenu, themeToggle || languageTarget.firstChild);
+    } else {
+      languageMenu.classList.add('language-menu-floating');
+      document.body.appendChild(languageMenu);
+    }
+
+    const trigger = languageMenu.querySelector('.language-trigger');
+    const dropdown = languageMenu.querySelector('.language-dropdown');
+
+    const closeLanguageMenu = () => {
+      dropdown.hidden = true;
+      trigger.setAttribute('aria-expanded', 'false');
+    };
+
+    trigger.addEventListener('click', () => {
+      const willOpen = dropdown.hidden;
+      dropdown.hidden = !willOpen;
+      trigger.setAttribute('aria-expanded', String(willOpen));
+    });
+
+    languageMenu.querySelectorAll('.language-option').forEach((option) => {
+      option.addEventListener('click', () => {
+        if (option.dataset.lang !== 'fr') return;
+        closeLanguageMenu();
+      });
+    });
+
+    document.addEventListener('click', (event) => {
+      if (!languageMenu.contains(event.target)) closeLanguageMenu();
     });
   }
 })();
