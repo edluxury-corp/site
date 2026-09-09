@@ -15,3 +15,23 @@ html[data-theme="dark"] .site-header#top{background:linear-gradient(to bottom,rg
 @media(max-width:420px){.hero-copy{width:74%!important;padding-top:46px!important;padding-bottom:10px!important}.hero{min-height:525px!important}}
 @media(max-width:430px){.hero{min-height:505px!important}.hero-copy{width:70%!important;padding:34px 10px 8px 16px!important}.hero-copy h1{font-size:clamp(28px,8.8vw,34px)!important;line-height:1!important}.hero-copy .eyebrow{margin-bottom:6px!important}.hero-copy .gold-line{margin:10px 0!important}.hero-copy .button{margin-top:6px!important;padding:11px 14px!important}.hero-image{object-position:61% bottom!important}}
 @media(max-width:390px){.hero{min-height:480px!important}.hero-copy{width:67%!important;padding:26px 8px 8px 14px!important}.hero-copy h1{font-size:clamp(27px,8.5vw,32px)!important}.hero-image{object-position:59% bottom!important}}
+
+/* Six destinations stay accessible before the desktop header becomes crowded. */
+.site-header { grid-template-columns: auto minmax(0, 1fr) auto; gap: 24px; }
+.main-nav { gap: clamp(14px, 1.6vw, 28px); }
+.main-nav a { white-space: nowrap; }
+.proposal-page { min-height: 65vh; }
+.proposal-page h1 { font-size: clamp(36px, 5vw, 64px); text-transform: none; }
+.proposal-actions { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 24px; margin-top: 32px; }
+@media (max-width: 1350px) {
+  .site-header { grid-template-columns: 1fr auto auto !important; gap: 12px; }
+  .site-header > .brand { grid-column: 1; grid-row: 1; }
+  .header-actions { grid-column: 2; grid-row: 1; }
+  .site-header .private-link { display: none; }
+  .menu-toggle { display: block; grid-column: 3; grid-row: 1; border: 1px solid var(--line); background: transparent; color: var(--ink); padding: 10px 14px; text-transform: uppercase; letter-spacing: .08em; }
+  .main-nav { display: none; position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; align-items: center; gap: 8px; padding: 20px; background: var(--cream); border-top: 1px solid var(--line); max-height: calc(100dvh - 112px); overflow-y: auto; z-index: 65; }
+  .main-nav.open { display: flex; }
+  .main-nav a { padding: 10px 0; }
+  .main-nav a.active::after { bottom: 5px; }
+  html[data-theme="dark"] .main-nav { background: var(--cream); }
+}
