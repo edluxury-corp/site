@@ -155,3 +155,6 @@ html[lang="ar"] .conditional-field .field-large{margin-right:0}
 html[lang="ar"] .budget-grid label:not(:last-child) span{direction:ltr;unicode-bidi:isolate}
 @media(max-width:640px){html[lang="ar"] .sourcing-intro{text-align:right}html[lang="ar"] .sourcing-intro .gold-line{margin-right:0;margin-left:auto}html[lang="ar"] .field-large,html[lang="ar"] .contact-fields,html[lang="ar"] .form-privacy,html[lang="ar"] .sourcing-submit,html[lang="ar"] .sourcing-section > .choice-grid,html[lang="ar"] .conditional-field{margin-left:0;margin-right:50px}}
 @media(max-width:460px){html[lang="ar"] .field-large,html[lang="ar"] .contact-fields,html[lang="ar"] .form-privacy,html[lang="ar"] .sourcing-submit,html[lang="ar"] .sourcing-section > .choice-grid,html[lang="ar"] .conditional-field{margin-right:0}}
+
+/* Keep Arabic offer-page actions aligned with the RTL copy. */
+html[lang="ar"] .proposal-actions{justify-content:flex-start}
