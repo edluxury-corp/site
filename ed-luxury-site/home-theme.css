@@ -265,3 +265,11 @@ html[lang="zh-CN"] .product-info h2,
 html[lang="zh-CN"] .product-detail-info h1{font-family:"Cormorant Garamond",serif!important}
 html[lang="zh-CN"] .product-price,
 html[lang="zh-CN"] .product-detail-price{direction:ltr;unicode-bidi:isolate}
+
+
+/* Simplified Chinese showroom typography. */
+html[lang="zh-CN"] .showrooms-lead,
+html[lang="zh-CN"] .showroom-concept-copy p,
+html[lang="zh-CN"] .event-description p,
+html[lang="zh-CN"] .showroom-cta > p:not(.eyebrow){line-height:1.9}
+html[lang="zh-CN"] .event-date{font-family:"Noto Sans SC","Manrope",sans-serif;letter-spacing:.03em;text-transform:none}
