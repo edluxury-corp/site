@@ -38,25 +38,6 @@ html[lang="ko"] .values h3{font-family:"Noto Serif KR","Cormorant Garamond",seri
 @media(max-width:430px){.hero{min-height:505px!important}.hero-copy{width:70%!important;padding:34px 10px 8px 16px!important}.hero-copy h1{font-size:clamp(28px,8.8vw,34px)!important;line-height:1!important}.hero-copy .eyebrow{margin-bottom:6px!important}.hero-copy .gold-line{margin:10px 0!important}.hero-copy .button{margin-top:6px!important;padding:11px 14px!important}.hero-image{object-position:61% bottom!important}}
 @media(max-width:390px){.hero{min-height:480px!important}.hero-copy{width:67%!important;padding:26px 8px 8px 14px!important}.hero-copy h1{font-size:clamp(27px,8.5vw,32px)!important}.hero-image{object-position:59% bottom!important}}
 
-/* French mobile hero: a genuinely shallow horizontal band over the bag. */
-@media(max-width:520px){
-  html[lang="fr"] .hero-copy{
-    width:100%!important;
-    padding:14px 18px 12px!important;
-  }
-  html[lang="fr"] .hero-copy .eyebrow{margin:0 0 4px!important}
-  html[lang="fr"] .hero-copy h1{
-    font-size:clamp(27px,7.3vw,31px)!important;
-    line-height:.92!important;
-  }
-  html[lang="fr"] .hero-copy .lead{display:none!important}
-  html[lang="fr"] .hero-copy .gold-line{margin:6px 0!important}
-  html[lang="fr"] .hero-copy .button{
-    margin-top:0!important;
-    padding:9px 14px!important;
-  }
-}
-
 /* Six destinations stay accessible before the desktop header becomes crowded. */
 .site-header { grid-template-columns: auto minmax(0, 1fr) auto; gap: 24px; }
 .main-nav { gap: clamp(14px, 1.6vw, 28px); }
@@ -395,3 +376,24 @@ html[lang="it"] .contact-sell p:not(.eyebrow){line-height:1.8}
 /* Italian private sourcing form. */
 html[lang="it"] .sourcing-intro > p:last-child,
 html[lang="it"] .form-privacy{line-height:1.8}
+
+/* Shallow mobile hero band in every available language. */
+@media(max-width:520px){
+  html[lang] .hero-copy{
+    width:100%!important;
+    padding:14px 18px 12px!important;
+  }
+  html[lang] .hero-copy .eyebrow{margin:0 0 4px!important}
+  html[lang] .hero-copy h1{font-size:clamp(27px,7.3vw,31px)!important}
+  html:is([lang="fr"],[lang="en"],[lang="es"],[lang="it"],[lang="pt-BR"]) .hero-copy h1{line-height:.92!important}
+  html[lang="ko"] .hero-copy h1{line-height:1.12!important}
+  html:is([lang="ja"],[lang="zh-CN"]) .hero-copy h1{line-height:1.2!important}
+  html[lang="ru"] .hero-copy h1{line-height:1.08!important}
+  html[lang="ar"] .hero-copy h1{line-height:1.3!important}
+  html[lang] .hero-copy .lead{display:none!important}
+  html[lang] .hero-copy .gold-line{margin:6px 0!important}
+  html[lang] .hero-copy .button{
+    margin-top:0!important;
+    padding:9px 14px!important;
+  }
+}
