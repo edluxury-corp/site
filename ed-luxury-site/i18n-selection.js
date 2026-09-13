@@ -61,3 +61,20 @@
 'Hermès Birkin 35 Rose Epsom 2013':'爱马仕 Birkin 35 Rose，Epsom 皮革，2013 年',
 'Hermès Birkin 35 Vert Menthe Clémence 2012':'爱马仕 Birkin 35 Vert Menthe，Clémence 皮革，2012 年'
 })})();
+
+ 
+(()=>{if(EDL_LANG!=='ru')return;document.title='Коллекция — ED Luxury';const meta=document.querySelector('meta[name="description"]');if(meta)meta.content='Откройте частную коллекцию редких изделий Hermès, отобранных ED Luxury.';EDL_TRANSLATE({
+'La sélection':'Коллекция',
+'Une sélection de pièces iconiques choisies pour leur caractère, leur état et leur singularité.':'Знаковые изделия, выбранные за их характер, состояние и уникальность.',
+'Prix sur demande':'Цена по запросу',
+'Disponible':'В наличии',
+'Prochainement':'Скоро',
+'Cuir noir · Noir · Doré · 1995':'Black leather · Noir · Gold-tone hardware · 1995',
+'Epsom · Rose · Métallerie argentée · 2013':'Epsom · Rose · Silver-tone hardware · 2013',
+'Hermès Birkin 35 Rouge Swift 2006':'Hermès Birkin 35 Rouge, Swift leather, 2006',
+'Hermès Birkin 35 Orange Togo 2008':'Hermès Birkin 35 Orange, Togo leather, 2008',
+'Hermès Birkin 35 Noir 1995':'Hermès Birkin 35 Noir, 1995',
+'Hermès Birkin 30 Bleu Jean Togo 2005':'Hermès Birkin 30 Bleu Jean, Togo leather, 2005',
+'Hermès Birkin 35 Rose Epsom 2013':'Hermès Birkin 35 Rose, Epsom leather, 2013',
+'Hermès Birkin 35 Vert Menthe Clémence 2012':'Hermès Birkin 35 Vert Menthe, Clémence leather, 2012'
+})})();
