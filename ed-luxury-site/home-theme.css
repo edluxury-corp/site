@@ -346,3 +346,13 @@ html[lang="ru"] .showroom-concept-copy p,
 html[lang="ru"] .event-description p,
 html[lang="ru"] .showroom-cta > p:not(.eyebrow){line-height:1.85}
 html[lang="ru"] .event-date{font-family:"Noto Sans","Manrope",sans-serif;letter-spacing:.015em;text-transform:none}
+
+
+/* Russian contact page typography. */
+html[lang="ru"] .contact-lead,
+html[lang="ru"] .contact-note,
+html[lang="ru"] .contact-sourcing > p:not(.eyebrow),
+html[lang="ru"] .contact-sell p:not(.eyebrow){line-height:1.85}
+html[lang="ru"] .contact-label,
+html[lang="ru"] .sell-coming-soon{font-family:"Noto Sans","Manrope",sans-serif;letter-spacing:.015em;text-transform:none}
+html[lang="ru"] .contact-block p.contact-value{font-family:"Noto Serif","Cormorant Garamond",serif!important}
