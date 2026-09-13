@@ -69,3 +69,15 @@
   const meta=document.querySelector('meta[name="description"]');
   if(meta)meta.content='ED Luxury 的藏品提案服务即将开放。如需咨询，欢迎联系我们的团队。';
 })();
+
+(()=> {
+  if (window.EDL_LANG !== 'ru') return;
+  window.EDL_TRANSLATE?.({
+    'Proposer une pièce — prochainement': 'Предложить изделие — скоро',
+    'Notre service de proposition de pièces sera bientôt disponible. En attendant, notre équipe reste à votre disposition.': 'Скоро вы сможете предложить своё изделие ED Luxury. Пока сервис готовится к запуску, наша команда с радостью ответит на ваши вопросы.',
+    'Retour à l’accueil': 'Вернуться на главную'
+  });
+  document.title = 'Предложить изделие — ED Luxury';
+  const meta = document.querySelector('meta[name="description"]');
+  if (meta) meta.content = 'Скоро вы сможете предложить изделие ED Luxury. Пока сервис готовится к запуску, свяжитесь с нашей командой.';
+})();
