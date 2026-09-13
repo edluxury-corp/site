@@ -218,3 +218,21 @@
     min-height: 570px !important;
   }
 }
+
+
+/* English light-theme hero copy: improve contrast without obscuring the image. */
+html[lang="en"]:not([data-theme="dark"]) .hero-copy .lead {
+  color: #211a14;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.6;
+  max-width: 520px;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, .4);
+}
+
+@media (max-width: 640px) {
+  html[lang="en"]:not([data-theme="dark"]) .hero-copy .lead {
+    font-size: 16px;
+    line-height: 1.55;
+  }
+}
