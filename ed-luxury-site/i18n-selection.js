@@ -47,3 +47,17 @@
 'Hermès Birkin 35 Rose Epsom 2013':'Hermès Birkin 35 Rose、Epsomレザー、2013年製',
 'Hermès Birkin 35 Vert Menthe Clémence 2012':'Hermès Birkin 35 Vert Menthe、Clémenceレザー、2012年製'
 })})();
+
+(()=>{if(EDL_LANG!=='zh')return;document.title='精选系列 — ED Luxury';const meta=document.querySelector('meta[name="description"]');if(meta)meta.content='探索 ED Luxury 精心甄选的爱马仕珍品系列。';EDL_TRANSLATE({
+'La sélection':'精选系列',
+'Une sélection de pièces iconiques choisies pour leur caractère, leur état et leur singularité.':'以独特气质、品相与稀有性为标准，精心甄选的经典珍品。',
+'Prix sur demande':'价格请咨询','Disponible':'现货可购','Prochainement':'即将推出',
+'Cuir noir · Noir · Doré · 1995':'黑色皮革 · Noir · 金色金属件 · 1995',
+'Epsom · Rose · Métallerie argentée · 2013':'Epsom · Rose · 银色金属件 · 2013',
+'Hermès Birkin 35 Rouge Swift 2006':'爱马仕 Birkin 35 Rouge，Swift 皮革，2006 年',
+'Hermès Birkin 35 Orange Togo 2008':'爱马仕 Birkin 35 Orange，Togo 皮革，2008 年',
+'Hermès Birkin 35 Noir 1995':'爱马仕 Birkin 35 Noir，1995 年',
+'Hermès Birkin 30 Bleu Jean Togo 2005':'爱马仕 Birkin 30 Bleu Jean，Togo 皮革，2005 年',
+'Hermès Birkin 35 Rose Epsom 2013':'爱马仕 Birkin 35 Rose，Epsom 皮革，2013 年',
+'Hermès Birkin 35 Vert Menthe Clémence 2012':'爱马仕 Birkin 35 Vert Menthe，Clémence 皮革，2012 年'
+})})();
