@@ -220,8 +220,8 @@
 }
 
 
-/* English light-theme hero copy: improve contrast without obscuring the image. */
-html[lang="en"]:not([data-theme="dark"]) .hero-copy .lead {
+/* Light-theme hero copy across all languages: improve contrast without obscuring the image. */
+html:not([data-theme="dark"]) .hero-copy .lead {
   color: #211a14;
   font-size: 17px;
   font-weight: 600;
@@ -231,8 +231,18 @@ html[lang="en"]:not([data-theme="dark"]) .hero-copy .lead {
 }
 
 @media (max-width: 640px) {
-  html[lang="en"]:not([data-theme="dark"]) .hero-copy .lead {
+  html:not([data-theme="dark"]) .hero-copy .lead {
     font-size: 16px;
     line-height: 1.55;
   }
 }
+/* Give scripts with taller glyphs more breathing room. */
+html:is([lang="ar"],[lang="ja"],[lang="ko"],[lang="zh-CN"],[lang="ru"]):not([data-theme="dark"]) .hero-copy .lead {
+  line-height: 1.85;
+}
+@media (max-width: 640px) {
+  html:is([lang="ar"],[lang="ja"],[lang="ko"],[lang="zh-CN"],[lang="ru"]):not([data-theme="dark"]) .hero-copy .lead {
+    line-height: 1.7;
+  }
+}
+
