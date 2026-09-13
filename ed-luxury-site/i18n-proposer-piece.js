@@ -93,3 +93,15 @@
   const meta = document.querySelector('meta[name="description"]');
   if (meta) meta.content = 'Presto potrai proporre un articolo a ED Luxury. Nel frattempo, contatta il nostro team per qualsiasi domanda.';
 })();
+
+(()=> {
+  if (window.EDL_LANG !== 'pt') return;
+  window.EDL_TRANSLATE?.({
+    'Proposer une pièce — prochainement': 'Oferecer uma peça — em breve',
+    'Notre service de proposition de pièces sera bientôt disponible. En attendant, notre équipe reste à votre disposition.': 'Em breve, você poderá oferecer uma peça à ED Luxury. Até lá, nossa equipe está à disposição para responder às suas perguntas.',
+    'Retour à l’accueil': 'Voltar ao início'
+  });
+  document.title = 'Oferecer uma peça — ED Luxury';
+  const meta = document.querySelector('meta[name="description"]');
+  if (meta) meta.content = 'Em breve, você poderá oferecer uma peça à ED Luxury. Enquanto isso, entre em contato com nossa equipe.';
+})();
