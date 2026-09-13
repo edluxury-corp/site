@@ -320,3 +320,41 @@
   document.querySelectorAll('.product-specs > div').forEach(row=>{const dt=row.querySelector('dt'),dd=row.querySelector('dd');if(dt?.textContent.trim()==='Комплектация'&&dd)dd.textContent=item.accessories});
   document.querySelectorAll('.product-gallery img').forEach((img,index)=>{img.alt=item.name+' — '+(item.views[index]||'фотография изделия')});
 })();
+
+(()=>{if(EDL_LANG!=='it')return;
+const p=location.pathname.split('/').pop()||'';
+const products={"birkin-35-rouge.html":{"name":"Hermès Birkin 35 Rouge","meta":"Hermès Birkin 35 del 2006 in pelle Swift Rouge con finiture Palladium.","description":"In ottime condizioni. Interno in pelle di capra tono su tono, con tasca con zip e tasca aperta. Corredata di clochette, lucchetto, due chiavi, cinturino portachiavi in pelle, sacca antipolvere e scatola Hermès.","views":["immagine principale","vista frontale","seconda vista frontale","vista laterale","vista posteriore"]},"birkin-35-orange.html":{"name":"Hermès Birkin 35 Orange","meta":"Hermès Birkin 35 del 2008 in pelle Togo Orange con finiture Palladium.","description":"In ottime condizioni. Interno in pelle arancione tono su tono, con tasca con zip e tasca aperta. Corredata di clochette, lucchetto, due chiavi, cinturino portachiavi in pelle, sacca antipolvere e scatola Hermès.","views":["immagine principale","lato sinistro","lato destro","vista posteriore","fondo"]},"birkin-35-noir.html":{"name":"Hermès Birkin 35 Noir","meta":"Hermès Birkin 35 del 1995 in pelle nera Noir con finiture dorate.","sub":"Pelle nera · Noir · Finiture dorate","description":"In buone condizioni. Interno in pelle nera, con tasca con zip e tasca aperta. Corredata di clochette, lucchetto, due chiavi, cinturino portachiavi in pelle, sacca antipolvere e scatola Hermès.","views":["immagine principale","lato sinistro","lato destro","vista posteriore","dettaglio delle finiture"]},"birkin-30-bleu-jean.html":{"name":"Hermès Birkin 30 Bleu Jean","meta":"Hermès Birkin 30 del 2005 in pelle Togo Bleu Jean con finiture Palladium.","description":"In ottime condizioni. Interno in pelle blu tono su tono, con tasca con zip e tasca aperta. Corredata di clochette, lucchetto, due chiavi, cinturino portachiavi in pelle, sacca antipolvere e scatola Hermès.","views":["immagine principale","vista frontale","vista laterale","vista posteriore","accessori"]},"birkin-35-rose.html":{"name":"Hermès Birkin 35 Rose","meta":"Hermès Birkin 35 del 2013 in pelle Epsom Rose con finiture argentate.","sub":"Epsom · Rose · Finiture argentate","description":"In ottime condizioni. Esterno quasi nuovo, con lievissimi micrograffi sulle finiture e un piccolo segno sulla chiusura. Anche l’interno è quasi nuovo. Corredata di clochette, lucchetto, due chiavi, scatola Hermès originale, due sacche antipolvere, copertura antipioggia e libretto.","accessories":"Clochette, lucchetto, due chiavi, scatola Hermès originale, due sacche antipolvere, copertura antipioggia e libretto","views":["immagine principale","vista laterale","vista posteriore","dettaglio delle finiture","fondo"]},"birkin-35-vert-menthe.html":{"name":"Hermès Birkin 35 Vert Menthe","meta":"Hermès Birkin 35 del 2012 in pelle Clémence Vert Menthe con finiture Palladium.","description":"In ottime condizioni. Interno in pelle tono su tono, con tasca con zip e tasca aperta. Corredata di clochette, lucchetto, due chiavi, cinturino portachiavi in pelle, sacca antipolvere e scatola Hermès.","views":["immagine principale","vista frontale","lato sinistro","lato destro","vista posteriore","interno","dettaglio dell’angolo","scatola"]}};
+const item=products[p];if(!item)return;
+document.title=item.name+' — ED Luxury';
+const meta=document.querySelector('meta[name="description"]');if(meta)meta.content=item.meta;
+EDL_TRANSLATE({
+'Disponible':'Disponibile',
+'Demander cette pièce':'Richiedi informazioni',
+'← Retour à la sélection':'← Torna alla selezione',
+'Modèle':'Modello',
+'Cuir':'Pelle',
+'Couleur':'Colore',
+'Métal':'Finiture',
+'Année':'Anno',
+'Stamp':'Punzone',
+'État':'Condizioni',
+'Accessoires':'Accessori',
+'Dimensions':'Dimensioni',
+'Très bon état':'Ottime condizioni',
+'Bon état':'Buone condizioni',
+'Carré J':'Quadrato J',
+'Carré L':'Quadrato L',
+'Carré I':'Quadrato I',
+'Carré P':'Quadrato P',
+'Carré Q':'Quadrato Q',
+'Cercle Y':'Cerchio Y',
+'Cuir noir':'Pelle nera',
+'Doré':'Dorate',
+'Argenté':'Argentate',
+'Métallerie argentée':'Finiture argentate'
+});
+if(item.sub){const sub=document.querySelector('.product-detail-sub');if(sub)sub.textContent=item.sub}
+const desc=document.querySelector('.product-detail-description');if(desc)desc.textContent=item.description;
+document.querySelectorAll('.product-specs > div').forEach(row=>{const dt=row.querySelector('dt'),dd=row.querySelector('dd');if(dt?.textContent.trim()==='Accessori'&&dd)dd.textContent=item.accessories||"Clochette, lucchetto, due chiavi, cinturino portachiavi in pelle, sacca antipolvere e scatola Hermès"});
+document.querySelectorAll('.product-gallery img').forEach((img,index)=>{img.alt=item.name+' — '+(item.views[index]||'foto del prodotto')});
+})();
