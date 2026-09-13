@@ -397,3 +397,10 @@ html[lang="it"] .form-privacy{line-height:1.8}
     padding:9px 14px!important;
   }
 }
+
+/* French mobile homepage: separate the selection block from the values. */
+@media(max-width:640px){
+  html[lang="fr"] .values{
+    border-top:1px solid rgba(181,150,97,.3);
+  }
+}
