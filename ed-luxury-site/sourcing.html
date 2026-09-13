@@ -310,7 +310,7 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js?v=ru-sourcing-1"></script>
   <script>
     const leatherChoices = document.querySelectorAll('input[name="leather"]');
     const exoticFields = document.getElementById('exotic-leather-fields');
@@ -386,7 +386,7 @@
       option.addEventListener('click', () => {
         const value = option.dataset.value;
         exoticHiddenInput.value = value;
-        luxurySelectValue.textContent = value;
+        luxurySelectValue.textContent = option.textContent;
         exoticOtherField.hidden = value !== 'Autre';
         if (value !== 'Autre') exoticOtherInput.value = '';
         closeLuxurySelect();
