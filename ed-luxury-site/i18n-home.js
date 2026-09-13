@@ -89,3 +89,20 @@
 'Chaque pièce est choisie pour sa rareté, son histoire et son intemporalité. Nous sourçons des pièces rares d’une qualité irréprochable.':'Каждое изделие мы выбираем за редкость, историю и неподвластный времени стиль. Мы находим редкие экземпляры безупречного качества.',
 'Explorer la sélection':'Посмотреть коллекцию'
 })})();
+(()=>{if(EDL_LANG!=='it')return;document.title='ED Luxury — Selezione privata';const meta=document.querySelector('meta[name="description"]');if(meta)meta.content='ED Luxury — selezione privata di pezzi d’eccezione ed esperienze esclusive negli showroom di Parigi.';EDL_TRANSLATE({
+'Maison de sélection parisienne':'Maison parigina di selezione privata',
+'L’art de la':'L’arte della',
+'sélection privée':'selezione privata',
+'ED Luxury sélectionne et source des pièces d’exception pour une clientèle exigeante .':'ED Luxury seleziona e ricerca pezzi d’eccezione per una clientela esigente.',
+'Découvrir notre sélection':'Scopri la nostra selezione',
+'L’univers de nos showrooms':'Il mondo dei nostri showroom',
+'L’élégance':'L’eleganza',
+'parisienne':'parigina',
+'Nos événements showroom prennent vie au cœur de Paris, dans de somptueux appartements haussmanniens.':'I nostri eventi showroom prendono vita nel cuore di Parigi, in raffinati appartamenti in stile haussmanniano.',
+'Découvrir l’univers':'Scopri l’esperienza',
+'Sélection d’exception':'Una selezione d’eccezione',
+'Des pièces iconiques,':'Pezzi iconici,',
+'sélectionnées pour vous':'scelti per te',
+'Chaque pièce est choisie pour sa rareté, son histoire et son intemporalité. Nous sourçons des pièces rares d’une qualité irréprochable.':'Ogni pezzo è scelto per la sua rarità, la sua storia e il suo fascino senza tempo. Ricerchiamo pezzi rari di qualità impeccabile.',
+'Explorer la sélection':'Esplora la selezione'
+})})();
