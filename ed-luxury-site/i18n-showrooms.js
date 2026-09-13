@@ -150,3 +150,40 @@
   if(cards[1]){const description=cards[1].querySelector('.event-description p');if(description)description.textContent='この日のために選んだパリのアパルトマンで、予約制のショッピング体験をお楽しみいただけます。'}
   set('.showroom-cta > p:not(.eyebrow)','日程、会場、ご紹介するお品物は、決まり次第個別にご案内します。');
 })();
+
+ 
+(()=>{
+  if(EDL_LANG!=='zh')return;
+  document.title='私享展厅 — ED Luxury';
+  const meta=document.querySelector('meta[name="description"]');
+  if(meta)meta.content='探索 ED Luxury 位于巴黎的私享展厅与专属购物体验，了解即将举行的活动及邀请。';
+  EDL_TRANSLATE({
+    'ED Luxury Paris':'ED Luxury 巴黎',
+    'Nos showrooms':'我们的私享展厅',
+    'Shopping experience':'私享购物体验',
+    'Prochains rendez-vous':'即将举行的活动',
+    'Paris private shopping':'巴黎私享购物',
+    'Prochainement':'即将公布',
+    'Private showroom — Paris':'巴黎私享展厅',
+    'Shopping experience — Paris':'巴黎私享购物体验',
+    'Être informé':'获取活动消息',
+    'Recevoir les prochaines invitations':'获取下一场活动邀请',
+    'Showroom ED Luxury à Paris':'ED Luxury 位于巴黎的展厅',
+    'Appartement parisien ED Luxury':'ED Luxury 巴黎公寓空间',
+    'Espace de présentation privé ED Luxury':'ED Luxury 私享展示空间',
+    'Salon de showroom ED Luxury':'ED Luxury 展厅会客厅',
+    'Showroom privé ED Luxury':'ED Luxury 私享展厅',
+    'Shopping experience ED Luxury à Paris':'ED Luxury 在巴黎举办的私享购物体验'
+  });
+  const set=(selector,value)=>{const element=document.querySelector(selector);if(element)element.textContent=value};
+  set('.showrooms-lead','我们精心甄选私密场所，在特定时期开设 ED Luxury 展厅，让宾客从容欣赏精选藏品。');
+  set('.showroom-concept-title h2','与精选珍品的一场私享邂逅');
+  const concept=document.querySelectorAll('.showroom-concept-copy p');
+  if(concept[0])concept[0].textContent='ED Luxury 于指定日期，在巴黎别具格调的公寓和场所举办私人活动。';
+  if(concept[1])concept[1].textContent='我们的展厅以限时私享购物体验呈现。在亲密舒适的空间里，宾客可以欣赏、试用专为活动甄选的珍品，并与我们交流每件作品的细节。';
+  if(concept[2])concept[2].textContent='活动地址和到访时段仅向已登记或受邀的宾客提供。';
+  const cards=document.querySelectorAll('.event-card');
+  if(cards[0]){const description=cards[0].querySelector('.event-description p');if(description)description.textContent='以私人形式呈现 ED Luxury 目前可选购的精选手袋与珍品。'}
+  if(cards[1]){const description=cards[1].querySelector('.event-description p');if(description)description.textContent='在专为活动挑选的巴黎公寓内，享受预约制私享购物体验。'}
+  set('.showroom-cta > p:not(.eyebrow)','活动日期、地点和展出珍品将在确定后陆续公布。');
+})();
