@@ -78,3 +78,24 @@
 'Hermès Birkin 35 Rose Epsom 2013':'Hermès Birkin 35 Rose, Epsom leather, 2013',
 'Hermès Birkin 35 Vert Menthe Clémence 2012':'Hermès Birkin 35 Vert Menthe, Clémence leather, 2012'
 })})();
+
+(()=>{if(EDL_LANG!=='it')return;
+document.title='La selezione — ED Luxury';
+const meta=document.querySelector('meta[name="description"]');
+if(meta)meta.content='Scopri la selezione privata di pezzi d’eccezione firmata ED Luxury.';
+EDL_TRANSLATE({
+'La sélection':'La selezione',
+'Une sélection de pièces iconiques choisies pour leur caractère, leur état et leur singularité.':'Una selezione di pezzi iconici scelti per il loro carattere, le loro condizioni e la loro unicità.',
+'Prix sur demande':'Prezzo su richiesta',
+'Disponible':'Disponibile',
+'Prochainement':'Prossimamente',
+'Cuir noir · Noir · Doré · 1995':'Pelle nera · Noir · Finiture dorate · 1995',
+'Epsom · Rose · Métallerie argentée · 2013':'Epsom · Rose · Finiture argentate · 2013',
+'Hermès Birkin 35 Rouge Swift 2006':'Hermès Birkin 35 Rouge in Swift, 2006',
+'Hermès Birkin 35 Orange Togo 2008':'Hermès Birkin 35 Orange in Togo, 2008',
+'Hermès Birkin 35 Noir 1995':'Hermès Birkin 35 Noir, 1995',
+'Hermès Birkin 30 Bleu Jean Togo 2005':'Hermès Birkin 30 Bleu Jean in Togo, 2005',
+'Hermès Birkin 35 Rose Epsom 2013':'Hermès Birkin 35 Rose in Epsom, 2013',
+'Hermès Birkin 35 Vert Menthe Clémence 2012':'Hermès Birkin 35 Vert Menthe in Clémence, 2012'
+});
+})();
