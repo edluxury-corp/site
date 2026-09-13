@@ -42,3 +42,39 @@
   }
   set('.showroom-cta > p:not(.eyebrow)', '일정과 장소, 선보일 제품은 확정되는 대로 개별적으로 안내해 드립니다.');
 })();
+
+(()=>{
+  if(EDL_LANG!=='es')return;
+  document.title='Showrooms privados — ED Luxury';
+  const meta=document.querySelector('meta[name="description"]');
+  if(meta)meta.content='Descubra los showrooms privados de ED Luxury y nuestras experiencias de compras exclusivas en París.';
+  EDL_TRANSLATE({
+    'ED Luxury Paris':'ED Luxury París',
+    'Nos showrooms':'Nuestros showrooms',
+    'Shopping experience':'Experiencia de compras privadas',
+    'Prochains rendez-vous':'Próximos encuentros',
+    'Paris private shopping':'Compras privadas en París',
+    'Prochainement':'Próximamente',
+    'Private showroom — Paris':'Showroom privado — París',
+    'Shopping experience — Paris':'Experiencia de compras privadas — París',
+    'Être informé':'Recibir novedades',
+    'Recevoir les prochaines invitations':'Recibir las próximas invitaciones',
+    'Showroom ED Luxury à Paris':'Showroom de ED Luxury en París',
+    'Appartement parisien ED Luxury':'Apartamento parisino de ED Luxury',
+    'Espace de présentation privé ED Luxury':'Espacio privado de presentación de ED Luxury',
+    'Salon de showroom ED Luxury':'Salón del showroom de ED Luxury',
+    'Showroom privé ED Luxury':'Showroom privado de ED Luxury',
+    'Shopping experience ED Luxury à Paris':'Experiencia de compras de ED Luxury en París'
+  });
+  const set=(selector,value)=>{const element=document.querySelector(selector);if(element)element.textContent=value};
+  set('.showrooms-lead','Espacios privados seleccionados para presentar las colecciones de ED Luxury en ocasiones especiales y en un entorno discreto.');
+  set('.showroom-concept-title h2','Un encuentro privado con nuestra selección');
+  const concept=document.querySelectorAll('.showroom-concept-copy p');
+  if(concept[0])concept[0].textContent='En fechas seleccionadas, ED Luxury organiza eventos privados en apartamentos y espacios excepcionales de París.';
+  if(concept[1])concept[1].textContent='Nuestros showrooms son experiencias temporales de compras privadas: un entorno íntimo donde los invitados pueden descubrir, probar y conversar sobre piezas elegidas especialmente para la ocasión.';
+  if(concept[2])concept[2].textContent='La dirección y los horarios se comunican exclusivamente a las personas inscritas o invitadas.';
+  const cards=document.querySelectorAll('.event-card');
+  if(cards[0]){const description=cards[0].querySelector('.event-description p');if(description)description.textContent='Una presentación privada de bolsos y piezas disponibles actualmente en ED Luxury.'}
+  if(cards[1]){const description=cards[1].querySelector('.event-description p');if(description)description.textContent='Una experiencia con cita previa en un apartamento parisino seleccionado para la ocasión.'}
+  set('.showroom-cta > p:not(.eyebrow)','Las fechas, los lugares y las piezas seleccionadas se anuncian de forma puntual.');
+})();
