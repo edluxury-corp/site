@@ -78,3 +78,39 @@
   if(cards[1]){const description=cards[1].querySelector('.event-description p');if(description)description.textContent='Una experiencia con cita previa en un apartamento parisino seleccionado para la ocasión.'}
   set('.showroom-cta > p:not(.eyebrow)','Las fechas, los lugares y las piezas seleccionadas se anuncian de forma puntual.');
 })();
+
+(()=>{
+  if(EDL_LANG!=='ar')return;
+  document.title='صالات العرض الخاصة — ED Luxury';
+  const meta=document.querySelector('meta[name="description"]');
+  if(meta)meta.content='اكتشف صالات العرض الخاصة من ED Luxury وتجارب التسوق الحصرية في باريس.';
+  EDL_TRANSLATE({
+    'ED Luxury Paris':'ED Luxury باريس',
+    'Nos showrooms':'صالات العرض الخاصة بنا',
+    'Shopping experience':'تجربة تسوّق خاصة',
+    'Prochains rendez-vous':'المواعيد القادمة',
+    'Paris private shopping':'تسوّق خاص في باريس',
+    'Prochainement':'قريباً',
+    'Private showroom — Paris':'صالة عرض خاصة — باريس',
+    'Shopping experience — Paris':'تجربة تسوّق خاصة — باريس',
+    'Être informé':'تلقَّ آخر المستجدات',
+    'Recevoir les prochaines invitations':'تلقَّ دعواتنا المقبلة',
+    'Showroom ED Luxury à Paris':'صالة عرض ED Luxury في باريس',
+    'Appartement parisien ED Luxury':'شقة باريسية تستضيف ED Luxury',
+    'Espace de présentation privé ED Luxury':'مساحة خاصة لعرض قطع ED Luxury',
+    'Salon de showroom ED Luxury':'صالون صالة عرض ED Luxury',
+    'Showroom privé ED Luxury':'صالة عرض ED Luxury الخاصة',
+    'Shopping experience ED Luxury à Paris':'تجربة تسوّق خاصة من ED Luxury في باريس'
+  });
+  const set=(selector,value)=>{const element=document.querySelector(selector);if(element)element.textContent=value};
+  set('.showrooms-lead','مساحات خاصة نختارها بعناية لاستقبال مجموعات ED Luxury في مناسبات محدودة، ضمن أجواء راقية تحافظ على خصوصيتك.');
+  set('.showroom-concept-title h2','لقاء خاص مع مجموعتنا المختارة');
+  const concept=document.querySelectorAll('.showroom-concept-copy p');
+  if(concept[0])concept[0].textContent='تنظّم ED Luxury في مواعيد مختارة فعاليات خاصة داخل شقق ومساحات استثنائية في باريس.';
+  if(concept[1])concept[1].textContent='صُممت صالات العرض لدينا كتجارب تسوّق خاصة لفترة محدودة، في أجواء حميمة تتيح لضيوفنا اكتشاف قطع انتُقيت خصيصاً للمناسبة وتجربتها والتعرّف على تفاصيلها.';
+  if(concept[2])concept[2].textContent='نشارك العناوين ومواعيد الزيارة حصرياً مع المسجلين أو المدعوين.';
+  const cards=document.querySelectorAll('.event-card');
+  if(cards[0]){const description=cards[0].querySelector('.event-description p');if(description)description.textContent='عرض خاص لمجموعة من الحقائب والقطع المتاحة حالياً لدى ED Luxury.'}
+  if(cards[1]){const description=cards[1].querySelector('.event-description p');if(description)description.textContent='تجربة تسوّق بموعد مسبق داخل شقة باريسية اختيرت خصيصاً لهذه المناسبة.'}
+  set('.showroom-cta > p:not(.eyebrow)','نعلن عن المواعيد والأماكن والقطع المختارة عند تحديد كل فعالية.');
+})();
