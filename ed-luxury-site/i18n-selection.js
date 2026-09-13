@@ -15,3 +15,21 @@
 'Hermès Birkin 35 Rose Epsom 2013':'Hermès Birkin 35 rosa Epsom de 2013',
 'Hermès Birkin 35 Vert Menthe Clémence 2012':'Hermès Birkin 35 Verde Menta Clémence de 2012'
 })})();
+
+(()=>{if(EDL_LANG!=='ar')return;document.title='المجموعة المختارة — ED Luxury';const meta=document.querySelector('meta[name="description"]');if(meta)meta.content='اكتشف مجموعة ED Luxury الخاصة من قطع هيرميس الاستثنائية المنتقاة بعناية.';EDL_TRANSLATE({
+'La sélection':'المجموعة المختارة',
+'Une sélection de pièces iconiques choisies pour leur caractère, leur état et leur singularité.':'قطع أيقونية اخترناها لتميّزها وحالتها وطابعها الفريد.',
+'Prix sur demande':'السعر عند الطلب','Disponible':'متاحة','Prochainement':'قريباً',
+'Swift · Rouge · Palladium · 2006':'أحمر · جلد Swift · بالاديوم · 2006',
+'Togo · Orange · Palladium · 2008':'برتقالي · جلد Togo · بالاديوم · 2008',
+'Cuir noir · Noir · Doré · 1995':'أسود · جلد أسود · معدن ذهبي · 1995',
+'Togo · Bleu Jean · Palladium · 2005':'أزرق جينز · جلد Togo · بالاديوم · 2005',
+'Epsom · Rose · Métallerie argentée · 2013':'وردي · جلد Epsom · معدن فضي · 2013',
+'Clémence · Vert Menthe · Palladium · 2012':'أخضر نعناعي · جلد Clémence · بالاديوم · 2012',
+'Hermès Birkin 35 Rouge Swift 2006':'حقيبة هيرميس بيركن 35 حمراء من جلد Swift، 2006',
+'Hermès Birkin 35 Orange Togo 2008':'حقيبة هيرميس بيركن 35 برتقالية من جلد Togo، 2008',
+'Hermès Birkin 35 Noir 1995':'حقيبة هيرميس بيركن 35 سوداء، 1995',
+'Hermès Birkin 30 Bleu Jean Togo 2005':'حقيبة هيرميس بيركن 30 بلون أزرق جينز من جلد Togo، 2005',
+'Hermès Birkin 35 Rose Epsom 2013':'حقيبة هيرميس بيركن 35 وردية من جلد Epsom، 2013',
+'Hermès Birkin 35 Vert Menthe Clémence 2012':'حقيبة هيرميس بيركن 35 خضراء نعناعية من جلد Clémence، 2012'
+})})();
