@@ -52,3 +52,21 @@
 'Chaque pièce est choisie pour sa rareté, son histoire et son intemporalité. Nous sourçons des pièces rares d’une qualité irréprochable.':'希少性、受け継がれるストーリー、時代を超える魅力を基準に、一点一点を選び抜いています。妥協のない品質を備えた希少な逸品をお届けします。',
 'Explorer la sélection':'セレクションを詳しく見る'
 })})();
+
+(()=>{if(EDL_LANG!=='zh')return;document.title='ED Luxury — 私享珍品甄选';const meta=document.querySelector('meta[name="description"]');if(meta)meta.content='ED Luxury 源自巴黎，甄选非凡奢华珍品，呈献私享展厅体验。';EDL_TRANSLATE({
+'Maison de sélection parisienne':'源自巴黎的私人甄选',
+'L’art de la':'私人甄选',
+'sélection privée':'的艺术',
+'ED Luxury sélectionne et source des pièces d’exception pour une clientèle exigeante .':'ED Luxury 为眼光独到的客户甄选并寻访非凡珍品。',
+'Découvrir notre sélection':'探索精选系列',
+'L’univers de nos showrooms':'私享展厅体验',
+'L’élégance':'巴黎',
+'parisienne':'优雅风尚',
+'Nos événements showroom prennent vie au cœur de Paris, dans de somptueux appartements haussmanniens.':'我们的展厅活动设于巴黎市中心典雅的奥斯曼风格公寓，呈现私密而独到的体验。',
+'Découvrir l’univers':'探索展厅',
+'Sélection d’exception':'非凡甄选',
+'Des pièces iconiques,':'经典之作，',
+'sélectionnées pour vous':'为您悉心甄选',
+'Chaque pièce est choisie pour sa rareté, son histoire et son intemporalité. Nous sourçons des pièces rares d’une qualité irréprochable.':'每一件珍品都因其稀有性、背后的故事与恒久魅力而入选。我们寻访品质卓越的稀有之作。',
+'Explorer la sélection':'浏览精选系列'
+})})();
