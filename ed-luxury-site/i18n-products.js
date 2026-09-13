@@ -202,3 +202,61 @@
   document.querySelectorAll('.product-specs > div').forEach(row=>{const dt=row.querySelector('dt'),dd=row.querySelector('dd');if(dt?.textContent.trim()==='付属品'&&dd)dd.textContent=item.accessories});
   document.querySelectorAll('.product-gallery img').forEach((img,index)=>{img.alt=item.name+'：'+(item.views[index]||'商品画像')});
 })();
+
+(()=>{
+  if(EDL_LANG!=='zh')return;
+  const p=location.pathname.split('/').pop()||'';
+  const standardAccessories='钟形钥匙套、挂锁、两把钥匙、皮革拉带、爱马仕防尘袋及盒子';
+  const products={
+    'birkin-35-rouge.html':{
+      name:'爱马仕 Birkin 35 Rouge',title:'爱马仕 Birkin 35 Rouge — ED Luxury',
+      meta:'2006 年爱马仕 Birkin 35，Swift 皮革，Rouge 配色，Palladium 金属件。',
+      description:'品相极佳。同色系山羊皮内里配有拉链袋和平口袋。随附钟形钥匙套、挂锁、两把钥匙、皮革拉带、爱马仕防尘袋及盒子。',
+      accessories:standardAccessories,views:['主图','正面','另一张正面图','侧面','背面']
+    },
+    'birkin-35-orange.html':{
+      name:'爱马仕 Birkin 35 Orange',title:'爱马仕 Birkin 35 Orange — ED Luxury',
+      meta:'2008 年爱马仕 Birkin 35，Togo 皮革，Orange 配色，Palladium 金属件。',
+      description:'品相极佳。同色系橙色皮革内里配有拉链袋和平口袋。随附钟形钥匙套、挂锁、两把钥匙、皮革拉带、爱马仕防尘袋及盒子。',
+      accessories:standardAccessories,views:['主图','左侧面','右侧面','背面','底部']
+    },
+    'birkin-35-noir.html':{
+      name:'爱马仕 Birkin 35 Noir',title:'爱马仕 Birkin 35 Noir — ED Luxury',
+      meta:'1995 年爱马仕 Birkin 35，黑色皮革，Noir 配色，金色金属件。',
+      sub:'黑色皮革 · Noir · 金色金属件',
+      description:'品相良好。黑色皮革内里配有拉链袋和平口袋。随附钟形钥匙套、挂锁、两把钥匙、皮革拉带、爱马仕防尘袋及盒子。',
+      accessories:standardAccessories,views:['主图','左侧面','右侧面','背面','金属件细节']
+    },
+    'birkin-30-bleu-jean.html':{
+      name:'爱马仕 Birkin 30 Bleu Jean',title:'爱马仕 Birkin 30 Bleu Jean — ED Luxury',
+      meta:'2005 年爱马仕 Birkin 30，Togo 皮革，Bleu Jean 配色，Palladium 金属件。',
+      description:'品相极佳。同色系蓝色皮革内里配有拉链袋和平口袋。随附钟形钥匙套、挂锁、两把钥匙、皮革拉带、爱马仕防尘袋及盒子。',
+      accessories:standardAccessories,views:['主图','正面','侧面','背面','配件']
+    },
+    'birkin-35-rose.html':{
+      name:'爱马仕 Birkin 35 Rose',title:'爱马仕 Birkin 35 Rose — ED Luxury',
+      meta:'2013 年爱马仕 Birkin 35，Epsom 皮革，Rose 配色，银色金属件。',
+      sub:'Epsom · Rose · 银色金属件',
+      description:'品相极佳。外观接近全新，金属件有轻微细小划痕，锁扣处有一处小痕迹；内里亦接近全新。随附钟形钥匙套、挂锁、两把钥匙、爱马仕原装盒、两个防尘袋、防雨罩及说明册。',
+      accessories:'钟形钥匙套、挂锁、两把钥匙、爱马仕原装盒、两个防尘袋、防雨罩及说明册',views:['主图','侧面','背面','金属件细节','底部']
+    },
+    'birkin-35-vert-menthe.html':{
+      name:'爱马仕 Birkin 35 Vert Menthe',title:'爱马仕 Birkin 35 Vert Menthe — ED Luxury',
+      meta:'2012 年爱马仕 Birkin 35，Clémence 皮革，Vert Menthe 配色，Palladium 金属件。',
+      description:'品相极佳。同色系皮革内里配有拉链袋和平口袋。随附钟形钥匙套、挂锁、两把钥匙、皮革拉带、爱马仕防尘袋及盒子。',
+      accessories:standardAccessories,views:['主图','正面','左侧面','右侧面','背面','内里','包角细节','盒子']
+    }
+  };
+  const item=products[p];if(!item)return;
+  document.title=item.title;
+  const meta=document.querySelector('meta[name="description"]');if(meta)meta.content=item.meta;
+  EDL_TRANSLATE({
+    'Disponible':'现货可购','Demander cette pièce':'咨询此款','← Retour à la sélection':'← 返回精选系列',
+    'Modèle':'型号','Cuir':'皮质','Couleur':'颜色','Métal':'金属件','Année':'年份','Stamp':'刻印','État':'品相','Accessoires':'配件','Dimensions':'尺寸',
+    'Très bon état':'品相极佳','Bon état':'品相良好','Cuir noir':'黑色皮革','Doré':'金色','Argenté':'银色'
+  });
+  if(item.sub){const sub=document.querySelector('.product-detail-sub');if(sub)sub.textContent=item.sub}
+  const description=document.querySelector('.product-detail-description');if(description)description.textContent=item.description;
+  document.querySelectorAll('.product-specs > div').forEach(row=>{const dt=row.querySelector('dt'),dd=row.querySelector('dd');if(dt?.textContent.trim()==='配件'&&dd)dd.textContent=item.accessories});
+  document.querySelectorAll('.product-gallery img').forEach((img,index)=>{img.alt=item.name+'：'+(item.views[index]||'商品图片')});
+})();
