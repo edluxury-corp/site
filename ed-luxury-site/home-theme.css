@@ -114,3 +114,11 @@ html[lang="ar"] .product-detail{grid-template-columns:minmax(360px,.85fr) minmax
 html[lang="ar"] .product-detail-info{grid-column:1;grid-row:1}
 html[lang="ar"] .product-gallery{grid-column:2;grid-row:1}
 @media(max-width:900px){html[lang="ar"] .product-detail{grid-template-columns:1fr}html[lang="ar"] .product-gallery{grid-column:1;grid-row:1}html[lang="ar"] .product-detail-info{grid-column:1;grid-row:2}}
+
+/* Arabic showroom reading rhythm. */
+html[lang="ar"] .showrooms-page{text-align:right}
+html[lang="ar"] .showrooms-lead,
+html[lang="ar"] .event-description p,
+html[lang="ar"] .showroom-cta > p:not(.eyebrow){line-height:1.9}
+html[lang="ar"] .event-date{font-family:"Noto Sans Arabic","Manrope",sans-serif;letter-spacing:normal;text-transform:none}
+html[lang="ar"] .showroom-cta{text-align:center}
