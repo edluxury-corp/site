@@ -224,3 +224,30 @@ html[lang="ja"] .option-title,
 html[lang="ja"] .conditional-label,
 html[lang="ja"] .contact-fields label,
 html[lang="ja"] .field-large label{letter-spacing:.02em;text-transform:none}
+
+/* Simplified Chinese homepage typography. */
+html[lang="zh-CN"] body,
+html[lang="zh-CN"] .main-nav,
+html[lang="zh-CN"] .button,
+html[lang="zh-CN"] .text-link,
+html[lang="zh-CN"] .eyebrow,
+html[lang="zh-CN"] .lead,
+html[lang="zh-CN"] .values p,
+html[lang="zh-CN"] .site-footer,
+html[lang="zh-CN"] .language-menu,
+html[lang="zh-CN"] .menu-toggle,
+html[lang="zh-CN"] .private-link{font-family:"Noto Sans SC","Manrope",sans-serif!important}
+html[lang="zh-CN"] h1,
+html[lang="zh-CN"] h2,
+html[lang="zh-CN"] h3{font-family:"Noto Serif SC","Cormorant Garamond",serif!important;font-style:normal;line-height:1.4!important;letter-spacing:.02em;text-transform:none}
+html[lang="zh-CN"] .main-nav a,
+html[lang="zh-CN"] .eyebrow,
+html[lang="zh-CN"] .button,
+html[lang="zh-CN"] .text-link,
+html[lang="zh-CN"] .private-link,
+html[lang="zh-CN"] .site-footer nav,
+html[lang="zh-CN"] .site-footer address{letter-spacing:.03em;text-transform:none}
+html[lang="zh-CN"] .lead,
+html[lang="zh-CN"] .section-copy > p:not(.eyebrow){line-height:1.9}
+@media(max-width:640px){html[lang="zh-CN"] .hero-copy{width:77%!important;padding-left:18px!important;padding-right:18px!important}html[lang="zh-CN"] .hero-copy h1{font-size:clamp(28px,8vw,38px)!important;line-height:1.4!important}}
+@media(max-width:390px){html[lang="zh-CN"] .hero-copy{width:78%!important}html[lang="zh-CN"] .hero-copy h1{font-size:28px!important}}
