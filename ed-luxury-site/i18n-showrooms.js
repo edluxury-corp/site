@@ -114,3 +114,39 @@
   if(cards[1]){const description=cards[1].querySelector('.event-description p');if(description)description.textContent='تجربة تسوّق بموعد مسبق داخل شقة باريسية اختيرت خصيصاً لهذه المناسبة.'}
   set('.showroom-cta > p:not(.eyebrow)','نعلن عن المواعيد والأماكن والقطع المختارة عند تحديد كل فعالية.');
 })();
+
+(()=>{
+  if(EDL_LANG!=='ja')return;
+  document.title='ショールーム — ED Luxury';
+  const meta=document.querySelector('meta[name="description"]');
+  if(meta)meta.content='ED Luxuryのパリのプライベートショールームと、特別なショッピング体験をご案内します。';
+  EDL_TRANSLATE({
+    'ED Luxury Paris':'ED Luxury パリ',
+    'Nos showrooms':'私たちのショールーム',
+    'Shopping experience':'プライベートショッピング',
+    'Prochains rendez-vous':'今後のご案内',
+    'Paris private shopping':'パリのプライベートショッピング',
+    'Prochainement':'近日開催',
+    'Private showroom — Paris':'プライベートショールーム — パリ',
+    'Shopping experience — Paris':'プライベートショッピング — パリ',
+    'Être informé':'開催情報を受け取る',
+    'Recevoir les prochaines invitations':'次回のご招待を受け取る',
+    'Showroom ED Luxury à Paris':'パリにあるED Luxuryのショールーム',
+    'Appartement parisien ED Luxury':'ED Luxuryのパリのアパルトマン',
+    'Espace de présentation privé ED Luxury':'ED Luxuryのプライベートな展示スペース',
+    'Salon de showroom ED Luxury':'ED Luxuryショールームのサロン',
+    'Showroom privé ED Luxury':'ED Luxuryのプライベートショールーム',
+    'Shopping experience ED Luxury à Paris':'パリでのED Luxuryのプライベートショッピング体験'
+  });
+  const set=(selector,value)=>{const element=document.querySelector(selector);if(element)element.textContent=value};
+  set('.showrooms-lead','ED Luxuryのコレクションを、落ち着いたプライベートな空間でご覧いただくために選び抜いた特別な場所です。');
+  set('.showroom-concept-title h2','選び抜かれた逸品とのプライベートな出会い');
+  const concept=document.querySelectorAll('.showroom-concept-copy p');
+  if(concept[0])concept[0].textContent='ED Luxuryは日程を限定し、パリの特別なアパルトマンや会場でプライベートイベントを開催しています。';
+  if(concept[1])concept[1].textContent='私たちのショールームは、期間限定のプライベートショッピング体験です。親密な空間で、この日のために選んだ逸品を実際にご覧いただき、お試しになりながら、ゆっくりお話しいただけます。';
+  if(concept[2])concept[2].textContent='会場の住所とご来場時間は、お申し込み済みの方とご招待した方にのみご案内します。';
+  const cards=document.querySelectorAll('.event-card');
+  if(cards[0]){const description=cards[0].querySelector('.event-description p');if(description)description.textContent='ED Luxuryで現在ご紹介できるバッグや逸品を、プライベートな場でご覧いただけます。'}
+  if(cards[1]){const description=cards[1].querySelector('.event-description p');if(description)description.textContent='この日のために選んだパリのアパルトマンで、予約制のショッピング体験をお楽しみいただけます。'}
+  set('.showroom-cta > p:not(.eyebrow)','日程、会場、ご紹介するお品物は、決まり次第個別にご案内します。');
+})();
