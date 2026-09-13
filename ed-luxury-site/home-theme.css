@@ -398,9 +398,9 @@ html[lang="it"] .form-privacy{line-height:1.8}
   }
 }
 
-/* French mobile homepage: separate the selection block from the values. */
+/* Mobile homepage: separate the selection block from the values in every language. */
 @media(max-width:640px){
-  html[lang="fr"] .values{
+  html[lang] .values{
     border-top:1px solid rgba(181,150,97,.3);
   }
 }
