@@ -50,3 +50,21 @@
 'Salon haussmannien du showroom':'奥斯曼风格展厅沙龙',
 'Espace privé de présentation':'私密展示空间'
 })})();
+
+ 
+(()=>{if(EDL_LANG!=='ru')return;EDL_TRANSLATE({
+'Discrétion':'Конфиденциальность',
+'Une approche confidentielle et sur mesure.':'Деликатный подход с учётом ваших пожеланий.',
+'Authenticité':'Подлинность',
+'Des pièces rigoureusement sélectionnées et vérifiées.':'Тщательно отобранные изделия, прошедшие проверку подлинности.',
+'Accompagnement':'Личное сопровождение',
+'Un interlocuteur dédié à chaque étape de votre expérience.':'Ваш персональный консультант на каждом этапе.',
+'Exigence':'Высокие стандарты',
+'Le plus haut niveau de qualité, sans compromis.':'Безупречное качество без компромиссов.',
+'Sac de luxe sélectionné par ED Luxury':'Роскошная сумка, выбранная ED Luxury',
+'Sélection de sacs de luxe':'Коллекция роскошных сумок',
+'Emplacement pour votre photo principale de Birkin':'Главное изображение сумки Birkin',
+'Showroom parisien ED Luxury':'Парижский шоурум ED Luxury',
+'Salon haussmannien du showroom':'Гостиная шоурума в османском стиле',
+'Espace privé de présentation':'Приватное пространство для презентации'
+})})();
