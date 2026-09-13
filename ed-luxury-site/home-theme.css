@@ -57,3 +57,41 @@ html[lang="ko"] .values h3{font-family:"Noto Serif KR","Cormorant Garamond",seri
   .main-nav a.active::after { bottom: 5px; }
   html[data-theme="dark"] .main-nav { background: var(--cream); }
 }
+
+/* Arabic homepage: right-to-left reading with an editorial Naskh heading. */
+html[lang="ar"] body,
+html[lang="ar"] .main-nav,
+html[lang="ar"] .button,
+html[lang="ar"] .text-link,
+html[lang="ar"] .eyebrow,
+html[lang="ar"] .lead,
+html[lang="ar"] .values p,
+html[lang="ar"] .site-footer,
+html[lang="ar"] .language-menu,
+html[lang="ar"] .menu-toggle,
+html[lang="ar"] .private-link{font-family:"Noto Sans Arabic","Manrope",sans-serif!important}
+html[lang="ar"] h1,
+html[lang="ar"] h2,
+html[lang="ar"] h3{font-family:"Noto Naskh Arabic","Cormorant Garamond",serif!important;font-style:normal;line-height:1.4!important}
+html[lang="ar"] .brand,
+html[lang="ar"] .language-menu,
+html[lang="ar"] .site-footer a[href^="mailto:"],
+html[lang="ar"] .site-footer a[href^="tel:"]{direction:ltr}
+html[lang="ar"] .hero-copy,
+html[lang="ar"] .section-copy{text-align:right}
+html[lang="ar"] .hero-copy{justify-self:end;width:min(52%,680px);padding-right:clamp(28px,7.2vw,110px);padding-left:clamp(28px,4vw,70px)}
+html[lang="ar"] .hero-copy h1,
+html[lang="ar"] .section-copy h2,
+html[lang="ar"] .values h3{letter-spacing:normal;text-transform:none}
+html[lang="ar"] .main-nav a,
+html[lang="ar"] .eyebrow,
+html[lang="ar"] .button,
+html[lang="ar"] .text-link,
+html[lang="ar"] .private-link,
+html[lang="ar"] .site-footer nav,
+html[lang="ar"] .site-footer address{letter-spacing:normal;text-transform:none}
+html[lang="ar"] .lead,
+html[lang="ar"] .section-copy > p:not(.eyebrow){line-height:1.85}
+html[lang="ar"] .text-link span{transform:scaleX(-1)}
+@media(max-width:640px){html[lang="ar"] .hero-copy{width:78%!important;padding-left:18px!important;padding-right:18px!important}html[lang="ar"] .hero-copy h1{font-size:clamp(28px,8vw,38px)!important;line-height:1.4!important}}
+@media(max-width:390px){html[lang="ar"] .hero-copy{width:79%!important}html[lang="ar"] .hero-copy h1{font-size:28px!important}}
