@@ -373,3 +373,6 @@ html[lang="it"] .contact-lead,
 html[lang="it"] .contact-note,
 html[lang="it"] .contact-sourcing > p:not(.eyebrow),
 html[lang="it"] .contact-sell p:not(.eyebrow){line-height:1.8}
+/* Italian private sourcing form. */
+html[lang="it"] .sourcing-intro > p:last-child,
+html[lang="it"] .form-privacy{line-height:1.8}
