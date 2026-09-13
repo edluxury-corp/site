@@ -122,3 +122,14 @@ html[lang="ar"] .event-description p,
 html[lang="ar"] .showroom-cta > p:not(.eyebrow){line-height:1.9}
 html[lang="ar"] .event-date{font-family:"Noto Sans Arabic","Manrope",sans-serif;letter-spacing:normal;text-transform:none}
 html[lang="ar"] .showroom-cta{text-align:center}
+
+/* Arabic contact page: readable details and unambiguous contact data. */
+html[lang="ar"] .contact-page{text-align:right}
+html[lang="ar"] .contact-lead,
+html[lang="ar"] .contact-note,
+html[lang="ar"] .contact-sourcing > p:not(.eyebrow),
+html[lang="ar"] .contact-sell p:not(.eyebrow){line-height:1.9}
+html[lang="ar"] .contact-label,
+html[lang="ar"] .sell-coming-soon{font-family:"Noto Sans Arabic","Manrope",sans-serif;letter-spacing:normal;text-transform:none}
+html[lang="ar"] .contact-block p.contact-value{font-family:"Noto Naskh Arabic","Cormorant Garamond",serif!important}
+html[lang="ar"] a.contact-value{direction:ltr;unicode-bidi:isolate}
