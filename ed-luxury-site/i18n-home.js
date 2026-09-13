@@ -16,3 +16,21 @@
 'Chaque pièce est choisie pour sa rareté, son histoire et son intemporalité. Nous sourçons des pièces rares d’une qualité irréprochable.':'Elegimos cada pieza por su rareza, su historia y su carácter atemporal. Encontramos piezas exclusivas de calidad impecable.',
 'Explorer la sélection':'Explorar la selección'
 })})();
+
+(()=>{if(EDL_LANG!=='ar')return;document.title='ED Luxury — مجموعة مختارة من القطع الفاخرة';const meta=document.querySelector('meta[name="description"]');if(meta)meta.content='ED Luxury — قطع فاخرة منتقاة بعناية وتجارب خاصة في صالات العرض بباريس.';EDL_TRANSLATE({
+'Maison de sélection parisienne':'دار باريسية لانتقاء القطع الفاخرة',
+'L’art de la':'فنّ',
+'sélection privée':'الانتقاء الخاص',
+'ED Luxury sélectionne et source des pièces d’exception pour une clientèle exigeante .':'تنتقي ED Luxury قطعاً استثنائية وتبحث عنها خصيصاً لعملائها أصحاب الذوق الرفيع.',
+'Découvrir notre sélection':'اكتشف مجموعتنا المختارة',
+'L’univers de nos showrooms':'عالم صالات العرض الخاصة بنا',
+'L’élégance':'أناقة',
+'parisienne':'باريس',
+'Nos événements showroom prennent vie au cœur de Paris, dans de somptueux appartements haussmanniens.':'تُقام فعاليات صالات العرض في قلب باريس، داخل شقق فاخرة بطابع العمارة الباريسية الكلاسيكية.',
+'Découvrir l’univers':'استكشف التجربة',
+'Sélection d’exception':'مجموعة استثنائية',
+'Des pièces iconiques,':'قطع أيقونية،',
+'sélectionnées pour vous':'انتُقيت خصيصاً لك',
+'Chaque pièce est choisie pour sa rareté, son histoire et son intemporalité. Nous sourçons des pièces rares d’une qualité irréprochable.':'نختار كل قطعة لندرتها وقصتها وجمالها الذي يتجاوز الزمن. ونبحث عن قطع نادرة بجودة لا تقبل المساومة.',
+'Explorer la sélection':'تصفّح المجموعة'
+})})();
