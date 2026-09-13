@@ -133,3 +133,25 @@ html[lang="ar"] .contact-label,
 html[lang="ar"] .sell-coming-soon{font-family:"Noto Sans Arabic","Manrope",sans-serif;letter-spacing:normal;text-transform:none}
 html[lang="ar"] .contact-block p.contact-value{font-family:"Noto Naskh Arabic","Cormorant Garamond",serif!important}
 html[lang="ar"] a.contact-value{direction:ltr;unicode-bidi:isolate}
+
+/* Arabic private sourcing form. */
+html[lang="ar"] .sourcing-page{text-align:right}
+html[lang="ar"] .sourcing-intro{text-align:center}
+html[lang="ar"] .sourcing-intro > p:last-child,
+html[lang="ar"] .form-privacy{line-height:1.9}
+html[lang="ar"] .field-large input,
+html[lang="ar"] .field-large textarea,
+html[lang="ar"] .contact-fields input,
+html[lang="ar"] .model-other-field input,
+html[lang="ar"] .luxury-select-trigger,
+html[lang="ar"] .luxury-select-menu button{text-align:right;font-family:"Noto Sans Arabic","Manrope",sans-serif}
+html[lang="ar"] .contact-fields input[type="email"],
+html[lang="ar"] .contact-fields input[type="tel"]{direction:ltr;text-align:left}
+html[lang="ar"] .conditional-field,
+html[lang="ar"] .form-privacy,
+html[lang="ar"] .sourcing-submit,
+html[lang="ar"] .sourcing-section > .choice-grid{margin-left:0;margin-right:74px}
+html[lang="ar"] .conditional-field .field-large{margin-right:0}
+html[lang="ar"] .budget-grid label:not(:last-child) span{direction:ltr;unicode-bidi:isolate}
+@media(max-width:640px){html[lang="ar"] .sourcing-intro{text-align:right}html[lang="ar"] .sourcing-intro .gold-line{margin-right:0;margin-left:auto}html[lang="ar"] .field-large,html[lang="ar"] .contact-fields,html[lang="ar"] .form-privacy,html[lang="ar"] .sourcing-submit,html[lang="ar"] .sourcing-section > .choice-grid,html[lang="ar"] .conditional-field{margin-left:0;margin-right:50px}}
+@media(max-width:460px){html[lang="ar"] .field-large,html[lang="ar"] .contact-fields,html[lang="ar"] .form-privacy,html[lang="ar"] .sourcing-submit,html[lang="ar"] .sourcing-section > .choice-grid,html[lang="ar"] .conditional-field{margin-right:0}}
