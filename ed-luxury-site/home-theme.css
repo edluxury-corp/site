@@ -294,3 +294,31 @@ html[lang="zh-CN"] .option-title,
 html[lang="zh-CN"] .conditional-label,
 html[lang="zh-CN"] .contact-fields label,
 html[lang="zh-CN"] .field-large label{letter-spacing:.03em;text-transform:none}
+
+ 
+/* Russian homepage typography. */
+html[lang="ru"] body,
+html[lang="ru"] .main-nav,
+html[lang="ru"] .button,
+html[lang="ru"] .text-link,
+html[lang="ru"] .eyebrow,
+html[lang="ru"] .lead,
+html[lang="ru"] .values p,
+html[lang="ru"] .site-footer,
+html[lang="ru"] .language-menu,
+html[lang="ru"] .menu-toggle,
+html[lang="ru"] .private-link{font-family:"Noto Sans","Manrope",sans-serif!important}
+html[lang="ru"] h1,
+html[lang="ru"] h2,
+html[lang="ru"] h3{font-family:"Noto Serif","Cormorant Garamond",serif!important;font-style:normal;line-height:1.3!important;letter-spacing:.005em;text-transform:none}
+html[lang="ru"] .main-nav a,
+html[lang="ru"] .eyebrow,
+html[lang="ru"] .button,
+html[lang="ru"] .text-link,
+html[lang="ru"] .private-link,
+html[lang="ru"] .site-footer nav,
+html[lang="ru"] .site-footer address{letter-spacing:.015em;text-transform:none}
+html[lang="ru"] .lead,
+html[lang="ru"] .section-copy > p:not(.eyebrow){line-height:1.85}
+@media(max-width:640px){html[lang="ru"] .hero-copy{width:83%!important;padding-left:18px!important;padding-right:18px!important}html[lang="ru"] .hero-copy h1{font-size:clamp(28px,7.6vw,38px)!important;line-height:1.3!important}}
+@media(max-width:390px){html[lang="ru"] .hero-copy{width:86%!important}html[lang="ru"] .hero-copy h1{font-size:27px!important}}
