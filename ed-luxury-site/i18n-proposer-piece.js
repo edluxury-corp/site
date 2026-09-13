@@ -32,3 +32,15 @@
   const meta=document.querySelector('meta[name="description"]');
   if(meta)meta.content='Próximamente podrá ofrecer una pieza a ED Luxury. Mientras tanto, póngase en contacto con nuestro equipo.';
 })();
+
+(()=>{
+  if(window.EDL_LANG!=='ar')return;
+  window.EDL_TRANSLATE?.({
+    'Proposer une pièce — prochainement':'عرض قطعة للبيع — قريباً',
+    'Notre service de proposition de pièces sera bientôt disponible. En attendant, notre équipe reste à votre disposition.':'ستتوفر قريباً خدمة عرض القطع للبيع لدى ED Luxury. وحتى ذلك الحين، يسعد فريقنا مساعدتك.',
+    'Retour à l’accueil':'العودة إلى الصفحة الرئيسية'
+  });
+  document.title='عرض قطعة للبيع — ED Luxury';
+  const meta=document.querySelector('meta[name="description"]');
+  if(meta)meta.content='ستتوفر قريباً خدمة عرض القطع للبيع لدى ED Luxury. تواصل مع فريقنا لأي استفسار.';
+})();
