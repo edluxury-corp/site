@@ -53,3 +53,57 @@
   const privacy = document.querySelector('.form-privacy');
   if (privacy) privacy.textContent = '입력하신 정보는 의뢰 내용을 검토하고 관련하여 연락드리는 목적으로만 사용됩니다.';
 })();
+
+(()=>{
+  if(EDL_LANG!=='es')return;
+  document.title='Búsqueda privada — ED Luxury';
+  const meta=document.querySelector('meta[name="description"]');
+  if(meta)meta.content='Confíe a ED Luxury la búsqueda de su Hermès Birkin, Kelly o HAC según sus preferencias de tamaño, color, material y presupuesto.';
+  EDL_TRANSLATE({
+    'Choisissez votre modèle':'Elija su modelo',
+    'Tailles':'Tamaños',
+    'Autre':'Otro',
+    'Autre taille Kelly':'Otro tamaño de Kelly',
+    'Ex. 22, 40, Mini Kelly...':'P. ej., 22, 40, Mini Kelly...',
+    'Autre taille Birkin / HAC':'Otro tamaño de Birkin / HAC',
+    'Précisez la taille ou le modèle recherché':'Indique el tamaño o modelo que busca',
+    'Couleur recherchée':'Color deseado',
+    'Couleur ou référence Hermès':'Color o referencia Hermès',
+    'Ex. Noir, Gold, Étoupe, Craie, Vert Menthe...':'P. ej., Noir, Gold, Étoupe, Craie, Vert Menthe...',
+    'Cuir / matière':'Cuero / material',
+    'Exotique':'Piel exótica',
+    'Indifférent':'Sin preferencia',
+    'Type de cuir exotique':'Tipo de piel exótica',
+    'Sélectionnez un cuir exotique':'Seleccione una piel exótica',
+    'Crocodile Niloticus':'Cocodrilo Niloticus',
+    'Crocodile Porosus':'Cocodrilo Porosus',
+    'Alligator Mississippiensis':'Aligátor Mississippiensis',
+    'Autruche':'Avestruz',
+    'Lézard':'Lagarto',
+    'Autre cuir exotique':'Otra piel exótica',
+    'Précisez le cuir exotique recherché':'Indique la piel exótica que busca',
+    'Autre cuir / matière':'Otro cuero / material',
+    'Précisez le cuir ou la matière recherchée':'Indique el cuero o material que busca',
+    'Métallerie':'Herrajes',
+    'Or':'Dorado',
+    'Palladium':'Paladio',
+    'Budget':'Presupuesto',
+    'Flexible':'Flexible',
+    'État recherché':'Estado deseado',
+    'Neuf / jamais porté':'Nuevo / sin usar',
+    'Excellent état':'Excelente estado',
+    'Très bon état':'Muy buen estado',
+    'Vos coordonnées':'Sus datos de contacto',
+    'Prénom *':'Nombre *',
+    'Nom *':'Apellidos *',
+    'E-mail *':'Correo electrónico *',
+    'WhatsApp / téléphone':'WhatsApp / teléfono',
+    'Informations complémentaires':'Información adicional',
+    'Précisez ici vos préférences, votre délai ou toute autre information utile.':'Indique sus preferencias, el plazo deseado o cualquier otro dato útil.',
+    'Envoyer ma demande':'Enviar mi solicitud'
+  });
+  const intro=document.querySelector('.sourcing-intro > p:not(.eyebrow)');
+  if(intro)intro.textContent='Describa la pieza que busca. ED Luxury estudiará su solicitud y se pondrá en contacto con usted si encontramos una oportunidad que se ajuste a sus criterios.';
+  const privacy=document.querySelector('.form-privacy');
+  if(privacy)privacy.textContent='La información facilitada se utilizará únicamente para estudiar su solicitud y ponerse en contacto con usted al respecto.';
+})();
