@@ -34,3 +34,21 @@
 'Chaque pièce est choisie pour sa rareté, son histoire et son intemporalité. Nous sourçons des pièces rares d’une qualité irréprochable.':'نختار كل قطعة لندرتها وقصتها وجمالها الذي يتجاوز الزمن. ونبحث عن قطع نادرة بجودة لا تقبل المساومة.',
 'Explorer la sélection':'تصفّح المجموعة'
 })})();
+
+(()=>{if(EDL_LANG!=='ja')return;document.title='ED Luxury — プライベートセレクション';const meta=document.querySelector('meta[name="description"]');if(meta)meta.content='ED Luxury — パリ発、選び抜かれたラグジュアリーアイテムとプライベートショールーム体験。';EDL_TRANSLATE({
+'Maison de sélection parisienne':'パリ発のプライベートセレクション',
+'L’art de la':'特別な一品を',
+'sélection privée':'選ぶという美学',
+'ED Luxury sélectionne et source des pièces d’exception pour une clientèle exigeante .':'ED Luxuryは、審美眼を持つお客様のために希少で上質な逸品を厳選し、ご希望に合うお品物をお探しします。',
+'Découvrir notre sélection':'セレクションを見る',
+'L’univers de nos showrooms':'ショールームの世界',
+'L’élégance':'パリの',
+'parisienne':'エレガンス',
+'Nos événements showroom prennent vie au cœur de Paris, dans de somptueux appartements haussmanniens.':'ショールームイベントは、パリ中心部にあるオスマン様式の優美なアパルトマンで開催します。',
+'Découvrir l’univers':'ショールームを見る',
+'Sélection d’exception':'選び抜かれた逸品',
+'Des pièces iconiques,':'アイコニックな逸品を、',
+'sélectionnées pour vous':'あなたのために厳選',
+'Chaque pièce est choisie pour sa rareté, son histoire et son intemporalité. Nous sourçons des pièces rares d’une qualité irréprochable.':'希少性、受け継がれるストーリー、時代を超える魅力を基準に、一点一点を選び抜いています。妥協のない品質を備えた希少な逸品をお届けします。',
+'Explorer la sélection':'セレクションを詳しく見る'
+})})();
