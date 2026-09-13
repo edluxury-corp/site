@@ -46,7 +46,6 @@
 'Proposer une pièce':'Proporre un articolo',
 'Accueil':'Home',
 'Sélection':'Selezione',
-'Showroom':'Showroom',
 'Showrooms':'Showroom',
 'À propos':'Chi siamo',
 'Contact':'Contatti',
@@ -63,6 +62,5 @@
 'Mode clair':'Modalità chiara',
 'Navigation principale':'Navigazione principale',
 'Navigation de pied de page':'Navigazione nel piè di pagina',
-'ED Luxury, accueil':'ED Luxury, homepage',
-'Menu':'Menu'
+'ED Luxury, accueil':'ED Luxury, homepage'
 })})();
