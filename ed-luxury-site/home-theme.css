@@ -322,3 +322,19 @@ html[lang="ru"] .lead,
 html[lang="ru"] .section-copy > p:not(.eyebrow){line-height:1.85}
 @media(max-width:640px){html[lang="ru"] .hero-copy{width:83%!important;padding-left:18px!important;padding-right:18px!important}html[lang="ru"] .hero-copy h1{font-size:clamp(28px,7.6vw,38px)!important;line-height:1.3!important}}
 @media(max-width:390px){html[lang="ru"] .hero-copy{width:86%!important}html[lang="ru"] .hero-copy h1{font-size:27px!important}}
+
+ 
+/* Russian selection and product pages. */
+html[lang="ru"] .collection-intro-text,
+html[lang="ru"] .product-detail-description{line-height:1.85}
+html[lang="ru"] .product-status,
+html[lang="ru"] .product-detail-status,
+html[lang="ru"] .product-specs dt,
+html[lang="ru"] .product-back,
+html[lang="ru"] .collection-footer{font-family:"Noto Sans","Manrope",sans-serif!important;letter-spacing:.015em;text-transform:none}
+html[lang="ru"] .product-info h2,
+html[lang="ru"] .product-detail-info h1{font-family:"Cormorant Garamond",serif!important}
+html[lang="ru"] .product-details,
+html[lang="ru"] .product-detail-sub{font-family:"Manrope",sans-serif}
+html[lang="ru"] .product-price,
+html[lang="ru"] .product-detail-price{direction:ltr;unicode-bidi:isolate}
