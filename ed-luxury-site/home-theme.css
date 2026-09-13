@@ -205,3 +205,12 @@ html[lang="ja"] .showroom-concept-copy p,
 html[lang="ja"] .event-description p,
 html[lang="ja"] .showroom-cta > p:not(.eyebrow){line-height:1.9}
 html[lang="ja"] .event-date{font-family:"Noto Sans JP","Manrope",sans-serif;letter-spacing:.02em;text-transform:none}
+
+/* Japanese contact details and service cards. */
+html[lang="ja"] .contact-lead,
+html[lang="ja"] .contact-note,
+html[lang="ja"] .contact-sourcing > p:not(.eyebrow),
+html[lang="ja"] .contact-sell p:not(.eyebrow){line-height:1.9}
+html[lang="ja"] .contact-label,
+html[lang="ja"] .sell-coming-soon{font-family:"Noto Sans JP","Manrope",sans-serif;letter-spacing:.02em;text-transform:none}
+html[lang="ja"] .contact-block p.contact-value{font-family:"Noto Serif JP","Cormorant Garamond",serif!important}
