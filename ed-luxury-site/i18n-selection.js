@@ -33,3 +33,17 @@
 'Hermès Birkin 35 Rose Epsom 2013':'حقيبة هيرميس بيركن 35 وردية من جلد Epsom، 2013',
 'Hermès Birkin 35 Vert Menthe Clémence 2012':'حقيبة هيرميس بيركن 35 خضراء نعناعية من جلد Clémence، 2012'
 })})();
+
+(()=>{if(EDL_LANG!=='ja')return;document.title='セレクション — ED Luxury';const meta=document.querySelector('meta[name="description"]');if(meta)meta.content='ED Luxuryが厳選した、特別なエルメスの逸品をご紹介します。';EDL_TRANSLATE({
+'La sélection':'セレクション',
+'Une sélection de pièces iconiques choisies pour leur caractère, leur état et leur singularité.':'個性、コンディション、希少性にこだわって選び抜いた、アイコニックな逸品をご紹介します。',
+'Prix sur demande':'価格はお問い合わせください',
+'Disponible':'在庫あり',
+'Prochainement':'近日公開',
+'Hermès Birkin 35 Rouge Swift 2006':'Hermès Birkin 35 Rouge、Swiftレザー、2006年製',
+'Hermès Birkin 35 Orange Togo 2008':'Hermès Birkin 35 Orange、Togoレザー、2008年製',
+'Hermès Birkin 35 Noir 1995':'Hermès Birkin 35 Noir、1995年製',
+'Hermès Birkin 30 Bleu Jean Togo 2005':'Hermès Birkin 30 Bleu Jean、Togoレザー、2005年製',
+'Hermès Birkin 35 Rose Epsom 2013':'Hermès Birkin 35 Rose、Epsomレザー、2013年製',
+'Hermès Birkin 35 Vert Menthe Clémence 2012':'Hermès Birkin 35 Vert Menthe、Clémenceレザー、2012年製'
+})})();
