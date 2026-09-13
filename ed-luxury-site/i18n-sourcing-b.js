@@ -267,3 +267,56 @@
     if(option.dataset.value==='Lézard'){option.dataset.value='Lizard';option.textContent='Lizard'}
   });
 })();
+
+(()=> {
+  if (EDL_LANG !== 'ru') return;
+  document.title = 'Индивидуальный поиск — ED Luxury';
+  const meta = document.querySelector('meta[name="description"]');
+  if (meta) meta.content = 'Поручите ED Luxury поиск Hermès Birkin, Kelly или HAC с учётом ваших пожеланий по размеру, цвету, материалу и бюджету.';
+  EDL_TRANSLATE({
+    'Choisissez votre modèle': 'Выберите модель',
+    'Tailles': 'Размеры',
+    'Autre': 'Другое',
+    'Autre taille Kelly': 'Другой размер Kelly',
+    'Ex. 22, 40, Mini Kelly...': 'Например: 22, 40, Mini Kelly...',
+    'Autre taille Birkin / HAC': 'Другой размер Birkin / HAC',
+    'Précisez la taille ou le modèle recherché': 'Укажите нужный размер или модель',
+    'Couleur recherchée': 'Желаемый цвет',
+    'Couleur ou référence Hermès': 'Цвет или код Hermès',
+    'Ex. Noir, Gold, Étoupe, Craie, Vert Menthe...': 'Например: Noir, Gold, Étoupe, Craie, Vert Menthe...',
+    'Cuir / matière': 'Кожа / материал',
+    'Exotique': 'Экзотическая кожа',
+    'Indifférent': 'Без предпочтений',
+    'Type de cuir exotique': 'Вид экзотической кожи',
+    'Sélectionnez un cuir exotique': 'Выберите вид экзотической кожи',
+    'Crocodile Niloticus': 'Crocodile Niloticus',
+    'Crocodile Porosus': 'Crocodile Porosus',
+    'Alligator Mississippiensis': 'Alligator Mississippiensis',
+    'Autruche': 'Ostrich',
+    'Lézard': 'Lizard',
+    'Autre cuir exotique': 'Другой вид экзотической кожи',
+    'Précisez le cuir exotique recherché': 'Укажите нужный вид экзотической кожи',
+    'Autre cuir / matière': 'Другая кожа / материал',
+    'Précisez le cuir ou la matière recherchée': 'Укажите нужную кожу или материал',
+    'Métallerie': 'Фурнитура',
+    'Or': 'Gold',
+    'Budget': 'Бюджет',
+    'Flexible': 'Гибкий бюджет',
+    'État recherché': 'Желаемое состояние',
+    'Neuf / jamais porté': 'Новое / ни разу не носили',
+    'Excellent état': 'Отличное состояние',
+    'Très bon état': 'Очень хорошее состояние',
+    'Vos coordonnées': 'Ваши контакты',
+    'Prénom *': 'Имя *',
+    'Nom *': 'Фамилия *',
+    'E-mail *': 'Электронная почта *',
+    'WhatsApp / téléphone': 'WhatsApp / телефон',
+    'Informations complémentaires': 'Дополнительная информация',
+    'Précisez ici vos préférences, votre délai ou toute autre information utile.': 'Укажите ваши предпочтения, желаемые сроки и другую полезную информацию.',
+    'Envoyer ma demande': 'Отправить запрос'
+  });
+  const intro = document.querySelector('.sourcing-intro > p:not(.eyebrow)');
+  if (intro) intro.textContent = 'Опишите изделие, которое вы ищете. ED Luxury изучит ваш запрос и свяжется с вами, если появится предложение, соответствующее вашим пожеланиям.';
+  const privacy = document.querySelector('.form-privacy');
+  if (privacy) privacy.textContent = 'Указанные данные используются только для рассмотрения вашего запроса и связи с вами по этому вопросу.';
+})();
