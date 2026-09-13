@@ -358,3 +358,35 @@ const desc=document.querySelector('.product-detail-description');if(desc)desc.te
 document.querySelectorAll('.product-specs > div').forEach(row=>{const dt=row.querySelector('dt'),dd=row.querySelector('dd');if(dt?.textContent.trim()==='Accessori'&&dd)dd.textContent=item.accessories||"Clochette, lucchetto, due chiavi, cinturino portachiavi in pelle, sacca antipolvere e scatola Hermès"});
 document.querySelectorAll('.product-gallery img').forEach((img,index)=>{img.alt=item.name+' — '+(item.views[index]||'foto del prodotto')});
 })();
+
+(()=>{if(EDL_LANG!=='pt')return;
+const p=location.pathname.split('/').pop()||'';
+const products={"birkin-35-rouge.html":{"name":"Hermès Birkin 35 Rouge","meta":"Hermès Birkin 35 de 2006 em couro Swift Rouge com ferragens Palladium.","description":"Em ótimo estado. Interior em couro de cabra no mesmo tom, com bolso com zíper e bolso aberto. Acompanha clochette, cadeado, duas chaves, tira de couro para as chaves, saco de proteção e caixa Hermès.","views":["imagem principal","vista frontal","segunda vista frontal","vista lateral","vista traseira"]},"birkin-35-orange.html":{"name":"Hermès Birkin 35 Orange","meta":"Hermès Birkin 35 de 2008 em couro Togo Orange com ferragens Palladium.","description":"Em ótimo estado. Interior em couro laranja no mesmo tom, com bolso com zíper e bolso aberto. Acompanha clochette, cadeado, duas chaves, tira de couro para as chaves, saco de proteção e caixa Hermès.","views":["imagem principal","lado esquerdo","lado direito","vista traseira","parte inferior"]},"birkin-35-noir.html":{"name":"Hermès Birkin 35 Noir","meta":"Hermès Birkin 35 de 1995 em couro preto Noir com ferragens douradas.","sub":"Couro preto · Noir · Ferragens douradas","description":"Em bom estado. Interior em couro preto, com bolso com zíper e bolso aberto. Acompanha clochette, cadeado, duas chaves, tira de couro para as chaves, saco de proteção e caixa Hermès.","views":["imagem principal","lado esquerdo","lado direito","vista traseira","detalhe das ferragens"]},"birkin-30-bleu-jean.html":{"name":"Hermès Birkin 30 Bleu Jean","meta":"Hermès Birkin 30 de 2005 em couro Togo Bleu Jean com ferragens Palladium.","description":"Em ótimo estado. Interior em couro azul no mesmo tom, com bolso com zíper e bolso aberto. Acompanha clochette, cadeado, duas chaves, tira de couro para as chaves, saco de proteção e caixa Hermès.","views":["imagem principal","vista frontal","vista lateral","vista traseira","acessórios"]},"birkin-35-rose.html":{"name":"Hermès Birkin 35 Rose","meta":"Hermès Birkin 35 de 2013 em couro Epsom Rose com ferragens prateadas.","sub":"Epsom · Rose · Ferragens prateadas","description":"Em ótimo estado. Parte externa quase nova, com alguns microarranhões leves nas ferragens e uma pequena marca no fecho. Interior também quase novo. Acompanha clochette, cadeado, duas chaves, caixa Hermès original, dois sacos de proteção, capa de chuva e livreto.","accessories":"Clochette, cadeado, duas chaves, caixa Hermès original, dois sacos de proteção, capa de chuva e livreto","views":["imagem principal","vista lateral","vista traseira","detalhe das ferragens","parte inferior"]},"birkin-35-vert-menthe.html":{"name":"Hermès Birkin 35 Vert Menthe","meta":"Hermès Birkin 35 de 2012 em couro Clémence Vert Menthe com ferragens Palladium.","description":"Em ótimo estado. Interior em couro no mesmo tom, com bolso com zíper e bolso aberto. Acompanha clochette, cadeado, duas chaves, tira de couro para as chaves, saco de proteção e caixa Hermès.","views":["imagem principal","vista frontal","lado esquerdo","lado direito","vista traseira","interior","detalhe do canto","caixa"]}};
+const item=products[p];if(!item)return;
+document.title=item.name+' — ED Luxury';
+const meta=document.querySelector('meta[name="description"]');if(meta)meta.content=item.meta;
+EDL_TRANSLATE({
+'Disponible':'Disponível',
+'Demander cette pièce':'Consultar esta peça',
+'← Retour à la sélection':'← Voltar à seleção',
+'Modèle':'Modelo',
+'Cuir':'Couro',
+'Couleur':'Cor',
+'Métal':'Ferragens',
+'Année':'Ano',
+'Stamp':'Marcação',
+'État':'Estado de conservação',
+'Accessoires':'Acessórios',
+'Dimensions':'Dimensões',
+'Très bon état':'Ótimo estado',
+'Bon état':'Bom estado',
+'Cuir noir':'Couro preto',
+'Doré':'Dourado',
+'Argenté':'Prateado',
+'Métallerie argentée':'Ferragens prateadas'
+});
+if(item.sub){const sub=document.querySelector('.product-detail-sub');if(sub)sub.textContent=item.sub}
+const description=document.querySelector('.product-detail-description');if(description)description.textContent=item.description;
+document.querySelectorAll('.product-specs > div').forEach(row=>{const dt=row.querySelector('dt'),dd=row.querySelector('dd');if(dt?.textContent.trim()==='Acessórios'&&dd)dd.textContent=item.accessories||"Clochette, cadeado, duas chaves, tira de couro para as chaves, saco de proteção e caixa Hermès"});
+document.querySelectorAll('.product-gallery img').forEach((img,index)=>{img.alt=item.name+' — '+(item.views[index]||'foto do produto')});
+})();
