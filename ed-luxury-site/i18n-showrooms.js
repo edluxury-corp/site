@@ -187,3 +187,40 @@
   if(cards[1]){const description=cards[1].querySelector('.event-description p');if(description)description.textContent='在专为活动挑选的巴黎公寓内，享受预约制私享购物体验。'}
   set('.showroom-cta > p:not(.eyebrow)','活动日期、地点和展出珍品将在确定后陆续公布。');
 })();
+
+ 
+(()=>{
+  if(EDL_LANG!=='ru')return;
+  document.title='Шоурумы — ED Luxury';
+  const meta=document.querySelector('meta[name="description"]');
+  if(meta)meta.content='Познакомьтесь с частными шоурумами ED Luxury и закрытыми встречами для покупателей в Париже.';
+  EDL_TRANSLATE({
+    'ED Luxury Paris':'ED Luxury Париж',
+    'Nos showrooms':'Наши шоурумы',
+    'Shopping experience':'Частные встречи с коллекцией',
+    'Prochains rendez-vous':'Ближайшие встречи',
+    'Paris private shopping':'Частный шопинг в Париже',
+    'Prochainement':'Скоро',
+    'Private showroom — Paris':'Частный шоурум — Париж',
+    'Shopping experience — Paris':'Частный шопинг — Париж',
+    'Être informé':'Узнать о событии',
+    'Recevoir les prochaines invitations':'Получать приглашения',
+    'Showroom ED Luxury à Paris':'Шоурум ED Luxury в Париже',
+    'Appartement parisien ED Luxury':'Парижские апартаменты ED Luxury',
+    'Espace de présentation privé ED Luxury':'Частное пространство для презентаций ED Luxury',
+    'Salon de showroom ED Luxury':'Гостиная шоурума ED Luxury',
+    'Showroom privé ED Luxury':'Частный шоурум ED Luxury',
+    'Shopping experience ED Luxury à Paris':'Частная встреча ED Luxury в Париже'
+  });
+  const set=(selector,value)=>{const element=document.querySelector(selector);if(element)element.textContent=value};
+  set('.showrooms-lead','Мы выбираем уединённые пространства, чтобы в особые дни представлять коллекции ED Luxury в конфиденциальной обстановке.');
+  set('.showroom-concept-title h2','Личная встреча с нашей коллекцией');
+  const concept=document.querySelectorAll('.showroom-concept-copy p');
+  if(concept[0])concept[0].textContent='В определённые дни ED Luxury проводит частные мероприятия в исключительных апартаментах и других пространствах Парижа.';
+  if(concept[1])concept[1].textContent='Наши шоурумы открываются на ограниченное время. В камерной атмосфере гости могут рассмотреть и примерить изделия, подобранные специально для встречи, и обсудить их с нашей командой.';
+  if(concept[2])concept[2].textContent='Адреса и время посещения сообщаются только зарегистрированным или приглашённым гостям.';
+  const cards=document.querySelectorAll('.event-card');
+  if(cards[0]){const description=cards[0].querySelector('.event-description p');if(description)description.textContent='Частная презентация сумок и других изделий, доступных в ED Luxury.'}
+  if(cards[1]){const description=cards[1].querySelector('.event-description p');if(description)description.textContent='Встреча по предварительной записи в парижских апартаментах, выбранных специально для этого события.'}
+  set('.showroom-cta > p:not(.eyebrow)','Даты, места проведения и представленные изделия объявляются по мере подготовки встреч.');
+})();
