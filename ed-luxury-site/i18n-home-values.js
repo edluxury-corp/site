@@ -24,3 +24,16 @@
 'Salon haussmannien du showroom':'صالون بطراز باريس الكلاسيكي في صالة العرض',
 'Espace privé de présentation':'مساحة خاصة لعرض القطع'
 })})();
+
+(()=>{if(EDL_LANG!=='ja')return;EDL_TRANSLATE({
+'Discrétion':'プライバシー','Une approche confidentielle et sur mesure.':'お一人おひとりに寄り添う、きめ細やかでプライベートなサービス。',
+'Authenticité':'真正性','Des pièces rigoureusement sélectionnées et vérifiées.':'厳選し、真贋を丁寧に確認したお品物だけをご紹介します。',
+'Accompagnement':'パーソナルサポート','Un interlocuteur dédié à chaque étape de votre expérience.':'ご相談からお届けまで、専任の担当者が寄り添います。',
+'Exigence':'妥協のない品質','Le plus haut niveau de qualité, sans compromis.':'細部にまで、最高水準の品質を追求します。',
+'Sac de luxe sélectionné par ED Luxury':'ED Luxuryが厳選したラグジュアリーバッグ',
+'Sélection de sacs de luxe':'ラグジュアリーバッグのセレクション',
+'Emplacement pour votre photo principale de Birkin':'バーキンのメイン画像',
+'Showroom parisien ED Luxury':'ED Luxuryのパリのショールーム',
+'Salon haussmannien du showroom':'オスマン様式のショールームサロン',
+'Espace privé de présentation':'プライベートな展示スペース'
+})})();
