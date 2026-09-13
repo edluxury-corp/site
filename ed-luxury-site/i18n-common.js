@@ -14,3 +14,30 @@
 (()=>{if(EDL_LANG!=='zh')return;EDL_TRANSLATE({
 'Confier une recherche':'委托寻品','Proposer une pièce':'提交藏品','Accueil':'首页','Sélection':'精选系列','Showroom':'展厅','Showrooms':'私享展厅','À propos':'关于我们','Contact':'联系我们','Nous contacter':'联系我们','Accès privé':'私享入口','Sourcing privé':'私人寻品','Confiez-nous votre recherche':'委托我们寻品','Mentions légales':'法律声明','Suivez-nous':'关注我们','ED Luxury — Tous droits réservés':'ED Luxury — 版权所有','Activer le mode sombre':'切换至深色模式','Activer le mode clair':'切换至浅色模式','Mode sombre':'深色模式','Mode clair':'浅色模式','Navigation principale':'主导航','Navigation de pied de page':'页脚导航','ED Luxury, accueil':'ED Luxury 首页','Menu':'菜单'
 })})();
+
+ 
+(()=>{if(EDL_LANG!=='ru')return;EDL_TRANSLATE({
+'Confier une recherche':'Поручить поиск',
+'Proposer une pièce':'Предложить изделие',
+'Accueil':'Главная',
+'Sélection':'Коллекция',
+'Showroom':'Шоурум',
+'Showrooms':'Шоурумы',
+'À propos':'О нас',
+'Contact':'Контакты',
+'Nous contacter':'Связаться с нами',
+'Accès privé':'Личный доступ',
+'Sourcing privé':'Индивидуальный поиск',
+'Confiez-nous votre recherche':'Поручите нам поиск',
+'Mentions légales':'Правовая информация',
+'Suivez-nous':'Мы в соцсетях',
+'ED Luxury — Tous droits réservés':'ED Luxury — Все права защищены',
+'Activer le mode sombre':'Включить тёмную тему',
+'Activer le mode clair':'Включить светлую тему',
+'Mode sombre':'Тёмная тема',
+'Mode clair':'Светлая тема',
+'Navigation principale':'Основная навигация',
+'Navigation de pied de page':'Навигация внизу страницы',
+'ED Luxury, accueil':'ED Luxury, главная страница',
+'Menu':'Меню'
+})})();
