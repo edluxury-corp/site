@@ -147,3 +147,58 @@
   document.querySelectorAll('.product-specs > div').forEach(row=>{const dt=row.querySelector('dt'),dd=row.querySelector('dd');if(dt?.textContent.trim()==='الملحقات'&&dd)dd.textContent=item.accessories});
   document.querySelectorAll('.product-gallery img').forEach((img,index)=>{img.alt=item.name+' — '+(item.views[index]||'صورة للمنتج')});
 })();
+
+(()=>{
+  if(EDL_LANG!=='ja')return;
+  const p=location.pathname.split('/').pop()||'';
+  const standardAccessories='クロシェット、カデナ、鍵2本、レザー製キーストラップ、エルメスの保存袋と箱';
+  const products={
+    'birkin-35-rouge.html':{
+      name:'Hermès Birkin 35 Rouge',title:'Hermès Birkin 35 Rouge — ED Luxury',
+      meta:'2006年製Hermès Birkin 35。Swiftレザー、Rouge、Palladium金具。',
+      description:'非常に良好な状態です。内側は同系色のシェーブルレザーで、ファスナーポケットとオープンポケットを備えています。クロシェット、カデナ、鍵2本、レザー製キーストラップ、エルメスの保存袋と箱が付属します。',
+      accessories:standardAccessories,views:['メイン画像','正面','正面の別アングル','側面','背面']
+    },
+    'birkin-35-orange.html':{
+      name:'Hermès Birkin 35 Orange',title:'Hermès Birkin 35 Orange — ED Luxury',
+      meta:'2008年製Hermès Birkin 35。Togoレザー、Orange、Palladium金具。',
+      description:'非常に良好な状態です。内側は同系色のオレンジレザーで、ファスナーポケットとオープンポケットを備えています。クロシェット、カデナ、鍵2本、レザー製キーストラップ、エルメスの保存袋と箱が付属します。',
+      accessories:standardAccessories,views:['メイン画像','左側面','右側面','背面','底面']
+    },
+    'birkin-35-noir.html':{
+      name:'Hermès Birkin 35 Noir',title:'Hermès Birkin 35 Noir — ED Luxury',
+      meta:'1995年製Hermès Birkin 35。ブラックレザー、Noir、Doré金具。',
+      description:'良好な状態です。内側はブラックレザーで、ファスナーポケットとオープンポケットを備えています。クロシェット、カデナ、鍵2本、レザー製キーストラップ、エルメスの保存袋と箱が付属します。',
+      accessories:standardAccessories,views:['メイン画像','左側面','右側面','背面','金具のディテール']
+    },
+    'birkin-30-bleu-jean.html':{
+      name:'Hermès Birkin 30 Bleu Jean',title:'Hermès Birkin 30 Bleu Jean — ED Luxury',
+      meta:'2005年製Hermès Birkin 30。Togoレザー、Bleu Jean、Palladium金具。',
+      description:'非常に良好な状態です。内側は同系色のブルーレザーで、ファスナーポケットとオープンポケットを備えています。クロシェット、カデナ、鍵2本、レザー製キーストラップ、エルメスの保存袋と箱が付属します。',
+      accessories:standardAccessories,views:['メイン画像','正面','側面','背面','付属品']
+    },
+    'birkin-35-rose.html':{
+      name:'Hermès Birkin 35 Rose',title:'Hermès Birkin 35 Rose — ED Luxury',
+      meta:'2013年製Hermès Birkin 35。Epsomレザー、Rose、Argenté金具。',
+      description:'非常に良好な状態です。外側は新品に近く、金具にごく軽い微細な擦れ、留め具に小さな跡があります。内側も新品に近い状態です。クロシェット、カデナ、鍵2本、エルメスのオリジナルボックス、保存袋2点、レインカバー、冊子が付属します。',
+      accessories:'クロシェット、カデナ、鍵2本、エルメスのオリジナルボックス、保存袋2点、レインカバー、冊子',views:['メイン画像','側面','背面','金具のディテール','底面']
+    },
+    'birkin-35-vert-menthe.html':{
+      name:'Hermès Birkin 35 Vert Menthe',title:'Hermès Birkin 35 Vert Menthe — ED Luxury',
+      meta:'2012年製Hermès Birkin 35。Clémenceレザー、Vert Menthe、Palladium金具。',
+      description:'非常に良好な状態です。内側は同系色のレザーで、ファスナーポケットとオープンポケットを備えています。クロシェット、カデナ、鍵2本、レザー製キーストラップ、エルメスの保存袋と箱が付属します。',
+      accessories:standardAccessories,views:['メイン画像','正面','左側面','右側面','背面','内側','角のディテール','箱']
+    }
+  };
+  const item=products[p];if(!item)return;
+  document.title=item.title;
+  const meta=document.querySelector('meta[name="description"]');if(meta)meta.content=item.meta;
+  EDL_TRANSLATE({
+    'Disponible':'在庫あり','Demander cette pièce':'この商品について問い合わせる','← Retour à la sélection':'← セレクションに戻る',
+    'Modèle':'モデル','Cuir':'レザー','Couleur':'カラー','Métal':'金具','Année':'製造年','Stamp':'刻印','État':'状態','Accessoires':'付属品','Dimensions':'サイズ',
+    'Très bon état':'非常に良好','Bon état':'良好','Cuir noir':'ブラックレザー'
+  });
+  const description=document.querySelector('.product-detail-description');if(description)description.textContent=item.description;
+  document.querySelectorAll('.product-specs > div').forEach(row=>{const dt=row.querySelector('dt'),dd=row.querySelector('dd');if(dt?.textContent.trim()==='付属品'&&dd)dd.textContent=item.accessories});
+  document.querySelectorAll('.product-gallery img').forEach((img,index)=>{img.alt=item.name+'：'+(item.views[index]||'商品画像')});
+})();
