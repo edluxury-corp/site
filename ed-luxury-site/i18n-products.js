@@ -83,3 +83,67 @@
   ];
   document.querySelectorAll('.product-gallery img').forEach(img=>{let alt=img.getAttribute('alt')||'';for(const [from,to] of altReplacements)alt=alt.replace(from,to);img.setAttribute('alt',alt)});
 })();
+
+(()=>{
+  if(EDL_LANG!=='ar')return;
+  const p=location.pathname.split('/').pop()||'';
+  const standardAccessories='كلوشيت، قفل، مفتاحان، حافظة مفاتيح جلدية، كيس حفظ وصندوق من هيرميس';
+  const products={
+    'birkin-35-rouge.html':{
+      name:'حقيبة هيرميس بيركن 35 الحمراء',title:'هيرميس بيركن 35 أحمر — ED Luxury',
+      meta:'حقيبة هيرميس بيركن 35 من جلد Swift الأحمر مع معدن بالاديوم، إصدار 2006 — ED Luxury.',
+      sub:'أحمر · جلد Swift · بالاديوم',
+      description:'بحالة جيدة جداً. الجزء الداخلي من جلد الماعز باللون نفسه، مع جيب بسحّاب وجيب مفتوح. تأتي مع كلوشيت، وقفل، ومفتاحين، وحافظة مفاتيح جلدية، وكيس حفظ وصندوق من هيرميس.',
+      accessories:standardAccessories,views:['الصورة الرئيسية','الواجهة الأمامية','صورة أمامية ثانية','الجانب','الخلف']
+    },
+    'birkin-35-orange.html':{
+      name:'حقيبة هيرميس بيركن 35 البرتقالية',title:'هيرميس بيركن 35 برتقالي — ED Luxury',
+      meta:'حقيبة هيرميس بيركن 35 من جلد Togo البرتقالي مع معدن بالاديوم، إصدار 2008 — ED Luxury.',
+      sub:'برتقالي · جلد Togo · بالاديوم',
+      description:'بحالة جيدة جداً. الجزء الداخلي من الجلد البرتقالي باللون نفسه، مع جيب بسحّاب وجيب مفتوح. تأتي مع كلوشيت، وقفل، ومفتاحين، وحافظة مفاتيح جلدية، وكيس حفظ وصندوق من هيرميس.',
+      accessories:standardAccessories,views:['الصورة الرئيسية','الجانب الأيسر','الجانب الأيمن','الخلف','القاعدة']
+    },
+    'birkin-35-noir.html':{
+      name:'حقيبة هيرميس بيركن 35 السوداء',title:'هيرميس بيركن 35 أسود — ED Luxury',
+      meta:'حقيبة هيرميس بيركن 35 من الجلد الأسود مع معدن ذهبي، إصدار 1995 — ED Luxury.',
+      sub:'أسود · جلد أسود · معدن ذهبي',
+      description:'بحالة جيدة. الجزء الداخلي من الجلد الأسود، مع جيب بسحّاب وجيب مفتوح. تأتي مع كلوشيت، وقفل، ومفتاحين، وحافظة مفاتيح جلدية، وكيس حفظ وصندوق من هيرميس.',
+      accessories:standardAccessories,views:['الصورة الرئيسية','الجانب الأيسر','الجانب الأيمن','الخلف','تفاصيل المعدن']
+    },
+    'birkin-30-bleu-jean.html':{
+      name:'حقيبة هيرميس بيركن 30 بلون أزرق جينز',title:'هيرميس بيركن 30 أزرق جينز — ED Luxury',
+      meta:'حقيبة هيرميس بيركن 30 من جلد Togo بلون أزرق جينز مع معدن بالاديوم، إصدار 2005 — ED Luxury.',
+      sub:'أزرق جينز · جلد Togo · بالاديوم',
+      description:'بحالة جيدة جداً. الجزء الداخلي من الجلد الأزرق باللون نفسه، مع جيب بسحّاب وجيب مفتوح. تأتي مع كلوشيت، وقفل، ومفتاحين، وحافظة مفاتيح جلدية، وكيس حفظ وصندوق من هيرميس.',
+      accessories:standardAccessories,views:['الصورة الرئيسية','الواجهة الأمامية','الجانب','الخلف','الملحقات']
+    },
+    'birkin-35-rose.html':{
+      name:'حقيبة هيرميس بيركن 35 الوردية',title:'هيرميس بيركن 35 وردي — ED Luxury',
+      meta:'حقيبة هيرميس بيركن 35 من جلد Epsom الوردي مع معدن فضي، إصدار 2013 — ED Luxury.',
+      sub:'وردي · جلد Epsom · معدن فضي',
+      description:'بحالة جيدة جداً. الجزء الخارجي قريب من حالة الجديد، مع خدوش دقيقة وخفيفة على المعدن وأثر صغير على الإغلاق. الجزء الداخلي قريب من حالة الجديد أيضاً. تأتي مع كلوشيت، وقفل، ومفتاحين، وصندوق هيرميس الأصلي، وكيسي حفظ، وغطاء للمطر، وكتيّب.',
+      accessories:'كلوشيت، قفل، مفتاحان، صندوق هيرميس الأصلي، كيسا حفظ، غطاء للمطر، وكتيّب',views:['الصورة الرئيسية','الجانب','الخلف','تفاصيل المعدن','القاعدة']
+    },
+    'birkin-35-vert-menthe.html':{
+      name:'حقيبة هيرميس بيركن 35 الخضراء النعناعية',title:'هيرميس بيركن 35 أخضر نعناعي — ED Luxury',
+      meta:'حقيبة هيرميس بيركن 35 من جلد Clémence الأخضر النعناعي مع معدن بالاديوم، إصدار 2012 — ED Luxury.',
+      sub:'أخضر نعناعي · جلد Clémence · بالاديوم',
+      description:'بحالة جيدة جداً. الجزء الداخلي من الجلد باللون نفسه، مع جيب بسحّاب وجيب مفتوح. تأتي مع كلوشيت، وقفل، ومفتاحين، وحافظة مفاتيح جلدية، وكيس حفظ وصندوق من هيرميس.',
+      accessories:standardAccessories,views:['الصورة الرئيسية','الواجهة الأمامية','الجانب الأيسر','الجانب الأيمن','الخلف','الجزء الداخلي','تفاصيل الزاوية','الصندوق']
+    }
+  };
+  const item=products[p];if(!item)return;
+  document.title=item.title;
+  const meta=document.querySelector('meta[name="description"]');if(meta)meta.content=item.meta;
+  EDL_TRANSLATE({
+    'Disponible':'متاحة','Demander cette pièce':'استفسر عن هذه القطعة','← Retour à la sélection':'العودة إلى المجموعة المختارة',
+    'Modèle':'الموديل','Cuir':'الجلد','Couleur':'اللون','Métal':'المعدن','Année':'سنة الصنع','Stamp':'الختم','État':'الحالة','Accessoires':'الملحقات','Dimensions':'الأبعاد',
+    'Très bon état':'حالة جيدة جداً','Bon état':'حالة جيدة','Doré':'ذهبي','Argenté':'فضي','Argentée':'فضي','Métallerie argentée':'معدن فضي','Palladium':'بالاديوم',
+    'Cuir noir':'جلد أسود','Rouge':'أحمر','Orange':'برتقالي','Noir':'أسود','Rose':'وردي','Vert Menthe':'أخضر نعناعي','Bleu Jean':'أزرق جينز',
+    'Carré J':'مربع J','Carré L':'مربع L','Carré I':'مربع I','Carré P':'مربع P','Carré Q':'مربع Q','Cercle Y':'دائرة Y'
+  });
+  const sub=document.querySelector('.product-detail-sub');if(sub)sub.textContent=item.sub;
+  const description=document.querySelector('.product-detail-description');if(description)description.textContent=item.description;
+  document.querySelectorAll('.product-specs > div').forEach(row=>{const dt=row.querySelector('dt'),dd=row.querySelector('dd');if(dt?.textContent.trim()==='الملحقات'&&dd)dd.textContent=item.accessories});
+  document.querySelectorAll('.product-gallery img').forEach((img,index)=>{img.alt=item.name+' — '+(item.views[index]||'صورة للمنتج')});
+})();
