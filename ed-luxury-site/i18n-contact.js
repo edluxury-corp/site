@@ -131,3 +131,26 @@
   set('.contact-sourcing > p:not(.eyebrow)', 'Поручите нам поиск Birkin, Kelly или HAC с учётом ваших пожеланий по размеру, цвету, материалу, фурнитуре, состоянию и бюджету.');
   set('.contact-sell div > p:not(.eyebrow)', 'В ближайшее время ED Luxury начнёт рассматривать предложения о продаже Birkin, Kelly, HAC и других избранных изделий.');
 })();
+
+(()=> {
+  if (EDL_LANG !== 'it') return;
+  document.title = 'Contatti — ED Luxury';
+  const meta = document.querySelector('meta[name="description"]');
+  if (meta) meta.content = 'Contatta ED Luxury per informazioni sui nostri pezzi, sugli showroom privati o sui nostri servizi.';
+  EDL_TRANSLATE({
+    'Localisation': 'Dove siamo',
+    'Paris, France': 'Parigi, Francia',
+    'Pour échanger directement avec notre équipe.': 'Per parlare direttamente con il nostro team.',
+    'Rencontres et showrooms sur rendez-vous ou invitation.': 'Incontri e visite agli showroom su appuntamento o invito.',
+    'Vous recherchez une pièce précise ?': 'Cerchi un pezzo particolare?',
+    'Vendre une pièce': 'Vendi un pezzo',
+    'Vous souhaitez nous proposer un sac ?': 'Vuoi proporci una borsa?'
+  });
+  const set = (selector, value) => {
+    const element = document.querySelector(selector);
+    if (element) element.textContent = value;
+  };
+  set('.contact-lead', 'Per qualsiasi domanda su ED Luxury, su un pezzo della nostra selezione o sui prossimi eventi privati, il nostro team è a tua disposizione.');
+  set('.contact-sourcing > p:not(.eyebrow)', 'Affidaci la ricerca della tua Birkin, Kelly o HAC secondo le tue preferenze di misura, colore, materiale, finiture, condizioni e budget.');
+  set('.contact-sell div > p:not(.eyebrow)', 'Presto ED Luxury potrà valutare le tue proposte di Birkin, Kelly, HAC e altri pezzi selezionati.');
+})();
