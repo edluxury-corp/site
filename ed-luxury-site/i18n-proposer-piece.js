@@ -56,3 +56,16 @@
   const meta=document.querySelector('meta[name="description"]');
   if(meta)meta.content='ED Luxuryでは、お品物をご提案いただけるサービスを近日開始予定です。ご質問はスタッフまでお気軽にお問い合わせください。';
 })();
+
+ 
+(()=>{
+  if(window.EDL_LANG!=='zh')return;
+  window.EDL_TRANSLATE?.({
+    'Proposer une pièce — prochainement':'提交藏品 — 即将开放',
+    'Notre service de proposition de pièces sera bientôt disponible. En attendant, notre équipe reste à votre disposition.':'提交藏品的服务即将开放。在此期间，如有任何疑问，欢迎联系我们的团队。',
+    'Retour à l’accueil':'返回首页'
+  });
+  document.title='提交藏品 — ED Luxury';
+  const meta=document.querySelector('meta[name="description"]');
+  if(meta)meta.content='ED Luxury 的藏品提案服务即将开放。如需咨询，欢迎联系我们的团队。';
+})();
