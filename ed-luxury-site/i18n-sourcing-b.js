@@ -211,3 +211,59 @@
   const privacy=document.querySelector('.form-privacy');
   if(privacy)privacy.textContent='お預かりした情報は、ご依頼内容の確認と、それに関するご連絡のためだけに使用します。';
 })();
+
+ 
+(()=>{
+  if(EDL_LANG!=='zh')return;
+  document.title='私人寻品 — ED Luxury';
+  const meta=document.querySelector('meta[name="description"]');
+  if(meta)meta.content='委托 ED Luxury 寻找心仪的 Hermès Birkin、Kelly 或 HAC 手袋，并按尺寸、颜色、皮革与预算提出需求。';
+  EDL_TRANSLATE({
+    'Choisissez votre modèle':'选择心仪款式',
+    'Tailles':'尺寸',
+    'Autre':'其他',
+    'Autre taille Kelly':'其他 Kelly 尺寸',
+    'Ex. 22, 40, Mini Kelly...':'例如：22、40、Mini Kelly……',
+    'Autre taille Birkin / HAC':'其他 Birkin / HAC 尺寸',
+    'Précisez la taille ou le modèle recherché':'请填写您寻找的尺寸或款式',
+    'Couleur recherchée':'心仪颜色',
+    'Couleur ou référence Hermès':'Hermès 颜色名称或编号',
+    'Ex. Noir, Gold, Étoupe, Craie, Vert Menthe...':'例如：Noir、Gold、Étoupe、Craie、Vert Menthe……',
+    'Cuir / matière':'皮革与材质',
+    'Exotique':'Exotic leather 珍稀皮革',
+    'Indifférent':'无特别偏好',
+    'Type de cuir exotique':'珍稀皮革种类',
+    'Sélectionnez un cuir exotique':'请选择珍稀皮革',
+    'Autruche':'Ostrich',
+    'Lézard':'Lizard',
+    'Autre cuir exotique':'其他珍稀皮革',
+    'Précisez le cuir exotique recherché':'请填写您寻找的珍稀皮革',
+    'Autre cuir / matière':'其他皮革或材质',
+    'Précisez le cuir ou la matière recherchée':'请填写您寻找的皮革或材质',
+    'Métallerie':'金属件',
+    'Or':'Gold',
+    'Budget':'预算',
+    'Flexible':'预算可商议',
+    'État recherché':'期望品相',
+    'Neuf / jamais porté':'全新／未使用',
+    'Excellent état':'品相极佳',
+    'Très bon état':'品相良好',
+    'Vos coordonnées':'联系方式',
+    'Prénom *':'名 *',
+    'Nom *':'姓 *',
+    'E-mail *':'电子邮箱 *',
+    'WhatsApp / téléphone':'WhatsApp／电话号码',
+    'Informations complémentaires':'补充说明',
+    'Précisez ici vos préférences, votre délai ou toute autre information utile.':'请填写其他偏好、期望时间或有助于寻品的信息。',
+    'Envoyer ma demande':'提交寻品需求'
+  });
+  const intro=document.querySelector('.sourcing-intro > p:not(.eyebrow)');
+  if(intro)intro.textContent='请描述您正在寻找的珍品。ED Luxury 将审阅您的需求；如发现符合条件的机会，我们会与您联系。';
+  const privacy=document.querySelector('.form-privacy');
+  if(privacy)privacy.textContent='您提供的信息仅用于评估寻品需求及就此与您联系。';
+  const exoticOptions=document.querySelectorAll('#exotic-leather-select [data-value]');
+  exoticOptions.forEach(option=>{
+    if(option.dataset.value==='Autruche'){option.dataset.value='Ostrich';option.textContent='Ostrich'}
+    if(option.dataset.value==='Lézard'){option.dataset.value='Lizard';option.textContent='Lizard'}
+  });
+})();
