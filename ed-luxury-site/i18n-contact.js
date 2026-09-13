@@ -22,3 +22,24 @@
   set('.contact-sourcing > p:not(.eyebrow)', '원하시는 버킨, 켈리 또는 HAC를 크기, 색상, 소재, 하드웨어, 상태와 예산에 맞춰 찾아드립니다.');
   set('.contact-sell div > p:not(.eyebrow)', 'ED Luxury는 곧 버킨, 켈리, HAC 및 그 밖의 엄선된 제품에 대한 판매 제안을 검토할 예정입니다.');
 })();
+
+(()=>{
+  if(EDL_LANG!=='es')return;
+  document.title='Contacto — ED Luxury';
+  const meta=document.querySelector('meta[name="description"]');
+  if(meta)meta.content='Contacte con ED Luxury para cualquier consulta sobre nuestras piezas, nuestros showrooms privados o nuestros servicios.';
+  EDL_TRANSLATE({
+    'E-mail':'Correo electrónico',
+    'Localisation':'Ubicación',
+    'Paris, France':'París, Francia',
+    'Pour échanger directement avec notre équipe.':'Para hablar directamente con nuestro equipo.',
+    'Rencontres et showrooms sur rendez-vous ou invitation.':'Encuentros y visitas a nuestros showrooms con cita previa o invitación.',
+    'Vous recherchez une pièce précise ?':'¿Busca una pieza en particular?',
+    'Vendre une pièce':'Vender una pieza',
+    'Vous souhaitez nous proposer un sac ?':'¿Desea ofrecernos un bolso?'
+  });
+  const set=(selector,value)=>{const element=document.querySelector(selector);if(element)element.textContent=value};
+  set('.contact-lead','Si tiene alguna pregunta sobre ED Luxury, una pieza de nuestra selección o nuestros próximos eventos privados, nuestro equipo estará encantado de atenderle.');
+  set('.contact-sourcing > p:not(.eyebrow)','Confíenos la búsqueda de su Birkin, Kelly o HAC según sus preferencias de tamaño, color, material, herrajes, estado y presupuesto.');
+  set('.contact-sell div > p:not(.eyebrow)','Próximamente, ED Luxury podrá estudiar sus propuestas de Birkin, Kelly, HAC y otras piezas seleccionadas.');
+})();
