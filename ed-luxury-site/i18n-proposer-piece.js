@@ -81,3 +81,15 @@
   const meta = document.querySelector('meta[name="description"]');
   if (meta) meta.content = 'Скоро вы сможете предложить изделие ED Luxury. Пока сервис готовится к запуску, свяжитесь с нашей командой.';
 })();
+
+(()=> {
+  if (window.EDL_LANG !== 'it') return;
+  window.EDL_TRANSLATE?.({
+    'Proposer une pièce — prochainement': 'Proporre un articolo — prossimamente',
+    'Notre service de proposition de pièces sera bientôt disponible. En attendant, notre équipe reste à votre disposition.': 'Presto potrai proporre un articolo a ED Luxury. Nel frattempo, il nostro team è a tua disposizione per qualsiasi domanda.',
+    'Retour à l’accueil': 'Torna alla home'
+  });
+  document.title = 'Proporre un articolo — ED Luxury';
+  const meta = document.querySelector('meta[name="description"]');
+  if (meta) meta.content = 'Presto potrai proporre un articolo a ED Luxury. Nel frattempo, contatta il nostro team per qualsiasi domanda.';
+})();
