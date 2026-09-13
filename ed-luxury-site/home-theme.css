@@ -283,3 +283,14 @@ html[lang="zh-CN"] .contact-sell p:not(.eyebrow){line-height:1.9}
 html[lang="zh-CN"] .contact-label,
 html[lang="zh-CN"] .sell-coming-soon{font-family:"Noto Sans SC","Manrope",sans-serif;letter-spacing:.03em;text-transform:none}
 html[lang="zh-CN"] .contact-block p.contact-value{font-family:"Noto Serif SC","Cormorant Garamond",serif!important}
+
+
+/* Simplified Chinese private sourcing form typography. */
+html[lang="zh-CN"] .sourcing-intro > p:last-child,
+html[lang="zh-CN"] .form-privacy{line-height:1.9}
+html[lang="zh-CN"] .luxury-select-trigger,
+html[lang="zh-CN"] .luxury-select-menu button{font-family:"Noto Sans SC","Manrope",sans-serif}
+html[lang="zh-CN"] .option-title,
+html[lang="zh-CN"] .conditional-label,
+html[lang="zh-CN"] .contact-fields label,
+html[lang="zh-CN"] .field-large label{letter-spacing:.03em;text-transform:none}
