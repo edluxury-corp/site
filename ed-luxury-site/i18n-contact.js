@@ -85,3 +85,25 @@
   set('.contact-sourcing > p:not(.eyebrow)','サイズ、カラー、素材、金具、コンディション、ご予算などのご希望に合わせて、Birkin、Kelly、HACをお探しします。');
   set('.contact-sell div > p:not(.eyebrow)','ED Luxuryでは近日中に、Birkin、Kelly、HACをはじめとする厳選されたお品物のご提案を承る予定です。');
 })();
+
+ 
+(()=>{
+  if(EDL_LANG!=='zh')return;
+  document.title='联系我们 — ED Luxury';
+  const meta=document.querySelector('meta[name="description"]');
+  if(meta)meta.content='如需咨询 ED Luxury 精选藏品、巴黎私享展厅或我们的服务，欢迎联系我们。';
+  EDL_TRANSLATE({
+    'E-mail':'电子邮箱',
+    'Localisation':'所在地',
+    'Paris, France':'法国巴黎',
+    'Pour échanger directement avec notre équipe.':'欢迎通过 WhatsApp 与我们的团队直接交流。',
+    'Rencontres et showrooms sur rendez-vous ou invitation.':'会面及展厅参观须提前预约或凭邀请参加。',
+    'Vous recherchez une pièce précise ?':'正在寻找心仪的珍品？',
+    'Vendre une pièce':'出售藏品',
+    'Vous souhaitez nous proposer un sac ?':'想向我们推荐一款手袋？'
+  });
+  const set=(selector,value)=>{const element=document.querySelector(selector);if(element)element.textContent=value};
+  set('.contact-lead','无论您想了解 ED Luxury、精选系列中的藏品，还是即将举行的私人活动，我们的团队都乐意为您提供帮助。');
+  set('.contact-sourcing > p:not(.eyebrow)','告诉我们您对尺寸、颜色、材质、金属件、品相和预算的要求，我们将为您寻找心仪的 Birkin、Kelly 或 HAC。');
+  set('.contact-sell div > p:not(.eyebrow)','ED Luxury 即将开放 Birkin、Kelly、HAC 及其他精选藏品的出售提案评估。');
+})();
