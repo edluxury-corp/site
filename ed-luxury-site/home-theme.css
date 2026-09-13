@@ -198,3 +198,10 @@ html[lang="ja"] .product-info h2,
 html[lang="ja"] .product-detail-info h1{font-family:"Cormorant Garamond",serif!important}
 html[lang="ja"] .product-details,
 html[lang="ja"] .product-detail-sub{font-family:"Manrope",sans-serif}
+
+/* Japanese showroom text rhythm. */
+html[lang="ja"] .showrooms-lead,
+html[lang="ja"] .showroom-concept-copy p,
+html[lang="ja"] .event-description p,
+html[lang="ja"] .showroom-cta > p:not(.eyebrow){line-height:1.9}
+html[lang="ja"] .event-date{font-family:"Noto Sans JP","Manrope",sans-serif;letter-spacing:.02em;text-transform:none}
