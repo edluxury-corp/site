@@ -161,3 +161,53 @@
   const privacy=document.querySelector('.form-privacy');
   if(privacy)privacy.textContent='تُستخدم المعلومات التي تقدمها فقط لدراسة طلبك والتواصل معك بشأنه.';
 })();
+
+(()=>{
+  if(EDL_LANG!=='ja')return;
+  document.title='プライベートソーシング — ED Luxury';
+  const meta=document.querySelector('meta[name="description"]');
+  if(meta)meta.content='お探しのHermès Birkin、Kelly、HACをED Luxuryにご相談ください。サイズ、カラー、素材、ご予算に合わせてお探しします。';
+  EDL_TRANSLATE({
+    'Choisissez votre modèle':'モデルをお選びください',
+    'Tailles':'サイズ',
+    'Autre':'その他',
+    'Autre taille Kelly':'Kellyのその他のサイズ',
+    'Ex. 22, 40, Mini Kelly...':'例：22、40、Mini Kellyなど',
+    'Autre taille Birkin / HAC':'Birkin／HACのその他のサイズ',
+    'Précisez la taille ou le modèle recherché':'ご希望のサイズまたはモデルをご記入ください',
+    'Couleur recherchée':'ご希望のカラー',
+    'Couleur ou référence Hermès':'Hermèsのカラー名・リファレンス',
+    'Ex. Noir, Gold, Étoupe, Craie, Vert Menthe...':'例：Noir、Gold、Étoupe、Craie、Vert Mentheなど',
+    'Cuir / matière':'レザー／素材',
+    'Exotique':'エキゾチックレザー',
+    'Indifférent':'指定なし',
+    'Type de cuir exotique':'エキゾチックレザーの種類',
+    'Sélectionnez un cuir exotique':'エキゾチックレザーをお選びください',
+    'Autruche':'オーストリッチ',
+    'Lézard':'リザード',
+    'Autre cuir exotique':'その他のエキゾチックレザー',
+    'Précisez le cuir exotique recherché':'ご希望のエキゾチックレザーをご記入ください',
+    'Autre cuir / matière':'その他のレザー／素材',
+    'Précisez le cuir ou la matière recherchée':'ご希望のレザーまたは素材をご記入ください',
+    'Métallerie':'金具',
+    'Or':'Gold',
+    'Budget':'ご予算',
+    'Flexible':'柔軟に検討',
+    'État recherché':'ご希望のコンディション',
+    'Neuf / jamais porté':'新品・未使用',
+    'Excellent état':'極めて良好',
+    'Très bon état':'非常に良好',
+    'Vos coordonnées':'ご連絡先',
+    'Prénom *':'お名前（名）*',
+    'Nom *':'お名前（姓）*',
+    'E-mail *':'メールアドレス *',
+    'WhatsApp / téléphone':'WhatsApp／電話番号',
+    'Informations complémentaires':'その他のご希望',
+    'Précisez ici vos préférences, votre délai ou toute autre information utile.':'ご希望の条件、購入時期、その他参考となる情報をご記入ください。',
+    'Envoyer ma demande':'依頼を送信する'
+  });
+  const intro=document.querySelector('.sourcing-intro > p:not(.eyebrow)');
+  if(intro)intro.textContent='お探しの品についてお聞かせください。ED Luxuryがご依頼を確認し、ご希望に合うお品物をご紹介できる可能性がある場合にご連絡します。';
+  const privacy=document.querySelector('.form-privacy');
+  if(privacy)privacy.textContent='お預かりした情報は、ご依頼内容の確認と、それに関するご連絡のためだけに使用します。';
+})();
