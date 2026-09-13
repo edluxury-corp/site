@@ -44,3 +44,15 @@
   const meta=document.querySelector('meta[name="description"]');
   if(meta)meta.content='ستتوفر قريباً خدمة عرض القطع للبيع لدى ED Luxury. تواصل مع فريقنا لأي استفسار.';
 })();
+
+(()=>{
+  if(window.EDL_LANG!=='ja')return;
+  window.EDL_TRANSLATE?.({
+    'Proposer une pièce — prochainement':'お品物のご提案 — 近日開始予定',
+    'Notre service de proposition de pièces sera bientôt disponible. En attendant, notre équipe reste à votre disposition.':'お品物をご提案いただけるサービスは、近日中に開始予定です。それまでの間も、ご質問がございましたらお気軽にお問い合わせください。',
+    'Retour à l’accueil':'ホームに戻る'
+  });
+  document.title='お品物のご提案 — ED Luxury';
+  const meta=document.querySelector('meta[name="description"]');
+  if(meta)meta.content='ED Luxuryでは、お品物をご提案いただけるサービスを近日開始予定です。ご質問はスタッフまでお気軽にお問い合わせください。';
+})();
