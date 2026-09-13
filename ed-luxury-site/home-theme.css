@@ -273,3 +273,13 @@ html[lang="zh-CN"] .showroom-concept-copy p,
 html[lang="zh-CN"] .event-description p,
 html[lang="zh-CN"] .showroom-cta > p:not(.eyebrow){line-height:1.9}
 html[lang="zh-CN"] .event-date{font-family:"Noto Sans SC","Manrope",sans-serif;letter-spacing:.03em;text-transform:none}
+
+
+/* Simplified Chinese contact page typography. */
+html[lang="zh-CN"] .contact-lead,
+html[lang="zh-CN"] .contact-note,
+html[lang="zh-CN"] .contact-sourcing > p:not(.eyebrow),
+html[lang="zh-CN"] .contact-sell p:not(.eyebrow){line-height:1.9}
+html[lang="zh-CN"] .contact-label,
+html[lang="zh-CN"] .sell-coming-soon{font-family:"Noto Sans SC","Manrope",sans-serif;letter-spacing:.03em;text-transform:none}
+html[lang="zh-CN"] .contact-block p.contact-value{font-family:"Noto Serif SC","Cormorant Garamond",serif!important}
