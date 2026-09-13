@@ -320,3 +320,51 @@
   const privacy = document.querySelector('.form-privacy');
   if (privacy) privacy.textContent = 'Указанные данные используются только для рассмотрения вашего запроса и связи с вами по этому вопросу.';
 })();
+
+(()=> {
+  if (EDL_LANG !== 'it') return;
+  document.title = 'Ricerca personalizzata — ED Luxury';
+  const meta = document.querySelector('meta[name="description"]');
+  if (meta) meta.content = 'Affida a ED Luxury la ricerca di una Hermès Birkin, Kelly o HAC secondo le tue preferenze di misura, colore, materiale e budget.';
+  EDL_TRANSLATE({
+    'Choisissez votre modèle': 'Scegli il modello',
+    'Tailles': 'Misure',
+    'Autre': 'Altro',
+    'Autre taille Kelly': 'Un’altra misura di Kelly',
+    'Ex. 22, 40, Mini Kelly...': 'Per esempio: 22, 40, Mini Kelly...',
+    'Autre taille Birkin / HAC': 'Un’altra misura di Birkin / HAC',
+    'Précisez la taille ou le modèle recherché': 'Indica la misura o il modello desiderato',
+    'Couleur recherchée': 'Colore desiderato',
+    'Couleur ou référence Hermès': 'Colore o riferimento Hermès',
+    'Ex. Noir, Gold, Étoupe, Craie, Vert Menthe...': 'Per esempio: Noir, Gold, Étoupe, Craie, Vert Menthe...',
+    'Cuir / matière': 'Pelle / materiale',
+    'Exotique': 'Pelle esotica',
+    'Indifférent': 'Nessuna preferenza',
+    'Type de cuir exotique': 'Tipo di pelle esotica',
+    'Sélectionnez un cuir exotique': 'Seleziona una pelle esotica',
+    'Autruche': 'Struzzo',
+    'Lézard': 'Lucertola',
+    'Autre cuir exotique': 'Un’altra pelle esotica',
+    'Précisez le cuir exotique recherché': 'Indica la pelle esotica desiderata',
+    'Autre cuir / matière': 'Un’altra pelle / materiale',
+    'Précisez le cuir ou la matière recherchée': 'Indica la pelle o il materiale desiderato',
+    'Métallerie': 'Finiture metalliche',
+    'Or': 'Oro',
+    'Flexible': 'Flessibile',
+    'État recherché': 'Condizioni desiderate',
+    'Neuf / jamais porté': 'Nuovo / mai indossato',
+    'Excellent état': 'Condizioni eccellenti',
+    'Très bon état': 'Ottime condizioni',
+    'Vos coordonnées': 'I tuoi contatti',
+    'Prénom *': 'Nome *',
+    'Nom *': 'Cognome *',
+    'WhatsApp / téléphone': 'WhatsApp / telefono',
+    'Informations complémentaires': 'Informazioni aggiuntive',
+    'Précisez ici vos préférences, votre délai ou toute autre information utile.': 'Indica le tue preferenze, i tempi desiderati o qualsiasi altra informazione utile.',
+    'Envoyer ma demande': 'Invia la richiesta'
+  });
+  const intro = document.querySelector('.sourcing-intro > p:not(.eyebrow)');
+  if (intro) intro.textContent = 'Descrivi il pezzo che stai cercando. ED Luxury valuterà la tua richiesta e ti ricontatterà se individuerà un’opportunità in linea con i tuoi criteri.';
+  const privacy = document.querySelector('.form-privacy');
+  if (privacy) privacy.textContent = 'Le informazioni fornite vengono utilizzate esclusivamente per valutare la tua richiesta e ricontattarti in merito.';
+})();
