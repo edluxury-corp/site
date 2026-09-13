@@ -64,3 +64,24 @@
   set('.contact-sourcing > p:not(.eyebrow)','دعنا نبحث لك عن حقيبة بيركن أو كيلي أو HAC وفق تفضيلاتك في الحجم واللون والخامة والمعدن والحالة والميزانية.');
   set('.contact-sell div > p:not(.eyebrow)','ستتمكن ED Luxury قريباً من دراسة عروض بيع حقائب بيركن وكيلي وHAC وغيرها من القطع المختارة.');
 })();
+
+(()=>{
+  if(EDL_LANG!=='ja')return;
+  document.title='お問い合わせ — ED Luxury';
+  const meta=document.querySelector('meta[name="description"]');
+  if(meta)meta.content='ED Luxuryのセレクション、プライベートショールーム、各種サービスに関するご質問は、こちらからお問い合わせください。';
+  EDL_TRANSLATE({
+    'E-mail':'メール',
+    'Localisation':'所在地',
+    'Paris, France':'フランス・パリ',
+    'Pour échanger directement avec notre équipe.':'スタッフと直接ご相談いただけます。',
+    'Rencontres et showrooms sur rendez-vous ou invitation.':'ご面会やショールームへのご案内は、事前予約またはご招待に限ります。',
+    'Vous recherchez une pièce précise ?':'お探しのお品物はございますか？',
+    'Vendre une pièce':'お品物の売却',
+    'Vous souhaitez nous proposer un sac ?':'バッグのご売却をお考えですか？'
+  });
+  const set=(selector,value)=>{const element=document.querySelector(selector);if(element)element.textContent=value};
+  set('.contact-lead','ED Luxuryやセレクションのお品物、今後のプライベートイベントについてご質問がございましたら、お気軽にお問い合わせください。スタッフが丁寧にご案内します。');
+  set('.contact-sourcing > p:not(.eyebrow)','サイズ、カラー、素材、金具、コンディション、ご予算などのご希望に合わせて、Birkin、Kelly、HACをお探しします。');
+  set('.contact-sell div > p:not(.eyebrow)','ED Luxuryでは近日中に、Birkin、Kelly、HACをはじめとする厳選されたお品物のご提案を承る予定です。');
+})();
