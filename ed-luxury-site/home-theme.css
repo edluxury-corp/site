@@ -365,3 +365,6 @@ html[lang="ru"] .option-title,
 html[lang="ru"] .conditional-label,
 html[lang="ru"] .contact-fields label,
 html[lang="ru"] .field-large label{letter-spacing:.015em;text-transform:none}
+/* Russian offer-a-piece placeholder. */
+html[lang="ru"] .proposal-page .contact-lead{line-height:1.85}
+@media(max-width:640px){html[lang="ru"] .proposal-page h1{font-size:clamp(30px,8vw,42px);overflow-wrap:anywhere}}
