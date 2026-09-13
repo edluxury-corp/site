@@ -260,3 +260,63 @@
   document.querySelectorAll('.product-specs > div').forEach(row=>{const dt=row.querySelector('dt'),dd=row.querySelector('dd');if(dt?.textContent.trim()==='配件'&&dd)dd.textContent=item.accessories});
   document.querySelectorAll('.product-gallery img').forEach((img,index)=>{img.alt=item.name+'：'+(item.views[index]||'商品图片')});
 })();
+
+ 
+(()=>{
+  if(EDL_LANG!=='ru')return;
+  const p=location.pathname.split('/').pop()||'';
+  const standardAccessories='leather key holder, навесной замок, два ключа, кожаный ремешок, пыльник Hermès и фирменная коробка';
+  const products={
+    'birkin-35-rouge.html':{
+      name:'Hermès Birkin 35 Rouge',title:'Hermès Birkin 35 Rouge — ED Luxury',
+      meta:'Hermès Birkin 35 2006 года: Swift leather, цвет Rouge, Palladium hardware.',
+      description:'Очень хорошее состояние. Подкладка из козьей кожи в тон сумке, с карманом на молнии и открытым карманом. В комплекте leather key holder, навесной замок, два ключа, кожаный ремешок, пыльник Hermès и фирменная коробка.',
+      accessories:standardAccessories,views:['главное фото','вид спереди','другой ракурс спереди','вид сбоку','вид сзади']
+    },
+    'birkin-35-orange.html':{
+      name:'Hermès Birkin 35 Orange',title:'Hermès Birkin 35 Orange — ED Luxury',
+      meta:'Hermès Birkin 35 2008 года: Togo leather, цвет Orange, Palladium hardware.',
+      description:'Очень хорошее состояние. Подкладка из оранжевой кожи в тон сумке, с карманом на молнии и открытым карманом. В комплекте leather key holder, навесной замок, два ключа, кожаный ремешок, пыльник Hermès и фирменная коробка.',
+      accessories:standardAccessories,views:['главное фото','вид слева','вид справа','вид сзади','вид снизу']
+    },
+    'birkin-35-noir.html':{
+      name:'Hermès Birkin 35 Noir',title:'Hermès Birkin 35 Noir — ED Luxury',
+      meta:'Hermès Birkin 35 1995 года: Black leather, цвет Noir, Gold-tone hardware.',
+      sub:'Black leather · Noir · Gold-tone hardware',
+      description:'Хорошее состояние. Подкладка из чёрной кожи с карманом на молнии и открытым карманом. В комплекте leather key holder, навесной замок, два ключа, кожаный ремешок, пыльник Hermès и фирменная коробка.',
+      accessories:standardAccessories,views:['главное фото','вид слева','вид справа','вид сзади','деталь фурнитуры']
+    },
+    'birkin-30-bleu-jean.html':{
+      name:'Hermès Birkin 30 Bleu Jean',title:'Hermès Birkin 30 Bleu Jean — ED Luxury',
+      meta:'Hermès Birkin 30 2005 года: Togo leather, цвет Bleu Jean, Palladium hardware.',
+      description:'Очень хорошее состояние. Подкладка из синей кожи в тон сумке, с карманом на молнии и открытым карманом. В комплекте leather key holder, навесной замок, два ключа, кожаный ремешок, пыльник Hermès и фирменная коробка.',
+      accessories:standardAccessories,views:['главное фото','вид спереди','вид сбоку','вид сзади','комплектация']
+    },
+    'birkin-35-rose.html':{
+      name:'Hermès Birkin 35 Rose',title:'Hermès Birkin 35 Rose — ED Luxury',
+      meta:'Hermès Birkin 35 2013 года: Epsom leather, цвет Rose, Silver-tone hardware.',
+      sub:'Epsom · Rose · Silver-tone hardware',
+      description:'Очень хорошее состояние. Снаружи сумка почти как новая; на фурнитуре есть несколько едва заметных микроцарапин, а на застёжке — небольшая отметина. Внутри состояние также близко к новому. В комплекте leather key holder, навесной замок, два ключа, оригинальная коробка Hermès, два пыльника, дождевик и буклет.',
+      accessories:'leather key holder, навесной замок, два ключа, оригинальная коробка Hermès, два пыльника, дождевик и буклет',views:['главное фото','вид сбоку','вид сзади','деталь фурнитуры','вид снизу']
+    },
+    'birkin-35-vert-menthe.html':{
+      name:'Hermès Birkin 35 Vert Menthe',title:'Hermès Birkin 35 Vert Menthe — ED Luxury',
+      meta:'Hermès Birkin 35 2012 года: Clémence leather, цвет Vert Menthe, Palladium hardware.',
+      description:'Очень хорошее состояние. Подкладка из кожи в тон сумке, с карманом на молнии и открытым карманом. В комплекте leather key holder, навесной замок, два ключа, кожаный ремешок, пыльник Hermès и фирменная коробка.',
+      accessories:standardAccessories,views:['главное фото','вид спереди','вид слева','вид справа','вид сзади','внутренняя отделка','деталь угла','коробка']
+    }
+  };
+  const item=products[p];if(!item)return;
+  document.title=item.title;
+  const meta=document.querySelector('meta[name="description"]');if(meta)meta.content=item.meta;
+  EDL_TRANSLATE({
+    'Disponible':'В наличии','Demander cette pièce':'Узнать об этом изделии','← Retour à la sélection':'← Вернуться к коллекции',
+    'Modèle':'Модель','Cuir':'Кожа','Couleur':'Цвет','Métal':'Фурнитура','Année':'Год','Stamp':'Stamp','État':'Состояние','Accessoires':'Комплектация','Dimensions':'Размеры',
+    'Très bon état':'Очень хорошее','Bon état':'Хорошее','Cuir noir':'Black leather','Doré':'Gold-tone hardware','Argenté':'Silver-tone hardware',
+    'Carré J':'Square J','Carré L':'Square L','Carré I':'Square I','Carré P':'Square P','Carré Q':'Square Q','Cercle Y':'Circle Y'
+  });
+  if(item.sub){const sub=document.querySelector('.product-detail-sub');if(sub)sub.textContent=item.sub}
+  const description=document.querySelector('.product-detail-description');if(description)description.textContent=item.description;
+  document.querySelectorAll('.product-specs > div').forEach(row=>{const dt=row.querySelector('dt'),dd=row.querySelector('dd');if(dt?.textContent.trim()==='Комплектация'&&dd)dd.textContent=item.accessories});
+  document.querySelectorAll('.product-gallery img').forEach((img,index)=>{img.alt=item.name+' — '+(item.views[index]||'фотография изделия')});
+})();
