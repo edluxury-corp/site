@@ -64,3 +64,26 @@
 'Navigation de pied de page':'Navigazione nel piè di pagina',
 'ED Luxury, accueil':'ED Luxury, homepage'
 })})();
+
+(()=>{if(EDL_LANG!=='pt')return;EDL_TRANSLATE({
+'Confier une recherche':'Solicitar uma busca',
+'Proposer une pièce':'Oferecer uma peça',
+'Accueil':'Início',
+'Sélection':'Seleção',
+'À propos':'Sobre nós',
+'Contact':'Contato',
+'Nous contacter':'Fale conosco',
+'Accès privé':'Acesso exclusivo',
+'Sourcing privé':'Busca personalizada',
+'Confiez-nous votre recherche':'Conte-nos o que procura',
+'Mentions légales':'Informações legais',
+'Suivez-nous':'Siga-nos',
+'ED Luxury — Tous droits réservés':'ED Luxury — Todos os direitos reservados',
+'Activer le mode sombre':'Ativar modo escuro',
+'Activer le mode clair':'Ativar modo claro',
+'Mode sombre':'Modo escuro',
+'Mode clair':'Modo claro',
+'Navigation principale':'Navegação principal',
+'Navigation de pied de page':'Navegação do rodapé',
+'ED Luxury, accueil':'ED Luxury, página inicial'
+})})();
