@@ -20,3 +20,15 @@
     ? 'ED Luxury 제품 판매 제안 서비스가 곧 시작됩니다. 궁금한 점은 저희 팀에 문의해 주세요.'
     : 'Offer a piece to ED Luxury — coming soon. Contact our team in the meantime.';
 })();
+
+(()=>{
+  if(window.EDL_LANG!=='es')return;
+  window.EDL_TRANSLATE?.({
+    'Proposer une pièce — prochainement':'Ofrecer una pieza — próximamente',
+    'Notre service de proposition de pièces sera bientôt disponible. En attendant, notre équipe reste à votre disposition.':'Próximamente podrá ofrecernos sus piezas. Mientras tanto, nuestro equipo estará encantado de atenderle.',
+    'Retour à l’accueil':'Volver al inicio'
+  });
+  document.title='Ofrecer una pieza — ED Luxury';
+  const meta=document.querySelector('meta[name="description"]');
+  if(meta)meta.content='Próximamente podrá ofrecer una pieza a ED Luxury. Mientras tanto, póngase en contacto con nuestro equipo.';
+})();
