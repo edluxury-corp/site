@@ -70,3 +70,22 @@
 'Chaque pièce est choisie pour sa rareté, son histoire et son intemporalité. Nous sourçons des pièces rares d’une qualité irréprochable.':'每一件珍品都因其稀有性、背后的故事与恒久魅力而入选。我们寻访品质卓越的稀有之作。',
 'Explorer la sélection':'浏览精选系列'
 })})();
+
+ 
+(()=>{if(EDL_LANG!=='ru')return;document.title='ED Luxury — Частная коллекция';const meta=document.querySelector('meta[name="description"]');if(meta)meta.content='ED Luxury — тщательно отобранные редкие изделия и закрытые встречи в парижских шоурумах.';EDL_TRANSLATE({
+'Maison de sélection parisienne':'Парижский дом частной коллекции',
+'L’art de la':'Искусство',
+'sélection privée':'частного выбора',
+'ED Luxury sélectionne et source des pièces d’exception pour une clientèle exigeante .':'ED Luxury отбирает и находит исключительные изделия для взыскательных клиентов.',
+'Découvrir notre sélection':'Открыть коллекцию',
+'L’univers de nos showrooms':'Мир наших шоурумов',
+'L’élégance':'Парижская',
+'parisienne':'элегантность',
+'Nos événements showroom prennent vie au cœur de Paris, dans de somptueux appartements haussmanniens.':'Наши встречи проходят в самом сердце Парижа, в изысканных апартаментах османского стиля.',
+'Découvrir l’univers':'Узнать о шоурумах',
+'Sélection d’exception':'Исключительная коллекция',
+'Des pièces iconiques,':'Легендарные изделия,',
+'sélectionnées pour vous':'выбранные для вас',
+'Chaque pièce est choisie pour sa rareté, son histoire et son intemporalité. Nous sourçons des pièces rares d’une qualité irréprochable.':'Каждое изделие мы выбираем за редкость, историю и неподвластный времени стиль. Мы находим редкие экземпляры безупречного качества.',
+'Explorer la sélection':'Посмотреть коллекцию'
+})})();
