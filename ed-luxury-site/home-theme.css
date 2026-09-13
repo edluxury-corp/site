@@ -338,3 +338,11 @@ html[lang="ru"] .product-details,
 html[lang="ru"] .product-detail-sub{font-family:"Manrope",sans-serif}
 html[lang="ru"] .product-price,
 html[lang="ru"] .product-detail-price{direction:ltr;unicode-bidi:isolate}
+
+
+/* Russian showroom text rhythm. */
+html[lang="ru"] .showrooms-lead,
+html[lang="ru"] .showroom-concept-copy p,
+html[lang="ru"] .event-description p,
+html[lang="ru"] .showroom-cta > p:not(.eyebrow){line-height:1.85}
+html[lang="ru"] .event-date{font-family:"Noto Sans","Manrope",sans-serif;letter-spacing:.015em;text-transform:none}
