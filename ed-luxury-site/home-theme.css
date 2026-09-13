@@ -158,3 +158,30 @@ html[lang="ar"] .budget-grid label:not(:last-child) span{direction:ltr;unicode-b
 
 /* Keep Arabic offer-page actions aligned with the RTL copy. */
 html[lang="ar"] .proposal-actions{justify-content:flex-start}
+
+/* Japanese homepage typography and compact-screen rhythm. */
+html[lang="ja"] body,
+html[lang="ja"] .main-nav,
+html[lang="ja"] .button,
+html[lang="ja"] .text-link,
+html[lang="ja"] .eyebrow,
+html[lang="ja"] .lead,
+html[lang="ja"] .values p,
+html[lang="ja"] .site-footer,
+html[lang="ja"] .language-menu,
+html[lang="ja"] .menu-toggle,
+html[lang="ja"] .private-link{font-family:"Noto Sans JP","Manrope",sans-serif!important}
+html[lang="ja"] h1,
+html[lang="ja"] h2,
+html[lang="ja"] h3{font-family:"Noto Serif JP","Cormorant Garamond",serif!important;font-style:normal;line-height:1.4!important;letter-spacing:.01em;text-transform:none}
+html[lang="ja"] .main-nav a,
+html[lang="ja"] .eyebrow,
+html[lang="ja"] .button,
+html[lang="ja"] .text-link,
+html[lang="ja"] .private-link,
+html[lang="ja"] .site-footer nav,
+html[lang="ja"] .site-footer address{letter-spacing:.02em;text-transform:none}
+html[lang="ja"] .lead,
+html[lang="ja"] .section-copy > p:not(.eyebrow){line-height:1.9}
+@media(max-width:640px){html[lang="ja"] .hero-copy{width:79%!important;padding-left:18px!important;padding-right:18px!important}html[lang="ja"] .hero-copy h1{font-size:clamp(28px,8vw,38px)!important;line-height:1.4!important}}
+@media(max-width:390px){html[lang="ja"] .hero-copy{width:80%!important}html[lang="ja"] .hero-copy h1{font-size:28px!important}}
