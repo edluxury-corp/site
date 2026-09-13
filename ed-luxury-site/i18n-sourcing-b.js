@@ -107,3 +107,57 @@
   const privacy=document.querySelector('.form-privacy');
   if(privacy)privacy.textContent='La información facilitada se utilizará únicamente para estudiar su solicitud y ponerse en contacto con usted al respecto.';
 })();
+
+(()=>{
+  if(EDL_LANG!=='ar')return;
+  document.title='خدمة البحث الخاصة — ED Luxury';
+  const meta=document.querySelector('meta[name="description"]');
+  if(meta)meta.content='دع ED Luxury تبحث لك عن حقيبة هيرميس بيركن أو كيلي أو HAC وفق تفضيلاتك في اللون والخامة والحالة والميزانية.';
+  EDL_TRANSLATE({
+    'Choisissez votre modèle':'اختر الموديل',
+    'Tailles':'الأحجام',
+    'Autre':'خيار آخر',
+    'Autre taille Kelly':'مقاس آخر لكيلي',
+    'Ex. 22, 40, Mini Kelly...':'مثال: 22، 40، ميني كيلي...',
+    'Autre taille Birkin / HAC':'مقاس آخر لبيركن / HAC',
+    'Précisez la taille ou le modèle recherché':'حدّد المقاس أو الموديل الذي تبحث عنه',
+    'Couleur recherchée':'اللون المطلوب',
+    'Couleur ou référence Hermès':'لون هيرميس أو مرجعه',
+    'Ex. Noir, Gold, Étoupe, Craie, Vert Menthe...':'مثال: Noir، Gold، Étoupe، Craie، Vert Menthe...',
+    'Cuir / matière':'الجلد / الخامة',
+    'Exotique':'جلد نادر',
+    'Indifférent':'لا تفضيل',
+    'Type de cuir exotique':'نوع الجلد النادر',
+    'Sélectionnez un cuir exotique':'اختر نوع الجلد النادر',
+    'Crocodile Niloticus':'جلد تمساح نيلوتيكوس',
+    'Crocodile Porosus':'جلد تمساح بوروسوس',
+    'Alligator Mississippiensis':'جلد أليغيتور ميسيسيبي',
+    'Autruche':'جلد النعام',
+    'Lézard':'جلد السحلية',
+    'Autre cuir exotique':'نوع آخر من الجلد النادر',
+    'Précisez le cuir exotique recherché':'حدّد نوع الجلد النادر الذي تبحث عنه',
+    'Autre cuir / matière':'جلد أو خامة أخرى',
+    'Précisez le cuir ou la matière recherchée':'حدّد الجلد أو الخامة التي تبحث عنها',
+    'Métallerie':'المعدن',
+    'Or':'ذهبي',
+    'Palladium':'بالاديوم',
+    'Budget':'الميزانية',
+    'Flexible':'مرنة',
+    'État recherché':'الحالة المطلوبة',
+    'Neuf / jamais porté':'جديدة / لم تُستخدم',
+    'Excellent état':'حالة ممتازة',
+    'Très bon état':'حالة جيدة جداً',
+    'Vos coordonnées':'بيانات التواصل',
+    'Prénom *':'الاسم الأول *',
+    'Nom *':'اسم العائلة *',
+    'E-mail *':'البريد الإلكتروني *',
+    'WhatsApp / téléphone':'واتساب / رقم الهاتف',
+    'Informations complémentaires':'معلومات إضافية',
+    'Précisez ici vos préférences, votre délai ou toute autre information utile.':'اذكر تفضيلاتك والوقت المناسب لك وأي معلومات أخرى مفيدة.',
+    'Envoyer ma demande':'إرسال طلب البحث'
+  });
+  const intro=document.querySelector('.sourcing-intro > p:not(.eyebrow)');
+  if(intro)intro.textContent='صف القطعة التي تبحث عنها. سيدرس فريق ED Luxury طلبك ويتواصل معك إذا ظهرت فرصة تتوافق مع معاييرك.';
+  const privacy=document.querySelector('.form-privacy');
+  if(privacy)privacy.textContent='تُستخدم المعلومات التي تقدمها فقط لدراسة طلبك والتواصل معك بشأنه.';
+})();
