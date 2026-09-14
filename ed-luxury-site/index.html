@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="ED Luxury — sélection privée de pièces d’exception et showroom parisien." />
   <title>ED Luxury — Sélection privée</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="shortcut icon" href="/favicon.svg" />
 
   <script>
     try {
@@ -23,63 +25,13 @@
   <link rel="stylesheet" href="home-theme.css?v=all-values-divider-5" />
 
   <style>
-    /* Responsive hero framing */
-    .hero {
-      min-height: clamp(680px, 76vh, 860px);
-    }
-
-    .hero-image {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: 57% bottom;
-    }
-
-    @media (max-width: 1200px) {
-      .hero-image {
-        object-position: 60% bottom;
-      }
-    }
-
-    @media (max-width: 900px) {
-      .hero-image {
-        object-position: 64% bottom;
-      }
-    }
-
-    @media (max-width: 760px) {
-      .hero {
-        min-height: 760px;
-      }
-
-      .hero-image {
-        object-position: 67% bottom;
-      }
-    }
-
-    @media (max-width: 640px) {
-      .hero {
-        min-height: 720px;
-      }
-
-      .hero-image {
-        object-position: 72% bottom;
-      }
-
-      .hero-copy {
-        width: 100%;
-        padding: 125px 22px 40px;
-      }
-    }
-
-    @media (max-width: 430px) {
-      .hero-copy {
-        position: absolute !important;
-        top: 88px !important;
-        left: 0 !important;
-        margin: 0 !important;
-      }
-    }
+    .hero { min-height: clamp(680px, 76vh, 860px); }
+    .hero-image { width: 100%; height: 100%; object-fit: cover; object-position: 57% bottom; }
+    @media (max-width: 1200px) { .hero-image { object-position: 60% bottom; } }
+    @media (max-width: 900px) { .hero-image { object-position: 64% bottom; } }
+    @media (max-width: 760px) { .hero { min-height: 760px; } .hero-image { object-position: 67% bottom; } }
+    @media (max-width: 640px) { .hero { min-height: 720px; } .hero-image { object-position: 72% bottom; } .hero-copy { width: 100%; padding: 125px 22px 40px; } }
+    @media (max-width: 430px) { .hero-copy { position: absolute !important; top: 88px !important; left: 0 !important; margin: 0 !important; } }
   </style>
 </head>
 <body>
@@ -119,13 +71,7 @@
       </div>
 
       <div class="hero-visual reveal" aria-label="Emplacement pour votre photo principale de Birkin">
-        <img
-          src="assets/images/hero-bag.png"
-          data-light-src="assets/images/hero-bag.png"
-          data-dark-src="assets/images/hero_bag_noir.png"
-          alt="Sac de luxe sélectionné par ED Luxury"
-          class="hero-image"
-        />
+        <img src="assets/images/hero-bag.png" data-light-src="assets/images/hero-bag.png" data-dark-src="assets/images/hero_bag_noir.png" alt="Sac de luxe sélectionné par ED Luxury" class="hero-image" />
       </div>
       <p class="asset-note"></p>
     </section>
@@ -137,7 +83,6 @@
         <p>Nos événements showroom prennent vie au cœur de Paris, dans de somptueux appartements haussmanniens.</p>
         <a class="text-link" href="showrooms.html">Découvrir l’univers <span>→</span></a>
       </div>
-
       <div class="showroom-gallery reveal">
         <img src="assets/images/showroomA.JPG" alt="Showroom parisien ED Luxury">
         <img src="assets/images/ShowroomB.JPG" alt="Salon haussmannien du showroom">
@@ -147,14 +92,8 @@
 
     <section class="selection section-shell" id="selection">
       <div class="selection-image reveal">
-        <img
-          src="assets/images/selection_blanche.png"
-          data-light-src="assets/images/selection_blanche.png"
-          data-dark-src="assets/images/selection_noir.png"
-          alt="Sélection de sacs de luxe"
-        />
+        <img src="assets/images/selection_blanche.png" data-light-src="assets/images/selection_blanche.png" data-dark-src="assets/images/selection_noir.png" alt="Sélection de sacs de luxe" />
       </div>
-
       <div class="section-copy reveal">
         <p class="eyebrow">Sélection d’exception</p>
         <h2>Des pièces iconiques,<br>sélectionnées pour vous</h2>
@@ -173,66 +112,34 @@
   </main>
 
   <footer class="site-footer" id="contact">
-    <a class="brand footer-brand" href="#top">
-      <span class="brand-main">ED</span>
-      <span class="brand-sub">LUXURY</span>
-    </a>
-
+    <a class="brand footer-brand" href="#top"><span class="brand-main">ED</span><span class="brand-sub">LUXURY</span></a>
     <nav aria-label="Navigation de pied de page">
-      <a href="#top">Accueil</a>
-      <a href="#selection">Sélection</a>
-      <a href="#showroom">Showroom</a>
-      <a href="#about">À propos</a>
-      <a href="contact.html">Contact</a>
-      <a href="mentions-legales.html">Mentions légales</a>
+      <a href="#top">Accueil</a><a href="#selection">Sélection</a><a href="#showroom">Showroom</a><a href="#about">À propos</a><a href="contact.html">Contact</a><a href="mentions-legales.html">Mentions légales</a>
     </nav>
-
-    <div class="social">
-      <span>Suivez-nous</span>
-      <a href="#" aria-label="Instagram">Instagram</a>
-      <a href="sourcing.html">Sourcing privé</a>
-    </div>
-
-    <address>
-      <span>Accès privé</span>
-      <a href="mailto:edluxury.contact@gmail.com">edluxury.contact@gmail.com</a>
-      <a href="tel:+33600000000">+33 6 00 00 00 00</a>
-    </address>
-
+    <div class="social"><span>Suivez-nous</span><a href="#" aria-label="Instagram">Instagram</a><a href="sourcing.html">Sourcing privé</a></div>
+    <address><span>Accès privé</span><a href="mailto:edluxury.contact@gmail.com">edluxury.contact@gmail.com</a><a href="tel:+33600000000">+33 6 00 00 00 00</a></address>
     <p class="copyright">© <span id="year"></span> ED Luxury — Tous droits réservés</p>
   </footer>
 
-  <script src="script.js?v=pt-home-1"></script>
+  <script src="script.js?v=favicon-1"></script>
   <script>
     (() => {
       const root = document.documentElement;
       const toggle = document.querySelector('.theme-toggle');
       const themedImages = document.querySelectorAll('[data-light-src][data-dark-src]');
-
       function applyTheme(theme, persist) {
         const dark = theme === 'dark';
         root.dataset.theme = dark ? 'dark' : 'light';
-
-        themedImages.forEach((image) => {
-          image.src = dark ? image.dataset.darkSrc : image.dataset.lightSrc;
-        });
-
+        themedImages.forEach((image) => { image.src = dark ? image.dataset.darkSrc : image.dataset.lightSrc; });
         if (toggle) {
           toggle.setAttribute('aria-pressed', String(dark));
           toggle.setAttribute('aria-label', dark ? 'Activer le mode clair' : 'Activer le mode sombre');
           toggle.title = dark ? 'Mode clair' : 'Mode sombre';
         }
-
-        if (persist) {
-          try { localStorage.setItem('edluxury-theme', dark ? 'dark' : 'light'); } catch (error) {}
-        }
+        if (persist) { try { localStorage.setItem('edluxury-theme', dark ? 'dark' : 'light'); } catch (error) {} }
       }
-
       applyTheme(root.dataset.theme === 'dark' ? 'dark' : 'light', false);
-
-      toggle?.addEventListener('click', () => {
-        applyTheme(root.dataset.theme === 'dark' ? 'light' : 'dark', true);
-      });
+      toggle?.addEventListener('click', () => { applyTheme(root.dataset.theme === 'dark' ? 'light' : 'dark', true); });
     })();
   </script>
 </body>
